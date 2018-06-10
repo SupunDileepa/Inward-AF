@@ -1,14 +1,6 @@
 export default {
     items: [
         {
-            name: "Dashboard",
-            url: "/dashboard",
-            icon: "icon-speedometer",
-            badge: {
-                variant: "info"
-            }
-        },
-        {
             title: true,
             name: "Main Navigation",
             wrapper: {
@@ -20,34 +12,34 @@ export default {
         },
         {
             name: "Ward Admision",
-            url: "/theme/colors",
+            url: "#",
             icon: "icon-drop"
         },
         {
             name: "New Admission",
-            url: "/theme/typography",
+            url: "#",
             icon: "icon-pencil"
         },
         {
             name: "Transfer Admission",
-            url: "/base",
+            url: "#",
             icon: "icon-puzzle",
         },
         {
             name: "My Wards ",
-            url: "/buttons",
+            url: "#",
             icon: "icon-cursor",
             children: [
                 {
                     name: "Ward1",
-                    url: "/buttons/buttons",
+                    url: "#",
                     icon: "icon-cursor"
                 }
             ]
         },
         {
             name: "Patient Archived details ",
-            url: "/charts",
+            url: "#",
             icon: "icon-pie-chart"
         }
 
