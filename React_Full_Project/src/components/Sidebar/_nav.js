@@ -19,14 +19,39 @@ export default {
       class: "" // optional class names space delimited list for title item ex: "text-center"
     },
     {
-      name: "Ward Admision",
+      name: "Ward Admission",
       url: "/theme/colors",
       icon: "icon-drop"
     },
     {
-      name: "Typography",
-      url: "/theme/typography",
-      icon: "icon-pencil"
+      name: "New Admission",
+      url: "/theme/colors",
+      icon: "icon-drop"
+    },
+    {
+      name: "Transfer Admission",
+      url: "/theme/colors",
+      icon: "icon-drop"
+    },
+    {
+      name: "Search Patient By BHT",
+      url: "/theme/colors",
+      icon: "icon-drop"
+    },
+    {
+      name: "Bed Management",
+      url: "/theme/colors",
+      icon: "icon-drop"
+    },
+    {
+      name: "My Wards",
+      url: "/theme/colors",
+      icon: "icon-drop"
+    },
+    {
+      name: "Patient Archive Details",
+      url: "/theme/colors",
+      icon: "icon-drop"
     },
     {
       title: true,
