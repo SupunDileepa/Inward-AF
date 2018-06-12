@@ -1,4 +1,4 @@
 module.exports = {
-  database: "mongodb://localhost:27017/foodApp",
+  database: "mongodb://localhost:27017/his",
   secretOrKey: "secret"
 };
