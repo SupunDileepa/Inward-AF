@@ -20,7 +20,7 @@ export default {
     },
     {
       name: "Ward Admission",
-      url: "/theme/colors",
+      url: "/ward/admission",
       icon: "icon-drop"
     },
     {
@@ -35,7 +35,7 @@ export default {
     },
     {
       name: "Search Patient By BHT",
-      url: "/theme/colors",
+      url: "/search",
       icon: "icon-drop"
     },
     {
