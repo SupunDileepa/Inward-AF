@@ -11,6 +11,9 @@ import Dashboard from "../../views/Dashboard/";
 
 import Colors from "../../views/Theme/Colors/";
 
+
+
+
 import Typography from "../../views/Theme/Typography/";
 
 import Charts from "../../views/Charts/";
@@ -54,8 +57,10 @@ import Alerts from "../../views/Notifications/Alerts/";
 import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
+
 import wardAdmission from "../../views/wardAdmission";
 import searchByBHT from "../../views/searchByBHT";
+
 
 class Full extends Component {
   render() {
@@ -73,6 +78,7 @@ class Full extends Component {
                   name="Dashboard"
                   component={Dashboard}
                 />
+
                 <Route 
                   path="/ward/admission" 
                   name="wardAdmission" 
@@ -86,6 +92,7 @@ class Full extends Component {
                 <Route path="/base/cards" name="Cards" component={Cards} />
                 <Route path="/base/forms" name="Forms" component={Forms} />
                 <Route path="/base/switches" name="Swithces" component={Switches}/>
+
                 <Route path="/base/tables" name="Tables" component={Tables} />
                 <Route path="/base/tabs" name="Tabs" component={Tabs} />
                 <Route
