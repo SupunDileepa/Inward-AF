@@ -3,12 +3,14 @@ const mongooseUniqueValidator = require("mongoose-unique-validator");
 const bcrypt = require("bcryptjs");
 
 const UserSchema = new mongoose.Schema({
-  auto_id: String,
-  term_id: String,
-  drug_id: String,
+  bht: String,
+  pId: String,
+  drugName: String,
   dose: String,
   frequency: String,
-  status: String
+  prescriber: String,
+  duration:String
+
 });
 
 UserSchema.plugin(mongooseUniqueValidator);

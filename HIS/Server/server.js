@@ -14,6 +14,7 @@ const patient = require("./routes/api/patient");
 
 
 const lab = require("./routes/api/lab");
+const prescription=require("./routes/api/prescription");
 
 const allergies = require("./routes/api/allergies");
 
@@ -53,6 +54,7 @@ app.use("/api/", patient);
 
 
 app.use("/api/",lab);
+app.use("/api/",prescription);
 
 app.use("/api/", allergies);
 
