@@ -10,9 +10,14 @@ const userRoutes = require("./routes/api/user");
 const foodRoutes = require("./routes/api/food");
 const patient = require("./routes/api/patient");
 
+
+
+
 const lab = require("./routes/api/lab");
+const prescription=require("./routes/api/prescription");
 
 const allergies = require("./routes/api/allergies");
+
 
 
 mongoose.connect(config.database);
@@ -46,7 +51,10 @@ app.use("/api/users", userRoutes);
 app.use("/api/", foodRoutes);
 app.use("/api/", patient);
 
-app.use("/api",lab);
+
+
+app.use("/api/",lab);
+app.use("/api/",prescription);
 
 app.use("/api/", allergies);
 
