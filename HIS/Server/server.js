@@ -9,7 +9,15 @@ const config = require("./config/database");
 const userRoutes = require("./routes/api/user");
 const foodRoutes = require("./routes/api/food");
 const patient = require("./routes/api/patient");
+<<<<<<< HEAD
 const lab = require("./routes/api/lab");
+=======
+
+const lab = require("./routes/api/lab");
+
+const allergies = require("./routes/api/allergies");
+
+>>>>>>> master
 
 mongoose.connect(config.database);
 mongoose.connection.on("connected", () => {
@@ -41,7 +49,15 @@ app.get("/sample", (req, res) => {
 app.use("/api/users", userRoutes);
 app.use("/api/", foodRoutes);
 app.use("/api/", patient);
+<<<<<<< HEAD
 app.use("/api",lab);
+=======
+
+app.use("/api",lab);
+
+app.use("/api/", allergies);
+
+>>>>>>> master
 // app.use("/api/order", orderRoutes);
 // app.use("/api/payment", paymentRoutes);
 
