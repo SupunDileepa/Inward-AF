@@ -6,7 +6,7 @@ const LabTest = require("../../models/labTest");
 //add new test req to the database
 
 router.post("/labtests", (req, res, next) => {
-  const LabTest = new LabTest({
+  const labby = new LabTest({
     bed_id: req.body.bedid,
     patient_id: req.body.pId,
     test_id:req.body.testId,
@@ -14,11 +14,11 @@ router.post("/labtests", (req, res, next) => {
     testName:req.body.testName,
     testResult:req.body.testResult
   });
-  LabTests.save((err, result) => {
+  labby.save((err, result) => {
     if (err) {
       return res.json({ error: err });
     }
-    res.json({result, alert("New Test Requested") });
+    res.json({result});
   });
 });
 

@@ -9,7 +9,7 @@ const config = require("./config/database");
 const userRoutes = require("./routes/api/user");
 const foodRoutes = require("./routes/api/food");
 const patient = require("./routes/api/patient");
-onst lab = require("./routes/api/lab");
+const lab = require("./routes/api/lab");
 
 mongoose.connect(config.database);
 mongoose.connection.on("connected", () => {
