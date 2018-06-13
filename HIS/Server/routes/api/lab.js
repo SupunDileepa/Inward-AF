@@ -23,16 +23,19 @@ router.post("/labtests", (req, res, next) => {
 });
 
 
-//get all the lab test for the given patient
+//get all the lab test for the given patient id and beadhead id
 
-router.get('/labtests/:pId', (req, res, next) => {
-    var query = {'patient_id' : req.params.pId};
+router.get("/labtests/:pid/:bht", (req, res, next) => {
+    var query = {
+      "patient_id" : req.params.pid,
+      "bed_id" : req.params.bht
+    }
 
-    LabTest.find(query, (err, result) => {
-        if(err) return next(err);
-        res.json({obj:result});
+    LabTest.find(query, function(err, result) {
+      if (err) return next(err);
+      res.json(result);
     });
-});
-
+  }
+);
 
 module.exports = router;
