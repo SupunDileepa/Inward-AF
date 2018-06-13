@@ -29,13 +29,22 @@ router.post("/add", (req, res, next) => {
   });
 });
 
-router.get("/all",(req, res, next) => {
+router.get("/patients",(req, res, next) => {
     Patient.find(function(err, result) {
       if (err) return next(err);
       res.json({ obj: result });
     });
   }
 );
+
+router.get('/patients/:bhtid', (req, res, next) => {
+    var query = {'bht' : req.params.bhtid};
+
+    Patient.findOne(query, (err, result) => {
+        if(err) return next(err);
+        res.json({obj : result});
+    });
+});
 
 getToken = function(headers) {
   if (headers && headers.authorization) {
