@@ -26,11 +26,11 @@ router.post("/labtests", (req, res, next) => {
 //get all the lab test for the given patient
 
 router.get('/labtests/:pId', (req, res, next) => {
-    var query = {'pId' : req.params.pId};
+    var query = {'patient_id' : req.params.pId};
 
     LabTest.find(query, (err, result) => {
         if(err) return next(err);
-        res.json({result});
+        res.json({obj:result});
     });
 });
 
