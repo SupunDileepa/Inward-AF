@@ -1,7 +1,17 @@
 const mongoose = require("mongoose");
+autoIncrement = require("mongoose-auto-increment");
+autoIncrement.initialize(mongoose.connection);
 
 const allergySchema = mongoose.Schema({
+  pid: {
+    type: String,
+    required: true
+  },
   bht: {
+    type: String,
+    required: true
+  },
+  aid: {
     type: String,
     required: true
   },
@@ -26,4 +36,5 @@ const allergySchema = mongoose.Schema({
   }
 });
 
+allergySchema.plugin(autoIncrement.plugin, {model: "allergies", field: "aid"});
 module.exports = mongoose.model("allergies", allergySchema);

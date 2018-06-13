@@ -5,7 +5,9 @@ const allergies = require("../../models/allergies");
 // add an allery
 router.post("/allergies", (req, res, next) => {
     const allergy = new allergies({
+        pid: req.body.pid,
         bht: req.body.bht,
+        aid: req.body.aid,
         name: req.body.name,
         status: req.body.status,
         category: req.body.category,
@@ -20,9 +22,12 @@ router.post("/allergies", (req, res, next) => {
     });
   });
 
-// get all allergies
-router.get("/allergies/:bht", (req, res, next) => {
-    var query = {"bht" : req.params.bht};
+// get allergies of a bht and a pid
+router.get("/allergies/:pid/:bht", (req, res, next) => {
+    var query = {
+      "pid" : req.params.pid,
+      "bht" : req.params.bht
+    }
 
     allergies.find(query, function(err, result) {
       if (err) return next(err);
@@ -32,21 +37,24 @@ router.get("/allergies/:bht", (req, res, next) => {
 );
 
 // update an allergy
-router.put('/allergies/:bht/:aid', (req, res, next) => {
-    res.send(req.params.bht);
-    // var query = {'id' : req.params.bht};
-    // var newValues = {
-    //     name : req.body.name,
-    //     status : req.body.status,
-    //     category : req.body.category,
-    //     severity : req.body.severity,
-    //     remark : req.body.remark    
-    // }
+router.put('/allergies/:pid/:bht/:aid', (req, res, next) => {    
+    var query = {
+      'pid' : req.params.pid,
+      'bht' : req.params.bht,
+      'aid' : req.params.aid
+    }
+    var newValues = {
+      name: req.body.name,
+      status: req.body.status,
+      category: req.body.category,
+      severity: req.body.severity,
+      remark: req.body.remark  
+    }
 
-    // allergies.findOneAndUpdate(query, newValues, (err, result) => {
-    //     if(err) return next(err);
-    //     res.json({ obj: result, msg: "successfully updated" });
-    // });
+    allergies.findOneAndUpdate(query, newValues, (err, result) => {
+        if(err) return next(err);
+        res.json({ obj: result, msg: "successfully updated" });
+    });
 });
 
 module.exports = router;
