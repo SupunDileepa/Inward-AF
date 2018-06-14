@@ -77,7 +77,7 @@ ReactDOM.render(
         <Route exact path="/login" name="Login" component={Login} />
         <Route exact path="/register" name="Register" component={Register} />
 
-        <Route exact path="/bht" name="bhtFull" component={bhtFull} />
+        <Route  path="/bht" name="bhtFull" component={bhtFull} />
         <Route exact path="/bht/prescriptions" name="prescription" component={Prescribe} />  
               
         <Route  path="/" name="Home" component={Full} /> 
