@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { Container } from "reactstrap";
 import Header from "../../components/Header/";
-import Sidebar from "../../components/Sidebar/";
+import Sidebar from "../../components/bhtSidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
 import Aside from "../../components/Aside/";
 import Footer from "../../components/Footer/";
@@ -58,11 +58,11 @@ import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
 
-import wardAdmission from "../../views/wardAdmission";
+import Prescription from "../../views/prescribe";
 import searchByBHT from "../../views/searchByBHT";
 
 
-class Full extends Component {
+class bhtFull extends Component {
   render() {
     return (
       <div className="app">
@@ -74,15 +74,15 @@ class Full extends Component {
             <Container fluid>
               <Switch>
                 <Route
-                  path="/dashboard"
+                  path="/dashboardlol"
                   name="Dashboard"
                   component={Dashboard}
                 />
 
                 <Route 
-                  path="/ward/admission" 
-                  name="wardAdmission" 
-                  component={wardAdmission} />
+                  path="/bht/prescriptions" 
+                  name="Prescription" 
+                  component={Prescription} />
 
                 <Route 
                   path="/search" 
@@ -200,7 +200,7 @@ class Full extends Component {
                 <Route path="/widgets" name="Widgets" component={Widgets} />
                 <Route path="/charts" name="Charts" component={Charts} />
                 <Route path="/sample" name="Sample" component={Sample} />
-                <Redirect from="/" to="/dashboard" />
+                <Redirect from="/" to="/bht" />
               </Switch>
             </Container>
           </main>
@@ -212,4 +212,4 @@ class Full extends Component {
   }
 }
 
-export default Full;
+export default bhtFull;
