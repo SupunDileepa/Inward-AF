@@ -39,6 +39,8 @@ import store from "./store";
 
 
 import Prescribe from "./views/prescribe";
+import PrescribeDrug from "./views/prescribeDrug";
+
 //check for token
 
 if (localStorage.jwtToken) {
@@ -76,10 +78,15 @@ ReactDOM.render(
         <Route exact path="/" name="Landing" component={Landing} />
         <Route exact path="/login" name="Login" component={Login} />
         <Route exact path="/register" name="Register" component={Register} />
-
         <Route  path="/bht" name="bhtFull" component={bhtFull} />
-        <Route exact path="/bht/prescriptions" name="prescription" component={Prescribe} />  
-              
+
+         
+        <Route  path="/bht" name="bhtFull" component={bhtFull} />
+        <Route exact path="/bht/lol" name="prescribeDrug" component={PrescribeDrug} />  
+
+        
+ 
+
         <Route  path="/" name="Home" component={Full} /> 
         
                 

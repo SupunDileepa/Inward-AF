@@ -60,6 +60,9 @@ import Modals from "../../views/Notifications/Modals/";
 
 import Prescribe from "../../views/prescribe";
 import searchByBHT from "../../views/searchByBHT";
+import PrescribeDrug from "../../views/prescribeDrug";
+import Viewtest from "../../views/viewTest";
+
 
 
 class bhtFull extends Component {
@@ -84,10 +87,15 @@ class bhtFull extends Component {
                   name="Prescription" 
                   component={Prescribe} />
 
+                  <Route 
+                  path="/bht/prescribedrugs" 
+                  name="Prescription" 
+                  component={PrescribeDrug }/>
+
                 <Route 
-                  path="/search" 
-                  name="search" 
-                  component={searchByBHT}/>
+                  path="/bht/viewtests" 
+                  name="viewtests" 
+                  component={Viewtest}/>
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
                 <Route path="/base/forms" name="Forms" component={Forms} />

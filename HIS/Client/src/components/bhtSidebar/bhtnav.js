@@ -37,12 +37,12 @@ export default {
             children: [
         {
           name: "View Test Results",
-          url: "/viewtests",
+          url: "/bht/viewtests",
           
         },
         {
           name: "New Test Request",
-          url: "/newtests",
+          url: "/bht/newtests",
           
         },
      
