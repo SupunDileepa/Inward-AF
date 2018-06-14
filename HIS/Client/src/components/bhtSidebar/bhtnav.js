@@ -38,12 +38,12 @@ export default {
         {
           name: "View Test Results",
           url: "/bht/viewtests",
+
           
         },
         {
           name: "New Test Request",
-          url: "/bht/newtests",
-          
+          url: "/bht/newtests",          
         },
      
       ]
@@ -53,20 +53,18 @@ export default {
 
 
     {
+
       name: "Patient Allergies",
-      url: "/patien Allergies",
       icon: "icon-drop",
 
       children: [
         {
           name: "View Allergies",
-          url: "/viewtests",
-          
+          url: "/bht/allergies/view",          
         },
         {
           name: "Add New Allergy",
-          url: "/newtests",
-          
+          url: "/bht/allergies/create",          
         },
      
       ]
