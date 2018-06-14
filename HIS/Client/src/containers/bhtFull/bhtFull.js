@@ -53,9 +53,15 @@ import Modals from "../../views/Notifications/Modals/";
 
 import Prescribe from "../../views/prescribe";
 
+
 import viewAllergies from "./../../views/Allergies/view";
 import createAllergies from "./../../views/Allergies/create";
 import updateAllergies from "./../../views/Allergies/updateAllergy";
+
+import searchByBHT from "../../views/searchByBHT";
+import PrescribeDrug from "../../views/prescribeDrug";
+import Viewtest from "../../views/viewTest";
+
 
 
 class bhtFull extends Component {
@@ -80,6 +86,7 @@ class bhtFull extends Component {
                   name="Prescription" 
                   component={Prescribe} />
 
+
                 <Route 
                   path="/bht/allergies/view" 
                   name="viewAllergies" 
@@ -95,6 +102,19 @@ class bhtFull extends Component {
                 name="updateAllergies" 
                 component={updateAllergies} />
 
+
+
+                  <Route 
+                  path="/bht/prescribedrugs" 
+                  name="Prescription" 
+                  component={PrescribeDrug }/>
+
+                <Route 
+                  path="/bht/viewtests" 
+                  name="viewtests" 
+                  component={Viewtest}/>
+
+                <Route path="/base/cards" name="Cards" component={Cards} />
 
                 <Route path="/base/forms" name="Forms" component={Forms} />
                 <Route path="/base/switches" name="Swithces" component={Switches}/>

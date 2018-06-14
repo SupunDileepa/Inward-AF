@@ -38,6 +38,12 @@ import { Provider } from "react-redux";
 import store from "./store";
 
 
+
+import Prescribe from "./views/prescribe";
+import PrescribeDrug from "./views/prescribeDrug";
+
+
+
 import Prescribe from "./views/prescribe";
 
 import viewAllergies from "./views/Allergies/view";
@@ -79,10 +85,14 @@ ReactDOM.render(
         <Route exact path="/login" name="Login" component={Login} />
         <Route exact path="/register" name="Register" component={Register} />
 
+
         <Route  path="/bht" name="bhtFull" component={bhtFull} />
         <Route exact path="/bht/prescriptions" name="prescription" component={Prescribe} />  
-        <Route exact path="/bht/allergies/view" name="viewAllergies" component={viewAllergies} />
-              
+        <Route exact path="/bht/allergies/view" name="viewAllergies" component={viewAllergies} />              
+
+
+        <Route exact path="/bht/lol" name="prescribeDrug" component={PrescribeDrug} />  
+ 
         <Route  path="/" name="Home" component={Full} /> 
         
                 

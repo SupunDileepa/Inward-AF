@@ -37,13 +37,13 @@ export default {
             children: [
         {
           name: "View Test Results",
-          url: "/viewtests",
+          url: "/bht/viewtests",
+
           
         },
         {
           name: "New Test Request",
-          url: "/newtests",
-          
+          url: "/bht/newtests",          
         },
      
       ]
@@ -53,19 +53,18 @@ export default {
 
 
     {
-      name: "Patient Allergies",     
+
+      name: "Patient Allergies",
       icon: "icon-drop",
 
       children: [
         {
           name: "View Allergies",
-          url: "/bht/allergies/view",
-          
+          url: "/bht/allergies/view",          
         },
         {
           name: "Add New Allergy",
-          url: "/bht/allergies/create",
-          
+          url: "/bht/allergies/create",          
         },
      
       ]
