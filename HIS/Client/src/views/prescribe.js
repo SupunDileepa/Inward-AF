@@ -63,7 +63,7 @@ class Prescribe extends Component {
           
               <div class="col-md-2">
 
-                <Link to="/login" className="btn btn-lg btn-light">
+                <Link to="/login" className="btn btn-lg btn-warning">
                   Prescribe Drugs
                 </Link>
 
@@ -72,7 +72,7 @@ class Prescribe extends Component {
 
               <div class="col-md-2">
 
-                <button  onClick={this.expandChart.bind(this)} class="btn btn-success" >
+                <button  onClick={this.expandChart.bind(this)} class="btn btn-lg btn-success" >
                  Expand Drug Chart
                </button>
 

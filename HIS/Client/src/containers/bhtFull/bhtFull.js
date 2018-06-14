@@ -58,7 +58,7 @@ import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
 
-import Prescription from "../../views/prescribe";
+import Prescribe from "../../views/prescribe";
 import searchByBHT from "../../views/searchByBHT";
 
 
@@ -82,7 +82,7 @@ class bhtFull extends Component {
                 <Route 
                   path="/bht/prescriptions" 
                   name="Prescription" 
-                  component={Prescription} />
+                  component={Prescribe} />
 
                 <Route 
                   path="/search" 
