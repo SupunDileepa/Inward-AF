@@ -17,7 +17,7 @@ import "../scss/core/_dropdown-menu-right.scss";
 
 // Containers
 import Full from "./containers/Full/";
-import bhtFull from "./containers/Full/bhtFull";
+import bhtFull from "./containers/bhtFull";
 
 //components
 import Login from "./components/Auth/Login";
@@ -39,6 +39,7 @@ import store from "./store";
 
 
 import Prescribe from "./views/prescribe";
+
 import viewAllergies from "./views/Allergies/view";
 
 //check for token
@@ -76,10 +77,6 @@ ReactDOM.render(
         <Route exact path="/500" name="Page 500" component={Page500} /> */}
         <Route exact path="/" name="Landing" component={Landing} />
         <Route exact path="/login" name="Login" component={Login} />
-
-     
-
-
         <Route exact path="/register" name="Register" component={Register} />
 
         <Route  path="/bht" name="bhtFull" component={bhtFull} />
@@ -88,7 +85,6 @@ ReactDOM.render(
               
         <Route  path="/" name="Home" component={Full} /> 
         
-
                 
       </Switch>
     </HashRouter>

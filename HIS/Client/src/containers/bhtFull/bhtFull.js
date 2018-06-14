@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { Container } from "reactstrap";
 import Header from "../../components/Header/";
-import Sidebar from "../../components/Sidebar/";
+import Sidebar from "../../components/bhtSidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
 import Aside from "../../components/Aside/";
 import Footer from "../../components/Footer/";
@@ -51,19 +51,14 @@ import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
 
-<<<<<<< Updated upstream:HIS/Client/src/containers/Full/bhtFull.js
-import wardAdmission from "../../views/wardAdmission";
-import searchByBHT from "../../views/searchByBHT";
-=======
 import Prescribe from "../../views/prescribe";
 
 import viewAllergies from "./../../views/Allergies/view";
 import createAllergies from "./../../views/Allergies/create";
 import updateAllergies from "./../../views/Allergies/updateAllergy";
->>>>>>> Stashed changes:HIS/Client/src/containers/bhtFull/bhtFull.js
 
 
-class Full extends Component {
+class bhtFull extends Component {
   render() {
     return (
       <div className="app">
@@ -75,15 +70,15 @@ class Full extends Component {
             <Container fluid>
               <Switch>
                 <Route
-                  path="/dashboard"
+                  path="/dashboardlol"
                   name="Dashboard"
                   component={Dashboard}
                 />
 
                 <Route 
-                  path="/ward/admission" 
-                  name="wardAdmission" 
-                  component={wardAdmission} />
+                  path="/bht/prescriptions" 
+                  name="Prescription" 
+                  component={Prescribe} />
 
                 <Route 
                   path="/bht/allergies/view" 
@@ -211,7 +206,7 @@ class Full extends Component {
                 <Route path="/widgets" name="Widgets" component={Widgets} />
                 <Route path="/charts" name="Charts" component={Charts} />
                 <Route path="/sample" name="Sample" component={Sample} />
-                <Redirect from="/" to="/dashboard" />
+                <Redirect from="/" to="/bht" />
               </Switch>
             </Container>
           </main>
@@ -223,4 +218,4 @@ class Full extends Component {
   }
 }
 
-export default Full;
+export default bhtFull;

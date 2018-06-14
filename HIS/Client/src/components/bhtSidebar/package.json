@@ -1,0 +1,6 @@
+{
+  "name": "bhtSidebar",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./bhtSidebar.js"
+}
