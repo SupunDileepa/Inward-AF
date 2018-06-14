@@ -2,19 +2,12 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { Container } from "reactstrap";
 import Header from "../../components/Header/";
-import Sidebar from "../../components/Sidebar/";
+import Sidebar from "../../components/bhtSidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
 import Aside from "../../components/Aside/";
 import Footer from "../../components/Footer/";
 
 import Dashboard from "../../views/Dashboard/";
-
-import Colors from "../../views/Theme/Colors/";
-
-
-
-
-import Typography from "../../views/Theme/Typography/";
 
 import Charts from "../../views/Charts/";
 
@@ -58,11 +51,14 @@ import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
 
-import wardAdmission from "../../views/wardAdmission";
-import searchByBHT from "../../views/searchByBHT";
+import Prescribe from "../../views/prescribe";
+
+import viewAllergies from "./../../views/Allergies/view";
+import createAllergies from "./../../views/Allergies/create";
+import updateAllergies from "./../../views/Allergies/updateAllergy";
 
 
-class Full extends Component {
+class bhtFull extends Component {
   render() {
     return (
       <div className="app">
@@ -74,22 +70,32 @@ class Full extends Component {
             <Container fluid>
               <Switch>
                 <Route
-                  path="/dashboard"
+                  path="/dashboardlol"
                   name="Dashboard"
                   component={Dashboard}
                 />
 
                 <Route 
-                  path="/ward/admission" 
-                  name="wardAdmission" 
-                  component={wardAdmission} />
+                  path="/bht/prescriptions" 
+                  name="Prescription" 
+                  component={Prescribe} />
 
                 <Route 
-                  path="/search" 
-                  name="search" 
-                  component={searchByBHT}/>
+                  path="/bht/allergies/view" 
+                  name="viewAllergies" 
+                  component={viewAllergies}/>
 
-                <Route path="/base/cards" name="Cards" component={Cards} />
+                <Route 
+                path="/bht/allergies/create" 
+                name="createAllergies" 
+                component={createAllergies} />
+
+                 <Route 
+                path="/bht/allergies/update/:pid/:bht/:aid" 
+                name="updateAllergies" 
+                component={updateAllergies} />
+
+
                 <Route path="/base/forms" name="Forms" component={Forms} />
                 <Route path="/base/switches" name="Swithces" component={Switches}/>
 
@@ -200,7 +206,7 @@ class Full extends Component {
                 <Route path="/widgets" name="Widgets" component={Widgets} />
                 <Route path="/charts" name="Charts" component={Charts} />
                 <Route path="/sample" name="Sample" component={Sample} />
-                <Redirect from="/" to="/dashboard" />
+                <Redirect from="/" to="/bht" />
               </Switch>
             </Container>
           </main>
@@ -212,4 +218,4 @@ class Full extends Component {
   }
 }
 
-export default Full;
+export default bhtFull;

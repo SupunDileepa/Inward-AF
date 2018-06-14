@@ -1,8 +1,9 @@
+
 export default {
   items: [
     {
-      name: "Patient BHT Options",
-      url: "/ward/admission",
+      name: "Dashboard",
+      url: "/dashboard",
       icon: "icon-speedometer",
       badge: {
         variant: "info"
@@ -19,130 +20,63 @@ export default {
       class: "" // optional class names space delimited list for title item ex: "text-center"
     },
     {
-      name: "Patient Profile",
+      name: "Ward Admission",
       url: "/ward/admission",
       icon: "icon-drop"
     },
     {
-      name: "Prescription",
+      name: "New Admission",
       url: "/theme/colors",
       icon: "icon-drop"
     },
-
-
     {
-      name: "Laboratory Test",
-      icon: "icon-drop",
-
-            children: [
-        {
-          name: "View Test Results",
-          url: "/viewtests",
-          
-        },
-        {
-          name: "New Test Request",
-          url: "/newtests",
-          
-        },
-     
-      ]
-
-    },
-
-
-
-    {
-      name: "Patient Allergies",
-      url: "/patien Allergies",
-      icon: "icon-drop",
-
-      children: [
-        {
-          name: "View Allergies",
-          url: "/viewtests",
-          
-        },
-        {
-          name: "Add New Allergy",
-          url: "/newtests",
-          
-        },
-     
-      ]
-
-    },
-
-
-
-    {
-      name: "Charts",
-      url: "/theme/colors",
-      icon: "icon-drop",
-
-      children: [
-        {
-          name: "Fever Chart",
-          url: "/viewtests",
-          
-        },
-        {
-          name: "Diabetic Chart",
-          url: "/newtests",
-          
-        },
-
-          {
-          name: "Liquid Balance Chart",
-          url: "/newtests",
-          
-        },
-     
-      ]
-
-    },
-
-
-
-    {
-      name: "Patient Transfer",
-      url: "/theme/colors",
-      icon: "icon-drop",
-
-     children: [
-        {
-          name: "Internal Transfer",
-          url: "/viewtests",
-          
-        },
-        {
-          name: "External Transfer",
-          url: "/newtests",
-          
-        },
-     
-      ]
-
-    },
-    {
-      name: "Discharge Patient",
+      name: "Transfer Admission",
       url: "/theme/colors",
       icon: "icon-drop"
     },
-
     {
-      name: "Patient Diets",
+      name: "Search Patient By BHT",
+      url: "/search",
+      icon: "icon-drop"
+    },
+    {
+      name: "Bed Management",
+      url: "/theme/colors",
+      icon: "icon-drop"
+    },
+    {
+      name: "My Wards",
+      url: "/theme/colors",
+      icon: "icon-drop"
+    },
+    {
+      name: "Patient Archive Details",
+      url: "/theme/colors",
+      icon: "icon-drop"
+    },
+    {
+      title: true,
+      name: "Components",
+      wrapper: {
+        element: "",
+        attributes: {}
+      }
+    },
+    
+    {
+      name: "Pages",
+      url: "/pages",
       icon: "icon-star",
       children: [
         {
-          name: "Patient Diets",
+          name: "Login",
           url: "/login",
-
+          icon: "icon-star"
         },
         {
-          name: "View Patient Diets",
+          name: "Register",
           url: "/register",
-
+          icon: "icon-star"
         },
      
       ]
