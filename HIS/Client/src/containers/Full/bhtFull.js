@@ -9,13 +9,6 @@ import Footer from "../../components/Footer/";
 
 import Dashboard from "../../views/Dashboard/";
 
-import Colors from "../../views/Theme/Colors/";
-
-
-
-
-import Typography from "../../views/Theme/Typography/";
-
 import Charts from "../../views/Charts/";
 
 import Sample from "../../views/Sample/";
@@ -58,8 +51,16 @@ import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
 
+<<<<<<< Updated upstream:HIS/Client/src/containers/Full/bhtFull.js
 import wardAdmission from "../../views/wardAdmission";
 import searchByBHT from "../../views/searchByBHT";
+=======
+import Prescribe from "../../views/prescribe";
+
+import viewAllergies from "./../../views/Allergies/view";
+import createAllergies from "./../../views/Allergies/create";
+import updateAllergies from "./../../views/Allergies/updateAllergy";
+>>>>>>> Stashed changes:HIS/Client/src/containers/bhtFull/bhtFull.js
 
 
 class Full extends Component {
@@ -85,11 +86,21 @@ class Full extends Component {
                   component={wardAdmission} />
 
                 <Route 
-                  path="/search" 
-                  name="search" 
-                  component={searchByBHT}/>
+                  path="/bht/allergies/view" 
+                  name="viewAllergies" 
+                  component={viewAllergies}/>
 
-                <Route path="/base/cards" name="Cards" component={Cards} />
+                <Route 
+                path="/bht/allergies/create" 
+                name="createAllergies" 
+                component={createAllergies} />
+
+                 <Route 
+                path="/bht/allergies/update/:pid/:bht/:aid" 
+                name="updateAllergies" 
+                component={updateAllergies} />
+
+
                 <Route path="/base/forms" name="Forms" component={Forms} />
                 <Route path="/base/switches" name="Swithces" component={Switches}/>
 

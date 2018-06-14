@@ -37,8 +37,16 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 import { Provider } from "react-redux";
 import store from "./store";
 
+<<<<<<< Updated upstream
 //check for token
+=======
 
+import Prescribe from "./views/prescribe";
+>>>>>>> Stashed changes
+
+import viewAllergies from "./views/Allergies/view";
+
+//check for token
 if (localStorage.jwtToken) {
   //set auth token header auth
   setAuthToken(localStorage.jwtToken);
@@ -73,9 +81,20 @@ ReactDOM.render(
         <Route exact path="/500" name="Page 500" component={Page500} /> */}
         <Route exact path="/" name="Landing" component={Landing} />
         <Route exact path="/login" name="Login" component={Login} />
+<<<<<<< Updated upstream
         <Route exact path="/register" name="Register" component={Register} />        
         <Route path="/" name="Home" component={Full} /> 
         <Route exact path="/bht" name="bedhead" component={bhtFull} /> 
+=======
+        <Route exact path="/register" name="Register" component={Register} />
+
+        <Route  path="/bht" name="bhtFull" component={bhtFull} />
+        <Route exact path="/bht/prescriptions" name="prescription" component={Prescribe} />  
+        <Route exact path="/bht/allergies/view" name="viewAllergies" component={viewAllergies} />
+              
+        <Route  path="/" name="Home" component={Full} /> 
+        
+>>>>>>> Stashed changes
                 
       </Switch>
     </HashRouter>
