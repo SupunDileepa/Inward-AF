@@ -44,8 +44,6 @@ import PrescribeDrug from "./views/prescribeDrug";
 
 
 
-import Prescribe from "./views/prescribe";
-
 import viewAllergies from "./views/Allergies/view";
 
 //check for token
