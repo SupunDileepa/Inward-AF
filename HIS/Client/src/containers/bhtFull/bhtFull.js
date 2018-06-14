@@ -60,6 +60,7 @@ import Modals from "../../views/Notifications/Modals/";
 
 import Prescribe from "../../views/prescribe";
 import searchByBHT from "../../views/searchByBHT";
+import PrescribeDrug from "../../views/prescribeDrug";
 
 
 class bhtFull extends Component {
@@ -83,6 +84,11 @@ class bhtFull extends Component {
                   path="/bht/prescriptions" 
                   name="Prescription" 
                   component={Prescribe} />
+
+                  <Route 
+                  path="/bht/prescribedrugs" 
+                  name="Prescription" 
+                  component={PrescribeDrug }/>
 
                 <Route 
                   path="/search" 
