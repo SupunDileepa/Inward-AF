@@ -18,7 +18,7 @@ class PrescribeDrug extends Component {
 
 
 const newDrug={
-      PId:"1",
+      pId:"1",
       bht:"123",
 			drugName:this.refs.name.value,
 			dose:this.refs.dosage.value,

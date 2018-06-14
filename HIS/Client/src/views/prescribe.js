@@ -44,7 +44,7 @@ class Prescribe extends Component {
         this.setState({expand:true,name:"Minimize Drug Chart"});
 
      
-         
+         this.setState({ state: this.state });
 
   	}
  	
@@ -65,8 +65,9 @@ class Prescribe extends Component {
 
     if(this.state.expand){
 
-  	var prescriptionItems =this.state.prescriptions.map((prescription,i)=>{
-  					console.log("lol")
+
+  	var prescriptionItems1 =this.state.prescriptions.map((prescription,i)=>{
+  					
   		return(
 					<PrescribeItemExpand key={i} item={prescription}/>
   	 		)
@@ -74,7 +75,9 @@ class Prescribe extends Component {
   	 })
     //this.setState(this.state);
 
+
 }
+    if(!this.state.expand){
 
       var prescriptionItems =this.state.prescriptions.map((prescription,i)=>{
             
@@ -83,6 +86,8 @@ class Prescribe extends Component {
         )
               
      })
+
+    }
 
      // this.setState({item:prescriptionItems});
 
@@ -125,7 +130,9 @@ class Prescribe extends Component {
                  <br/>
                  <br/>
 
+                    {prescriptionItems1}
                     {prescriptionItems}
+
 
                  </div>
   				

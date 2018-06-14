@@ -28,7 +28,9 @@ constructor(props){
                         <thead>
                         <th>Drug</th>
                         <th>Dosage</th>
-                        <th>Frequency</th>               
+                        <th>Frequency</th>
+                        <th>Prescriber</th>
+                        <th>Duration</th>               
                         </thead>
                         <tbody>
 
@@ -38,6 +40,8 @@ constructor(props){
                                     <td>{this.state.item.drugName}</td>
                                     <td>{this.state.item.dose}</td>
                                     <td>{this.state.item.frequency}</td>
+                                    <td>{this.state.item.prescriber}</td>
+                                    <td>{this.state.item.duration}</td>
 
                                 </tr>
 
@@ -45,7 +49,9 @@ constructor(props){
 
                         </tbody>
                     </table> 
-
+                    <br/>
+                    <br/>
+                    <br/>
                           
 
            
