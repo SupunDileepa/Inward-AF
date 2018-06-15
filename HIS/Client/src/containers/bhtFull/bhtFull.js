@@ -66,8 +66,12 @@ import ViewReport from "../../views/viewReport";
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/";
 
+
+import Export from "../../views/download";
+
 import PatientChart from "../../components/Charts/";
 import PatientProfile from "../../components/PatientProfile/";
+
 
 
 
@@ -168,6 +172,12 @@ class bhtFull extends Component {
                   path="/bht/viewreport" 
                   name="viewreport" 
                   component={ViewReport}/>
+
+                    <Route
+                  path="/bht/printreports"
+                  name="printreports"
+                  component={Export}
+                />
 
                   
 

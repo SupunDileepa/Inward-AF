@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import LabItem from "./labItems";
 import DetailBar from "./details";
 
+
 class Viewtest extends Component {
   constructor() {
     super();
@@ -81,7 +82,10 @@ class Viewtest extends Component {
 
                          </tbody>
                     </table> 
-                    
+
+                 <br/>
+                 <br/>
+                 <br/>
 
 
                  </div>
