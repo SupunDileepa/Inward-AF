@@ -1,0 +1,6 @@
+{
+  "name": "NewAddmission",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./NewAddmission.js"
+}

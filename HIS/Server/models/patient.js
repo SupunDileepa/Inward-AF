@@ -1,8 +1,13 @@
 const mongoose = require("mongoose");
 autoIncrement = require("mongoose-auto-increment");
+
+
+
 autoIncrement.initialize(mongoose.connection);
 
-const patientSchema = new mongoose.Schema({
+const PatientSchema = mongoose.Schema({
+
+
   pId: {
     type: Number,
     required: true
@@ -17,18 +22,53 @@ const patientSchema = new mongoose.Schema({
   },
   wardNo: {
     type: Number,
-    required: true,
+
+
+    required: true
   },
   bedNo: {
     type: Number,
-    required: true,
+    required: true
   },
-  admittedDate: {
+  addmittedDate: {
     type: Date,
     default: Date.now()
+  },
+  dailyNo: {
+    type: Number,
+    required: true
+  },
+  monthlyNo: {
+    type: Number,
+    required: true
+  },
+  yearlyNo: {
+    type: Number,
+    required: true
+  },
+  patientComplain: {
+    type: String,
+    required: true
+  },
+  patientPreviousHistory: {
+    type: String,
+    required: true
+  },
+  gender: {
+    type: String
+  },
+  dob: {
+    type: String
+  },
+  doctor: {
+    docName: {
+      type: String,
+      required: true
+    }
   }
 });
+PatientSchema.plugin(autoIncrement.plugin, { model: "Patient", field: "pId" });
 
-patientSchema.plugin(autoIncrement.plugin, {model: "Patient", field: "pId"});
+module.exports = mongoose.model("Patient", PatientSchema);
 
-module.exports = mongoose.model("patient", patientSchema);
+

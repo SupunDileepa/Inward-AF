@@ -84,11 +84,12 @@ class Header extends Component {
         </NavbarToggler>
         <NavbarBrand href="/#/dashboard" />
 
+        <div className="m-auto">
+          <h3>Welcome To Health Information Systems</h3>
+        </div>
+
         {isAuthenticated ? authLinks : guestLinks}
 
-        <NavbarToggler className="d-md-down-none" onClick={this.asideToggle}>
-          <span className="navbar-toggler-icon" />
-        </NavbarToggler>
       </header>
     );
   }

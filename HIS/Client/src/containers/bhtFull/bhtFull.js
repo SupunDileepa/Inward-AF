@@ -2,20 +2,16 @@ import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { Container } from "reactstrap";
 import Header from "../../components/Header/";
-import Sidebar from "../../components/Sidebar/";
+import Sidebar from "../../components/bhtSidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
-
 // import Aside from "../../components/Aside/";
 import Footer from "../../components/Footer/";
 
-import TableView from "../../components/PatientList/TableView/";
-import NewAddmission from "../../components/NewAddmission/";
-import ViewAddmission from "../../components/ViewAddmission/";
-
 import Dashboard from "../../views/Dashboard/";
-import Charts from "../../views/Charts/";
-import Sample from "../../views/Sample/";
 
+import Charts from "../../views/Charts/";
+
+import Sample from "../../views/Sample/";
 
 import Widgets from "../../views/Widgets/";
 
@@ -54,12 +50,17 @@ import Alerts from "../../views/Notifications/Alerts/";
 import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
+import Prescribe from "../../views/prescribe";
 
-import wardAdmission from "../../views/wardAdmission";
+import viewAllergies from "./../../views/Allergies/view";
+import createAllergies from "./../../views/Allergies/create";
+import updateAllergies from "./../../views/Allergies/updateAllergy";
+
 import searchByBHT from "../../views/searchByBHT";
+import PrescribeDrug from "../../views/prescribeDrug";
+import Viewtest from "../../views/viewTest";
 
-
-class Full extends Component {
+class bhtFull extends Component {
   render() {
     return (
       <div className="app">
@@ -71,21 +72,49 @@ class Full extends Component {
             <Container fluid>
               <Switch>
                 <Route
-                  path="/dashboard"
+                  path="/dashboardlol"
                   name="Dashboard"
                   component={Dashboard}
                 />
 
-
                 <Route
-                  path="/ward/admission"
-                  name="wardAdmission"
-                  component={wardAdmission}
+                  path="/bht/prescriptions"
+                  name="Prescription"
+                  component={Prescribe}
                 />
 
-                <Route path="/search" name="search" component={searchByBHT} />
+                <Route
+                  path="/bht/allergies/view"
+                  name="viewAllergies"
+                  component={viewAllergies}
+                />
+
+                <Route
+                  path="/bht/allergies/create"
+                  name="createAllergies"
+                  component={createAllergies}
+                />
+
+                <Route
+                  path="/bht/allergies/update/:pid/:bht/:aid/:name/:remark/:category/:severity/:status"
+                  name="updateAllergies"
+                  component={updateAllergies}
+                />
+
+                <Route
+                  path="/bht/prescribedrugs"
+                  name="Prescription"
+                  component={PrescribeDrug}
+                />
+
+                <Route
+                  path="/bht/viewtests"
+                  name="viewtests"
+                  component={Viewtest}
+                />
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
+
                 <Route path="/base/forms" name="Forms" component={Forms} />
                 <Route
                   path="/base/switches"
@@ -200,30 +229,11 @@ class Full extends Component {
                 <Route path="/widgets" name="Widgets" component={Widgets} />
                 <Route path="/charts" name="Charts" component={Charts} />
                 <Route path="/sample" name="Sample" component={Sample} />
-
-
-                <Route
-                  path="/patientList/patientView"
-                  name="New Addmission"
-                  component={TableView}
-                />
-                <Route
-                  path="/newAddmission"
-                  name="PatientList"
-                  component={NewAddmission}
-                />
-                <Route
-                  path="/viewAddmission"
-                  name="View Addmission"
-                  component={ViewAddmission}
-                />
-
-                <Redirect from="/" to="/dashboard" />
+                <Redirect from="/" to="/bht" />
               </Switch>
             </Container>
           </main>
           {/* <Aside /> */}
-
         </div>
         <Footer />
       </div>
@@ -231,4 +241,4 @@ class Full extends Component {
   }
 }
 
-export default Full;
+export default bhtFull;

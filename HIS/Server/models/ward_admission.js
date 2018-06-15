@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
 const mongooseUniqueValidator = require("mongoose-unique-validator");
+
 const bcrypt = require("bcryptjs");
 
 const UserSchema = new mongoose.Schema({
@@ -26,7 +27,7 @@ const UserSchema = new mongoose.Schema({
     outcomes: String,
     dischargediagnosis: String,
     referredto: String  
-  
+
 });
 
 UserSchema.plugin(mongooseUniqueValidator);

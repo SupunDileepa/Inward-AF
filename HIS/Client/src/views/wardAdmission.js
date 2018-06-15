@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 
+import { Link } from "react-router-dom";
 
 class WardAdmission extends Component {
 
-  gotoBhtFull(){
-    window.open('/#/bht' + '20181','_blank');
-  }
+
+
 
   render() {
     return (
@@ -21,7 +21,9 @@ class WardAdmission extends Component {
                 <td>20181</td>
                 <td>1</td>
                 <td>Maria Anders</td>
-                <td><button onClick={this.gotoBhtFull.bind(this)}>view BHT</button></td>
+
+                <td> <Link to="/bht" className="btn btn-lg btn-primary"> View BHT </Link></td>
+
             </tr>
             <tr>
                 <td>20182</td>

@@ -18,6 +18,11 @@ import "../scss/core/_dropdown-menu-right.scss";
 // Containers
 import Full from "./containers/Full/";
 
+
+import bhtFull from "./containers/bhtFull";
+
+
+
 //components
 import Login from "./components/Auth/Login";
 import Register from "./components/Auth/Register";
@@ -35,6 +40,18 @@ import { setCurrentUser, logoutUser } from "./actions/authActions";
 
 import { Provider } from "react-redux";
 import store from "./store";
+
+
+
+
+
+import Prescribe from "./views/prescribe";
+import PrescribeDrug from "./views/prescribeDrug";
+
+
+
+import viewAllergies from "./views/Allergies/view";
+
 
 //check for token
 
@@ -73,7 +90,21 @@ ReactDOM.render(
         <Route exact path="/" name="Landing" component={Landing} />
         <Route exact path="/login" name="Login" component={Login} />
         <Route exact path="/register" name="Register" component={Register} />
-        <Route path="/" name="Home" component={Full} />
+
+
+
+
+        <Route  path="/bht" name="bhtFull" component={bhtFull} />
+        <Route exact path="/bht/prescriptions" name="prescription" component={Prescribe} />  
+        <Route exact path="/bht/allergies/view" name="viewAllergies" component={viewAllergies} />              
+
+
+        <Route exact path="/bht/lol" name="prescribeDrug" component={PrescribeDrug} />  
+ 
+        <Route  path="/" name="Home" component={Full} /> 
+        
+                
+
       </Switch>
     </HashRouter>
   </Provider>,

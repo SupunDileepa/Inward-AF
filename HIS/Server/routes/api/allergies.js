@@ -22,7 +22,8 @@ router.post("/allergies", (req, res, next) => {
     });
   });
 
-// get allergies of a bht and a pid
+
+// get allergies given pid and bht
 router.get("/allergies/:pid/:bht", (req, res, next) => {
     var query = {
       "pid" : req.params.pid,
