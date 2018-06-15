@@ -60,6 +60,24 @@ class View extends Component {
     
   }
  
+  componentDidMount(){
+    var nameUrl = this.props.match.params.name.replace(/_/g, " ");
+    var remarkUrl = this.props.match.params.remark.replace(/_/g, " ");
+    var categoryUrl = this.props.match.params.category.replace(/_/g, " ");
+    var severityUrl = this.props.match.params.severity.replace(/_/g, " ");
+    var statusUrl = this.props.match.params.status.replace(/_/g, " ");
+
+    this.refs.name.value = nameUrl;
+    this.refs.remark.value = remarkUrl;
+    document.getElementById("category").value = categoryUrl;
+    document.getElementById("severity").value = severityUrl;
+    if(statusUrl == "Current"){
+      document.getElementById("r1").checked = true;
+    }
+    else{
+      document.getElementById("r2").checked = true;
+    }
+  }
 
   render() {
     return (

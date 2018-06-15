@@ -10,7 +10,13 @@ class AllergyItem extends Component {
     }
 
     goToUpdate(){
-        var url = '/#/bht/allergies/update/' + this.state.item.pid + '/' + this.state.item.bht + '/' + this.state.item.aid;
+        var nameUrl = this.state.item.name.replace(/ /g, "_");
+        var remarkUrl = this.state.item.remark.replace(/ /g, "_");
+        var categoryUrl = this.state.item.category.replace(/ /g, "_");
+        var severityUrl = this.state.item.severity.replace(/ /g, "_");
+        var statusUrl = this.state.item.status.replace(/ /g, "_");
+
+        var url = '/#/bht/allergies/update/' + this.state.item.pid + '/' + this.state.item.bht + '/' + this.state.item.aid + '/' + nameUrl + '/' + remarkUrl + '/' + categoryUrl + '/' + severityUrl + '/' + statusUrl;
         window.open(url, '_self');       
     }
 

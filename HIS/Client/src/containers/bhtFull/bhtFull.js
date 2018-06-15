@@ -98,7 +98,7 @@ class bhtFull extends Component {
                 component={createAllergies} />
 
                  <Route 
-                path="/bht/allergies/update/:pid/:bht/:aid" 
+                path="/bht/allergies/update/:pid/:bht/:aid/:name/:remark/:category/:severity/:status" 
                 name="updateAllergies" 
                 component={updateAllergies} />
 
