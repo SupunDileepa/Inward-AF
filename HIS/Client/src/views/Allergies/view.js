@@ -7,13 +7,18 @@ class View extends Component {
   constructor(props){
       super(props);
       this.state = {
-        allergies : []
+        allergies : [],       
+        patient : JSON.parse(localStorage.getItem('patientDetails'))       
+        
       }
   }
 
   // get allergies of the given bht and pid
   getAllergies(){
-    fetch('http://localhost:5000/api/allergies/05/432')
+    var pid = this.state.patient.pid;
+    var bht = this.state.patient.bht;
+
+    fetch('http://localhost:5000/api/allergies/' + pid + '/' + bht)
     .then(response => response.json())
     .then(allergies=>this.setState({allergies}))      
   }
