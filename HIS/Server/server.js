@@ -11,7 +11,9 @@ const userRoutes = require("./routes/api/user");
 
 const externalTransfer = require("./routes/api/externalTransferroute");
 const internalTransfer = require("./routes/api/internalTransferroute");
-
+const diabeticsRouter =require("./routes/api/dibeticsChartroute");
+const fvrRouter = require("./routes/api/fvrChartroutes");
+const lbRouter = require("./routes/api/liquidBalanceChartroute");
 
 const patientRoutes = require("./routes/api/patient");
 
@@ -61,7 +63,9 @@ app.use("/api/users", userRoutes);
 
 app.use("/api/externalTransfer",externalTransfer);
 app.use("/api/internalTransfer",internalTransfer);
-
+app.use("/api/diabeticschart",diabeticsRouter);
+app.use("/api/feverchart",fvrRouter);
+app.use("/api/lbchart",lbRouter);
 
 app.use("/api/patients", patientRoutes);
 
