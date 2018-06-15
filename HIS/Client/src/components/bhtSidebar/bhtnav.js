@@ -1,8 +1,8 @@
 export default {
   items: [
     {
-      name: "Patient BHT Options",
-      url: "/ward/admission",
+      name: "Back To Ward",
+      url: "/patientList/patientView",
       icon: "icon-speedometer",
       badge: {
         variant: "info"
