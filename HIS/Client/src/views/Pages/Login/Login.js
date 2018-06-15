@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
@@ -48,12 +49,14 @@ class Login extends Component {
     };
     this.props.loginUser(userData);
   }
+
   render() {
     return (
       <div className="app flex-row align-items-center">
         <Container>
           <Row className="justify-content-center">
             <Col md="8">
+
               <form onSubmit={this.onSubmit}>
                 <CardGroup>
                   <Card className="p-4">
@@ -143,6 +146,7 @@ class Login extends Component {
                   </Card>
                 </CardGroup>
               </form>
+
             </Col>
           </Row>
         </Container>
@@ -150,6 +154,7 @@ class Login extends Component {
     );
   }
 }
+
 
 const mapStateToProps = state => ({
   auth: state.auth,
@@ -159,3 +164,4 @@ export default connect(
   mapStateToProps,
   { loginUser }
 )(Login);
+

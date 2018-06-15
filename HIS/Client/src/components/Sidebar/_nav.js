@@ -1,3 +1,4 @@
+
 export default {
   items: [
     {
@@ -19,6 +20,7 @@ export default {
       class: "" // optional class names space delimited list for title item ex: "text-center"
     },
     {
+
       name: "Ward Admision",
       url: "/patientList/patientView",
       icon: "icon-drop"
@@ -229,6 +231,7 @@ export default {
       title: true,
       name: "Extras"
     },
+
     {
       name: "Pages",
       url: "/pages",
@@ -244,16 +247,7 @@ export default {
           url: "/register",
           icon: "icon-star"
         },
-        {
-          name: "Error 404",
-          url: "/404",
-          icon: "icon-star"
-        },
-        {
-          name: "Error 500",
-          url: "/500",
-          icon: "icon-star"
-        }
+
       ]
     }
   ]

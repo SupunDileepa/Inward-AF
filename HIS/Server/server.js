@@ -7,7 +7,22 @@ const passport = require("passport");
 const config = require("./config/database");
 
 const userRoutes = require("./routes/api/user");
+
 const patientRoutes = require("./routes/api/patient");
+
+
+const patient = require("./routes/api/patient");
+
+
+
+
+const lab = require("./routes/api/lab");
+const prescription=require("./routes/api/prescription");
+
+const allergies = require("./routes/api/allergies");
+
+
+
 
 mongoose.connect(config.database);
 mongoose.connection.on("connected", () => {
@@ -37,7 +52,20 @@ app.get("/sample", (req, res) => {
 });
 
 app.use("/api/users", userRoutes);
+
 app.use("/api/patients", patientRoutes);
+
+
+app.use("/api/", patient);
+
+
+
+app.use("/api/",lab);
+app.use("/api/",prescription);
+
+app.use("/api/", allergies);
+
+
 // app.use("/api/order", orderRoutes);
 // app.use("/api/payment", paymentRoutes);
 
