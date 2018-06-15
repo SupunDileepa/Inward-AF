@@ -83,6 +83,7 @@ class Header extends Component {
           <span className="navbar-toggler-icon" />
         </NavbarToggler>
         <NavbarBrand href="/#/dashboard" />
+
         &nbsp;
         &nbsp;
         &nbsp;
@@ -124,6 +125,7 @@ class Header extends Component {
         &nbsp;
         <h3>Welcome To Health Information Systems</h3>
         {isAuthenticated ? authLinks : guestLinks}
+
 
       </header>
     );

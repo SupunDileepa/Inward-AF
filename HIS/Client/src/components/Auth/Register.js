@@ -50,7 +50,9 @@ class Register extends Component {
         {/* {user ? user.firstName : null} */}
         <div className="container">
           <div className="row">
-            <div className="col-md-8 m-auto">
+
+            <div className="col-md-4 m-auto">
+
               <h1 className="display-4 text-center">Sign Up</h1>
               {/* <p className="lead text-center">Create your account here</p> */}
               <form onSubmit={this.onSubmit}>
@@ -148,4 +150,6 @@ const mapStateToProps = state => ({
   errors: state.errors
 });
 
+
 export default connect(mapStateToProps, { registerUser })(withRouter(Register));
+
