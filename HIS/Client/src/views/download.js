@@ -26,23 +26,25 @@ export default class Export extends Component {
   }
 
   render() {
-    return (<div>
+    return (
+      <div>
       <div className="mb5">
         <button className="btn btn-primary" onClick={this.printDocument}>Get Report</button>
       </div>
-      {/* <div id="divToPrint" className="mt4" {...css({
-        backgroundColor: '#f5f5f5',
-        width: '210mm',
-        minHeight: '297mm',
-        marginLeft: 'auto',
-        marginRight: 'auto'
-      })}> */}
 
-             <h3>Click To Download Full Report Table</h3>
+       <div id="divToPrint" className="mt4" style={{   backgroundColor : '#f5f5f5',
+        width : '197mm',
+        minHeight : '297mm',
+        marginLeft :'auto',
+        marginRight :'auto'}}
+     
+      > 
+
+             
                       
               
         <div id="divToPrint" ><Viewtest/></div>
-      {/* </div> */}
+       </div> 
     </div>);
   }
 }
