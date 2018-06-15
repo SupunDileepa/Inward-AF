@@ -29,49 +29,37 @@ export default {
       icon: "icon-drop"
     },
 
-
     {
       name: "Laboratory Test",
       icon: "icon-drop",
 
-            children: [
+      children: [
         {
           name: "View Test Results",
-          url: "/bht/viewtests",
-
-          
+          url: "/bht/viewtests"
         },
         {
           name: "New Test Request",
-          url: "/bht/newtests",          
-        },
-     
+          url: "/bht/newtests"
+        }
       ]
-
     },
 
-
-
     {
-
       name: "Patient Allergies",
       icon: "icon-drop",
 
       children: [
         {
           name: "View Allergies",
-          url: "/bht/allergies/view",          
+          url: "/bht/allergies/view"
         },
         {
           name: "Add New Allergy",
-          url: "/bht/allergies/create",          
-        },
-     
+          url: "/bht/allergies/create"
+        }
       ]
-
     },
-
-
 
     {
       name: "Charts",
@@ -81,46 +69,35 @@ export default {
       children: [
         {
           name: "Fever Chart",
-          url: "/viewtests",
-          
+          url: "/viewtests"
         },
         {
           name: "Diabetic Chart",
-          url: "/newtests",
-          
+          url: "/newtests"
         },
 
-          {
+        {
           name: "Liquid Balance Chart",
-          url: "/newtests",
-          
-        },
-     
+          url: "/newtests"
+        }
       ]
-
     },
-
-
 
     {
       name: "Patient Transfer",
       url: "/theme/colors",
       icon: "icon-drop",
 
-     children: [
+      children: [
         {
           name: "Internal Transfer",
-          url: "/viewtests",
-          
+          url: "/bht/internalTransfer"
         },
         {
           name: "External Transfer",
-          url: "/newtests",
-          
-        },
-     
+          url: "/bht/externalTransfer"
+        }
       ]
-
     },
     {
       name: "Discharge Patient",
@@ -134,15 +111,12 @@ export default {
       children: [
         {
           name: "Patient Diets",
-          url: "/login",
-
+          url: "/login"
         },
         {
           name: "View Patient Diets",
-          url: "/register",
-
-        },
-     
+          url: "/register"
+        }
       ]
     }
   ]
