@@ -3,7 +3,7 @@ import jsPDF from 'jspdf';
 
 
 import React, {Component, PropTypes} from 'react';
-import Prescribe from './prescribe';
+import Viewtest from './viewTest';
 
 
 
@@ -18,7 +18,7 @@ export default class Export extends Component {
       .then((canvas) => {
         const imgData = canvas.toDataURL('image/png');
         const pdf = new jsPDF();
-        pdf.addImage(imgData, 'JPEG', -110, -110);
+        pdf.addImage(imgData, 'JPEG', 0, 0);
         // pdf.output('dataurlnewwindow');
         pdf.save("download.pdf");
       })
@@ -37,11 +37,11 @@ export default class Export extends Component {
         marginLeft: 'auto',
         marginRight: 'auto'
       })}> */}
-      
+
              <h3>Click To Download Full Report Table</h3>
                       
               
-        <div id="divToPrint" ><Prescribe/></div>
+        <div id="divToPrint" ><Viewtest/></div>
       {/* </div> */}
     </div>);
   }

@@ -44,6 +44,15 @@ export default {
           url: "/bht/addnewtests",
           
         },
+
+        {
+          name: "Create PDF",
+
+          url: "/bht/printreports",
+          
+        },
+
+
      
 
       ]

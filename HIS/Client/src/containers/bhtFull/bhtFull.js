@@ -66,6 +66,8 @@ import ViewReport from "../../views/viewReport";
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/";
 
+import Export from "../../views/download";
+
 class bhtFull extends Component {
   render() {
     return (
@@ -140,6 +142,12 @@ class bhtFull extends Component {
                   path="/bht/viewreport" 
                   name="viewreport" 
                   component={ViewReport}/>
+
+                    <Route
+                  path="/bht/printreports"
+                  name="printreports"
+                  component={Export}
+                />
 
                   
 
