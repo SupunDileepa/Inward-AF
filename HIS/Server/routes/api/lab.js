@@ -12,7 +12,8 @@ router.post("/labtests", (req, res, next) => {
     test_id:req.body.testId,
     tester:req.body.tester,
     testName:req.body.testName,
-    testResult:req.body.testResult
+    testResult:req.body.testResult,
+    image:req.body.image
   });
   labby.save((err, result) => {
     if (err) {

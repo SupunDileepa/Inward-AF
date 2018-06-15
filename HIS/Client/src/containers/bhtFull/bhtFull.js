@@ -59,10 +59,16 @@ import updateAllergies from "./../../views/Allergies/updateAllergy";
 import searchByBHT from "../../views/searchByBHT";
 import PrescribeDrug from "../../views/prescribeDrug";
 import Viewtest from "../../views/viewTest";
+import ImageUpload from "../../views/img";
+import AddNewReport from "../../views/addNewReports";
+import ViewReport from "../../views/viewReport";
 
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/";
 import PatientChart from "../../components/Charts/";
+import PatientProfile from "../../components/PatientProfile/";
+
+
 class bhtFull extends Component {
   render() {
     return (
@@ -78,6 +84,11 @@ class bhtFull extends Component {
                   path="/dashboardlol"
                   name="Dashboard"
                   component={Dashboard}
+                />
+                <Route
+                  path="/bht/profile"
+                  name="Profile"
+                  component={PatientProfile}
                 />
 
                 <Route
@@ -133,6 +144,18 @@ class bhtFull extends Component {
                   name="viewtests"
                   component={Viewtest}
                 />
+
+                  <Route 
+                  path="/bht/addnewtests" 
+                  name="addnewtests" 
+                  component={AddNewReport}/>
+
+                  <Route 
+                  path="/bht/viewreport" 
+                  name="viewreport" 
+                  component={ViewReport}/>
+
+                  
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
 
