@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import { Link } from "react-router-dom";
 import LabItem from "./labItems";
 import DetailBar from "./details";
-
+import Export from "./download";
 
 
 
@@ -86,7 +86,10 @@ class Viewtest extends Component {
 
                          </tbody>
                     </table> 
-                    
+
+                 <br/>
+                 <br/>
+                 <br/>
 
 
                  </div>

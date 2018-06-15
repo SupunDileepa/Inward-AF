@@ -1,0 +1,48 @@
+import html2canvas from 'html2canvas';
+import jsPDF from 'jspdf';
+
+
+import React, {Component, PropTypes} from 'react';
+import Prescribe from './prescribe';
+
+
+
+export default class Export extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  printDocument() {
+    const input = document.getElementById('divToPrint');
+    html2canvas(input)
+      .then((canvas) => {
+        const imgData = canvas.toDataURL('image/png');
+        const pdf = new jsPDF();
+        pdf.addImage(imgData, 'JPEG', -110, -110);
+        // pdf.output('dataurlnewwindow');
+        pdf.save("download.pdf");
+      })
+    ;
+  }
+
+  render() {
+    return (<div>
+      <div className="mb5">
+        <button className="btn btn-primary" onClick={this.printDocument}>Get Report</button>
+      </div>
+      {/* <div id="divToPrint" className="mt4" {...css({
+        backgroundColor: '#f5f5f5',
+        width: '210mm',
+        minHeight: '297mm',
+        marginLeft: 'auto',
+        marginRight: 'auto'
+      })}> */}
+      
+             <h3>Click To Download Full Report Table</h3>
+                      
+              
+        <div id="divToPrint" ><Prescribe/></div>
+      {/* </div> */}
+    </div>);
+  }
+}
