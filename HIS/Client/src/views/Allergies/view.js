@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import AllergyItem from "./allergyItem";
+import DetailBar from "./../details";
 
 class View extends Component {  
 
@@ -30,6 +31,8 @@ class View extends Component {
 
       return (
         <div className="animated fadeIn"> 
+            <DetailBar/>
+            <br/><br/>
             <table width="750">                  
                 <th>Name</th>
                 <th>Remark</th>

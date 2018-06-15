@@ -67,22 +67,22 @@ export default {
 
     {
       name: "Charts",
-      url: "/theme/colors",
+      url: "/bht/charts",
       icon: "icon-drop",
 
       children: [
         {
           name: "Fever Chart",
-          url: "/viewtests"
+          url: "/bht/charts"
         },
         {
           name: "Diabetic Chart",
-          url: "/newtests"
+          url: "/bht/charts"
         },
 
         {
           name: "Liquid Balance Chart",
-          url: "/newtests"
+          url: "/bht/charts"
         }
       ]
     },

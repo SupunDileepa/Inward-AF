@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import DetailBar from "./../../views/details";
 import {
   Row,
   Col,
@@ -74,6 +75,8 @@ class InternalTransferForms extends Component {
   render() {
     return (
       <div className="animated fadeIn">
+        <DetailBar/>
+        <br/><br/>
         <Row>
           <Col xs="12" sm="6">
             <Card>
