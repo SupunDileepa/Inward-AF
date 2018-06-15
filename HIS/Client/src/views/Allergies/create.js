@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import DetailBar from "./../details";
 
 class View extends Component {  
 
@@ -62,6 +63,8 @@ class View extends Component {
   render() {
     return (
       <div className="animated fadeIn"> 
+        <DetailBar/>
+        <br/><br/>
         <h3>Add New Allergy</h3><br/>
         <form>
           <input ref="name" type="text" placeholder="Allergy Name" required/><br/><br/>

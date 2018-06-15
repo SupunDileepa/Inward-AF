@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router';
+import DetailBar from "./details";
 
 class AddNewReport extends Component {
 
@@ -74,6 +75,8 @@ const newReport={
     return (
 
       <div className="labtest">
+      <DetailBar/>
+          <br/><br/>
       <h2>Enter New Lab Test Details Below To Add New Test Results</h2>
       <br/>
       <br/>
