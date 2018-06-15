@@ -1,8 +1,10 @@
 import React,{Component} from 'react';
 import { Link } from "react-router-dom";
+
 import PrescribeItem from "./prescribeItems";
 import PrescribeItemExpand from "./prescribeItemsExpand";
 import DetailBar from "./details";
+
 
 
 
@@ -12,14 +14,18 @@ class Prescribe extends Component {
   constructor(){
 
     super();
+
    // var it
+
     this.state={
 
     	user:JSON.parse(localStorage.getItem('session')),
       prescriptions:[],
+
       expand:false,
       name:"Expand Drug Chart"
       //item:it
+
     }
     console.log(this.state.name);
 
@@ -28,13 +34,16 @@ class Prescribe extends Component {
   componentWillMount(){
 
      // fetch(`/api/prescriptions/${this.state.user.pid}/${this.state.user.bht}`)
+
      fetch('http://localhost:5000/api/prescriptions/1/123')
+
         .then(res=>res.json())
          .then(prescriptions=> this.setState({prescriptions},()=> console.log(prescriptions)));
 
   }
 
  expandChart(){
+
 
            if(this.state.expand){
           this.setState({expand:false,name:"Expand Drug Chart"});
@@ -46,12 +55,14 @@ class Prescribe extends Component {
      
          this.setState({ state: this.state });
 
+
   	}
  	
   		
   	
 
   render(){
+
 
   	// const style={
 
@@ -103,22 +114,26 @@ class Prescribe extends Component {
               <div className="col-md-2">
 
                 <Link to="/bht/prescribedrugs" className="btn btn-lg btn-warning">
+
                   Prescribe Drugs
                 </Link>
 
               </div>
 
 
+
               <div className="col-md-2">
 
                 <button  onClick={this.expandChart.bind(this)} className="btn btn-lg btn-success" >
                  {this.state.name}
+
                </button>
 
               </div>
 
 
             </div>
+
 
                  <div className="panel panel-primary">
 
@@ -135,6 +150,7 @@ class Prescribe extends Component {
 
 
                  </div>
+
   				
 		
 
@@ -154,4 +170,6 @@ export default Prescribe;
 
 
 
+
  
+

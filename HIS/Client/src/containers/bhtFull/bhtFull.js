@@ -4,17 +4,10 @@ import { Container } from "reactstrap";
 import Header from "../../components/Header/";
 import Sidebar from "../../components/bhtSidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
-import Aside from "../../components/Aside/";
+// import Aside from "../../components/Aside/";
 import Footer from "../../components/Footer/";
 
 import Dashboard from "../../views/Dashboard/";
-
-import Colors from "../../views/Theme/Colors/";
-
-
-
-
-import Typography from "../../views/Theme/Typography/";
 
 import Charts from "../../views/Charts/";
 
@@ -57,8 +50,12 @@ import Alerts from "../../views/Notifications/Alerts/";
 import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
-
 import Prescribe from "../../views/prescribe";
+
+import viewAllergies from "./../../views/Allergies/view";
+import createAllergies from "./../../views/Allergies/create";
+import updateAllergies from "./../../views/Allergies/updateAllergy";
+
 import searchByBHT from "../../views/searchByBHT";
 import PrescribeDrug from "../../views/prescribeDrug";
 import Viewtest from "../../views/viewTest";
@@ -66,7 +63,8 @@ import ImageUpload from "../../views/img";
 import AddNewReport from "../../views/addNewReports";
 import ViewReport from "../../views/viewReport";
 
-
+import InternalTransfer from "../../components/InternalTransfer/";
+import ExternalTransfer from "../../components/ExternalTransfer/";
 
 class bhtFull extends Component {
   render() {
@@ -85,20 +83,53 @@ class bhtFull extends Component {
                   component={Dashboard}
                 />
 
-                <Route 
-                  path="/bht/prescriptions" 
-                  name="Prescription" 
-                  component={Prescribe} />
+                <Route
+                  path="/bht/internalTransfer"
+                  name="InternalTransfer"
+                  component={InternalTransfer}
+                />
 
-                  <Route 
-                  path="/bht/prescribedrugs" 
-                  name="Prescription" 
-                  component={PrescribeDrug }/>
+                <Route
+                  path="/bht/externalTransfer"
+                  name="ExternalTransfer"
+                  component={ExternalTransfer}
+                />
 
-                <Route 
-                  path="/bht/viewtests" 
-                  name="viewtests" 
-                  component={Viewtest}/>
+                <Route
+                  path="/bht/prescriptions"
+                  name="Prescription"
+                  component={Prescribe}
+                />
+
+                <Route
+                  path="/bht/allergies/view"
+                  name="viewAllergies"
+                  component={viewAllergies}
+                />
+
+                <Route
+                  path="/bht/allergies/create"
+                  name="createAllergies"
+                  component={createAllergies}
+                />
+
+                <Route
+                  path="/bht/allergies/update/:pid/:bht/:aid/:name/:remark/:category/:severity/:status"
+                  name="updateAllergies"
+                  component={updateAllergies}
+                />
+
+                <Route
+                  path="/bht/prescribedrugs"
+                  name="Prescription"
+                  component={PrescribeDrug}
+                />
+
+                <Route
+                  path="/bht/viewtests"
+                  name="viewtests"
+                  component={Viewtest}
+                />
 
                   <Route 
                   path="/bht/addnewtests" 
@@ -113,8 +144,13 @@ class bhtFull extends Component {
                   
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
+
                 <Route path="/base/forms" name="Forms" component={Forms} />
-                <Route path="/base/switches" name="Swithces" component={Switches}/>
+                <Route
+                  path="/base/switches"
+                  name="Swithces"
+                  component={Switches}
+                />
 
                 <Route path="/base/tables" name="Tables" component={Tables} />
                 <Route path="/base/tabs" name="Tabs" component={Tabs} />
@@ -227,7 +263,7 @@ class bhtFull extends Component {
               </Switch>
             </Container>
           </main>
-          <Aside />
+          {/* <Aside /> */}
         </div>
         <Footer />
       </div>

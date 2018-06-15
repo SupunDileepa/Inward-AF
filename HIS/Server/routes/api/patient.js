@@ -7,11 +7,15 @@ const passport = require("passport");
 require("../../config/passport")(passport);
 
 
+
+
 // allow response header to use content length on CORS
 router.use(function(req, res, next) { 
   res.header("Access-Control-Expose-Headers", "Content-Length");
   next();
 });
+
+
 
 // router.get("/", (req, res, next) => {
 //   Food.find((err, result) => {
@@ -26,7 +30,22 @@ router.post("/add", (req, res, next) => {
     name: req.body.name,
     wardNo: req.body.wardNo,
     bedNo: req.body.bedNo,
-    addmittedDate: req.body.addmittedDate
+
+
+    addmittedDate: req.body.addmittedDate,
+    doctor: {
+      docName: req.body.docName
+    },
+    //docName: req.body.doctor.docName,
+    yearlyNo: req.body.yearlyNo,
+    monthlyNo: req.body.monthlyNo,
+    dailyNo: req.body.dailyNo,
+    patientComplain: req.body.patientComplain,
+    patientPreviousHistory: req.body.patientPreviousHistory,
+    gender: req.body.gender,
+    dob: req.body.dob
+
+
   });
   Patients.save((err, result) => {
     if (err) {
@@ -38,11 +57,33 @@ router.post("/add", (req, res, next) => {
 
 
 
-router.get("/patients",(req, res, next) => {
+router.get(
+  "/all",
+  // passport.authenticate("jwt", { session: false }),
+  (req, res, next) => {
+    // var token = getToken(req.headers);
+    // if (token) {
+
+
     Patient.find(function(err, result) {
       if (err) return next(err);
       res.json({ obj: result });
     });
+
+//   }
+// );
+
+// router.get('/patients/:bhtid', (req, res, next) => {
+//     var query = {'bht' : req.params.bhtid};
+
+//     Patient.findOne(query, (err, result) => {
+//         if(err) return next(err);
+//         res.json({obj : result});
+//     });
+// });
+
+
+
   }
 );
 
@@ -56,6 +97,8 @@ router.get('/patients/:bhtid', (req, res, next) => {
         res.json(result);
     });    
 });
+
+
 
 getToken = function(headers) {
   if (headers && headers.authorization) {

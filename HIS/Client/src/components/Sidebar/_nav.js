@@ -1,4 +1,3 @@
-
 export default {
   items: [
     {
@@ -20,20 +19,19 @@ export default {
       class: "" // optional class names space delimited list for title item ex: "text-center"
     },
     {
-      name: "Ward Admission",
-      url: "/ward/admission",
+      name: "Ward Admision",
+      url: "/patientList/patientView",
       icon: "icon-drop"
     },
+    
+    
     {
-      name: "New Admission",
-      url: "/theme/colors",
+      name: "New Admision",
+      url: "/newAddmission",
       icon: "icon-drop"
     },
-    {
-      name: "Transfer Admission",
-      url: "/theme/colors",
-      icon: "icon-drop"
-    },
+     
+  
     {
       name: "Search Patient By BHT",
       url: "/search",
@@ -62,7 +60,8 @@ export default {
         attributes: {}
       }
     },
-    
+
+
     {
       name: "Pages",
       url: "/pages",
@@ -77,8 +76,8 @@ export default {
           name: "Register",
           url: "/register",
           icon: "icon-star"
-        },
-     
+
+        }
       ]
     }
   ]

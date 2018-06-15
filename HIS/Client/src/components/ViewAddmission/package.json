@@ -1,0 +1,6 @@
+{
+  "name": "ViewAddmission",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./ViewAddmission.js"
+}

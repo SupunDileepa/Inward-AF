@@ -4,21 +4,18 @@ import { Container } from "reactstrap";
 import Header from "../../components/Header/";
 import Sidebar from "../../components/Sidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
-import Aside from "../../components/Aside/";
+
+// import Aside from "../../components/Aside/";
 import Footer from "../../components/Footer/";
 
+import TableView from "../../components/PatientList/TableView/";
+import NewAddmission from "../../components/NewAddmission/";
+import ViewAddmission from "../../components/ViewAddmission/";
+
 import Dashboard from "../../views/Dashboard/";
-
-import Colors from "../../views/Theme/Colors/";
-
-
-
-
-import Typography from "../../views/Theme/Typography/";
-
 import Charts from "../../views/Charts/";
-
 import Sample from "../../views/Sample/";
+
 
 import Widgets from "../../views/Widgets/";
 
@@ -79,19 +76,22 @@ class Full extends Component {
                   component={Dashboard}
                 />
 
-                <Route 
-                  path="/ward/admission" 
-                  name="wardAdmission" 
-                  component={wardAdmission} />
 
-                <Route 
-                  path="/search" 
-                  name="search" 
-                  component={searchByBHT}/>
+                <Route
+                  path="/ward/admission"
+                  name="wardAdmission"
+                  component={wardAdmission}
+                />
+
+                <Route path="/search" name="search" component={searchByBHT} />
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
                 <Route path="/base/forms" name="Forms" component={Forms} />
-                <Route path="/base/switches" name="Swithces" component={Switches}/>
+                <Route
+                  path="/base/switches"
+                  name="Swithces"
+                  component={Switches}
+                />
 
                 <Route path="/base/tables" name="Tables" component={Tables} />
                 <Route path="/base/tabs" name="Tabs" component={Tabs} />
@@ -200,11 +200,30 @@ class Full extends Component {
                 <Route path="/widgets" name="Widgets" component={Widgets} />
                 <Route path="/charts" name="Charts" component={Charts} />
                 <Route path="/sample" name="Sample" component={Sample} />
+
+
+                <Route
+                  path="/patientList/patientView"
+                  name="New Addmission"
+                  component={TableView}
+                />
+                <Route
+                  path="/newAddmission"
+                  name="PatientList"
+                  component={NewAddmission}
+                />
+                <Route
+                  path="/viewAddmission"
+                  name="View Addmission"
+                  component={ViewAddmission}
+                />
+
                 <Redirect from="/" to="/dashboard" />
               </Switch>
             </Container>
           </main>
-          <Aside />
+          {/* <Aside /> */}
+
         </div>
         <Footer />
       </div>
