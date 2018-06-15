@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router';
+import DetailBar from "./details";
 
 class PrescribeDrug extends Component {
 
@@ -55,6 +56,8 @@ const newDrug={
     return (
 
       <div className="prescribe">
+      <DetailBar/>
+          <br/><br/>
       <h2>Enter Prescription Details Below To Prescribe A Drug</h2>
       <br/>
       <br/>
