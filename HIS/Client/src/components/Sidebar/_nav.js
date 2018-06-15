@@ -23,17 +23,15 @@ export default {
       url: "/patientList/patientView",
       icon: "icon-drop"
     },
+    
+    
     {
       name: "New Admision",
       url: "/newAddmission",
       icon: "icon-drop"
     },
-
-    {
-      name: "Transfer Admission",
-      url: "/theme/colors",
-      icon: "icon-drop"
-    },
+     
+  
     {
       name: "Search Patient By BHT",
       url: "/search",
@@ -63,6 +61,7 @@ export default {
       }
     },
 
+
     {
       name: "Pages",
       url: "/pages",
@@ -77,6 +76,7 @@ export default {
           name: "Register",
           url: "/register",
           icon: "icon-star"
+
         }
       ]
     }

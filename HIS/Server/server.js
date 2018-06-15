@@ -8,6 +8,11 @@ const config = require("./config/database");
 
 const userRoutes = require("./routes/api/user");
 
+
+const externalTransfer = require("./routes/api/externalTransferroute");
+const internalTransfer = require("./routes/api/internalTransferroute");
+
+
 const patientRoutes = require("./routes/api/patient");
 
 
@@ -16,12 +21,11 @@ const patient = require("./routes/api/patient");
 
 
 
+
 const lab = require("./routes/api/lab");
 const prescription=require("./routes/api/prescription");
 
 const allergies = require("./routes/api/allergies");
-
-
 
 
 mongoose.connect(config.database);
@@ -53,10 +57,17 @@ app.get("/sample", (req, res) => {
 
 app.use("/api/users", userRoutes);
 
+
+
+app.use("/api/externalTransfer",externalTransfer);
+app.use("/api/internalTransfer",internalTransfer);
+
+
 app.use("/api/patients", patientRoutes);
 
 
 app.use("/api/", patient);
+
 
 
 

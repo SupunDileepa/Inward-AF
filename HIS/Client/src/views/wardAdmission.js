@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
+
 import { Link } from "react-router-dom";
 
 class WardAdmission extends Component {
+
 
 
 
@@ -19,7 +21,9 @@ class WardAdmission extends Component {
                 <td>20181</td>
                 <td>1</td>
                 <td>Maria Anders</td>
+
                 <td> <Link to="/bht" className="btn btn-lg btn-primary"> View BHT </Link></td>
+
             </tr>
             <tr>
                 <td>20182</td>

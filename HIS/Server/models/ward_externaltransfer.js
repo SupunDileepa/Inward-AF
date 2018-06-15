@@ -2,8 +2,10 @@ const mongoose = require("mongoose");
 const mongooseUniqueValidator = require("mongoose-unique-validator");
 const bcrypt = require("bcryptjs");
 
-const UserSchema = new mongoose.Schema({
-    transfer_id: String,
+
+const ExternalTransferSchema = new mongoose.Schema({
+    transfer_id: Number,
+
     bht_no: String,
     transfer_from: String,
     transfer_to: String,
@@ -13,9 +15,12 @@ const UserSchema = new mongoose.Schema({
     report_of_spacial_examination: String,
     treatment_suggested: String,
     transfer_created_date_time: String,
+
+    remark: String,
     transfer_created_user: String
 });
 
-UserSchema.plugin(mongooseUniqueValidator);
+ExternalTransferSchema.plugin(mongooseUniqueValidator);
 
-module.exports = mongoose.model("ward_externaltransfer", UserSchema);
+module.exports = mongoose.model("ward_externaltransfer", ExternalTransferSchema);
+
