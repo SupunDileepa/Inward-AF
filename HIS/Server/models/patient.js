@@ -2,9 +2,11 @@ const mongoose = require("mongoose");
 autoIncrement = require("mongoose-auto-increment");
 
 
+
 autoIncrement.initialize(mongoose.connection);
 
 const PatientSchema = mongoose.Schema({
+
 
   pId: {
     type: Number,
@@ -20,6 +22,7 @@ const PatientSchema = mongoose.Schema({
   },
   wardNo: {
     type: Number,
+
 
     required: true
   },
@@ -67,4 +70,5 @@ const PatientSchema = mongoose.Schema({
 PatientSchema.plugin(autoIncrement.plugin, { model: "Patient", field: "pId" });
 
 module.exports = mongoose.model("Patient", PatientSchema);
+
 

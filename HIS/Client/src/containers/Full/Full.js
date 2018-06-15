@@ -4,9 +4,9 @@ import { Container } from "reactstrap";
 import Header from "../../components/Header/";
 import Sidebar from "../../components/Sidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
-import Aside from "../../components/Aside/";
-import Footer from "../../components/Footer/";
 
+// import Aside from "../../components/Aside/";
+import Footer from "../../components/Footer/";
 
 import TableView from "../../components/PatientList/TableView/";
 import NewAddmission from "../../components/NewAddmission/";
@@ -15,6 +15,7 @@ import ViewAddmission from "../../components/ViewAddmission/";
 import Dashboard from "../../views/Dashboard/";
 import Charts from "../../views/Charts/";
 import Sample from "../../views/Sample/";
+
 
 import Widgets from "../../views/Widgets/";
 
@@ -54,7 +55,6 @@ import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
 
-
 import wardAdmission from "../../views/wardAdmission";
 import searchByBHT from "../../views/searchByBHT";
 
@@ -77,20 +77,21 @@ class Full extends Component {
                 />
 
 
-                <Route 
-                  path="/ward/admission" 
-                  name="wardAdmission" 
-                  component={wardAdmission} />
+                <Route
+                  path="/ward/admission"
+                  name="wardAdmission"
+                  component={wardAdmission}
+                />
 
-                <Route 
-                  path="/search" 
-                  name="search" 
-                  component={searchByBHT}/>
+                <Route path="/search" name="search" component={searchByBHT} />
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
                 <Route path="/base/forms" name="Forms" component={Forms} />
-                <Route path="/base/switches" name="Swithces" component={Switches}/>
-
+                <Route
+                  path="/base/switches"
+                  name="Swithces"
+                  component={Switches}
+                />
 
                 <Route path="/base/tables" name="Tables" component={Tables} />
                 <Route path="/base/tabs" name="Tabs" component={Tabs} />
@@ -200,6 +201,7 @@ class Full extends Component {
                 <Route path="/charts" name="Charts" component={Charts} />
                 <Route path="/sample" name="Sample" component={Sample} />
 
+
                 <Route
                   path="/patientList/patientView"
                   name="New Addmission"
@@ -220,7 +222,8 @@ class Full extends Component {
               </Switch>
             </Container>
           </main>
-          <Aside />
+          {/* <Aside /> */}
+
         </div>
         <Footer />
       </div>
