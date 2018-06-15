@@ -4,9 +4,8 @@ import { Container } from "reactstrap";
 import Header from "../../components/Header/";
 import Sidebar from "../../components/Sidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
-import Aside from "../../components/Aside/";
+// import Aside from "../../components/Aside/";
 import Footer from "../../components/Footer/";
-
 
 import TableView from "../../components/PatientList/TableView/";
 import NewAddmission from "../../components/NewAddmission/";
@@ -53,11 +52,8 @@ import Alerts from "../../views/Notifications/Alerts/";
 import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
-
-
 import wardAdmission from "../../views/wardAdmission";
 import searchByBHT from "../../views/searchByBHT";
-
 
 class Full extends Component {
   render() {
@@ -76,21 +72,21 @@ class Full extends Component {
                   component={Dashboard}
                 />
 
+                <Route
+                  path="/ward/admission"
+                  name="wardAdmission"
+                  component={wardAdmission}
+                />
 
-                <Route 
-                  path="/ward/admission" 
-                  name="wardAdmission" 
-                  component={wardAdmission} />
-
-                <Route 
-                  path="/search" 
-                  name="search" 
-                  component={searchByBHT}/>
+                <Route path="/search" name="search" component={searchByBHT} />
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
                 <Route path="/base/forms" name="Forms" component={Forms} />
-                <Route path="/base/switches" name="Swithces" component={Switches}/>
-
+                <Route
+                  path="/base/switches"
+                  name="Swithces"
+                  component={Switches}
+                />
 
                 <Route path="/base/tables" name="Tables" component={Tables} />
                 <Route path="/base/tabs" name="Tabs" component={Tabs} />
@@ -220,7 +216,7 @@ class Full extends Component {
               </Switch>
             </Container>
           </main>
-          <Aside />
+          {/* <Aside /> */}
         </div>
         <Footer />
       </div>

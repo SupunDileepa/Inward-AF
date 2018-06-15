@@ -83,50 +83,11 @@ class Header extends Component {
           <span className="navbar-toggler-icon" />
         </NavbarToggler>
         <NavbarBrand href="/#/dashboard" />
+        <div className="m-auto">
+          <h3>Welcome To Health Information Systems</h3>
+        </div>
 
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        &nbsp;
-        <h3>Welcome To Health Information Systems</h3>
         {isAuthenticated ? authLinks : guestLinks}
-
-
       </header>
     );
   }
