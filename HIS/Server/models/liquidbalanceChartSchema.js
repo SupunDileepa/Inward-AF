@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 const liquidBalanceChartSchema = new mongoose.Schema({
-    // id:{
-    //     type:String,
-    //     required:true
-    // },
+    patient_id:{
+        type:String,
+        required:true
+    },
     bht_no:{
         type:String,
         required:true

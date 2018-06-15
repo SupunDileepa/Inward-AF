@@ -1,19 +1,13 @@
-import React,{Component} from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LabItem from "./labItems";
 import DetailBar from "./details";
-import Export from "./download";
-
 
 
 class Viewtest extends Component {
-
-
-  constructor(){
-
+  constructor() {
     super();
-   
-    this.state={
+
 
     	user:JSON.parse(localStorage.getItem('session')),
       labTestItems:[]
@@ -21,16 +15,18 @@ class Viewtest extends Component {
     }
     console.log("lol this.state.name");
 
-  }
-
-  componentWillMount(){
-
-     // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
-     fetch('http://localhost:5000/api/labtests/1/123')
-        .then(res=>res.json())
-         .then(labTestItems=> this.setState({labTestItems},()=> console.log(labTestItems)));
 
   }
+
+  componentWillMount() {
+    // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
+    fetch("http://localhost:5000/api/labtests/1/123")
+      .then(res => res.json())
+      .then(labTestItems =>
+        this.setState({ labTestItems }, () => console.log(labTestItems))
+      );
+  }
+
 
 
   render(){
@@ -104,12 +100,7 @@ class Viewtest extends Component {
 			
   		);
      }
+
 }
 
-
-export default Viewtest; 	
-
-
-
-
- 
+export default Viewtest;

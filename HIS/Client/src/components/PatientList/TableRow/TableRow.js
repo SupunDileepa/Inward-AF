@@ -14,19 +14,21 @@ class TableRow extends Component {
   //   this.deleteItemService.deleteData(this.props.id);
   // }
 
-  sendToLocal(){
 
+  sendToLocal() {
     localStorage.clear();
 
     const patient = {
-      pid : this.props.pId,
-      bht : this.props.bht,
-      name : this.props.name
-    }
+      pid: this.props.pId,
+      bht: this.props.bht,
+      name: this.props.name,
+      wardNo : this.props.wardNo,
+      bedNo : this.props.bedNo
+    };
 
-    localStorage.setItem('patientDetails',JSON.stringify(patient));
+    localStorage.setItem("patientDetails", JSON.stringify(patient));
   }
-  
+
 
   render() {
     return (
@@ -38,8 +40,14 @@ class TableRow extends Component {
         <td>{this.props.bedNo}</td>
         <td>{this.props.addmittedDate}</td>
         <td>
-          <Link to="/bht">
-            <button onClick={this.sendToLocal.bind(this)} type="button" className="btn btn-success btn-sm">
+
+          <Link to="/bht/profile">
+            <button
+              onClick={this.sendToLocal.bind(this)}
+              type="button"
+              className="btn btn-success btn-sm"
+            >
+
               <i className="fa fa-search fa-sm" /> View BHT
             </button>
           </Link>
