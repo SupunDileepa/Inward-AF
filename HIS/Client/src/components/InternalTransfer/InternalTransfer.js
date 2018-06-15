@@ -131,7 +131,7 @@ class InternalTransferForms extends Component {
                   <FormGroup>
                     <Label htmlFor="trDate">Transfer Date Time</Label>
                     <Input
-                      type="text"
+                      type="date"
                       id="transfer_date"
                       name="transfer_date"
                       value={this.state.transfer_date}
