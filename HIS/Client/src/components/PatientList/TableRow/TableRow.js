@@ -14,6 +14,7 @@ class TableRow extends Component {
   //   this.deleteItemService.deleteData(this.props.id);
   // }
 
+
   sendToLocal() {
     localStorage.clear();
 
@@ -28,6 +29,7 @@ class TableRow extends Component {
     localStorage.setItem("patientDetails", JSON.stringify(patient));
   }
 
+
   render() {
     return (
       <tr>
@@ -38,12 +40,14 @@ class TableRow extends Component {
         <td>{this.props.bedNo}</td>
         <td>{this.props.addmittedDate}</td>
         <td>
+
           <Link to="/bht/profile">
             <button
               onClick={this.sendToLocal.bind(this)}
               type="button"
               className="btn btn-success btn-sm"
             >
+
               <i className="fa fa-search fa-sm" /> View BHT
             </button>
           </Link>

@@ -7,11 +7,14 @@ class Viewtest extends Component {
   constructor() {
     super();
 
-    this.state = {
-      user: JSON.parse(localStorage.getItem("session")),
-      labTestItems: []
-    };
-    console.log(this.state.name);
+
+    	user:JSON.parse(localStorage.getItem('session')),
+      labTestItems:[]
+      
+    }
+    console.log("lol this.state.name");
+
+
   }
 
   componentWillMount() {
@@ -23,37 +26,77 @@ class Viewtest extends Component {
       );
   }
 
-  render() {
-    //Mapping lab test items
 
-    var labReports = this.state.labTestItems.map((labItems, i) => {
-      return <LabItem key={i} item={labItems} />;
-    });
 
-    return (
-      <div className="main_labReportView">
-        <DetailBar />
+  render(){
 
-        <br />
-        <br />
-        <br />
-        <h3>Lab Reports</h3>
-        <br />
-        <br />
-        <br />
 
-        <table className="table table-hover">
-          <thead>
-            <th>Test Name</th>
-            <th>Test Result</th>
-            <th>Tester</th>
-            <th>View Report</th>
-          </thead>
-          <tbody>{labReports}</tbody>
-        </table>
-      </div>
-    );
-  }
+
+
+//Mapping lab test items 
+
+  
+
+      var labReports =this.state.labTestItems.map((labItems,i)=>{
+            
+      return(
+          <LabItem key={i} item={labItems}/>
+        )
+              
+     })
+
+  
+
+    
+
+
+  	return(
+
+  			<div className='main_labReportView'>
+  			 
+          <DetailBar/>
+  		
+
+                 <br/>
+                 <br/>
+                 <br/>
+                    <h3>Lab Reports</h3>
+                 <br/>
+                 <br/>
+                 <br/>
+
+                   <table className="table table-hover">
+
+                      
+
+                        <thead>
+                        <th>Test Name</th>
+                        <th>Test Result</th>
+                        <th>Tester</th>
+                        <th>View Report</th>             
+                        </thead>
+                        <tbody>
+
+                    {labReports}
+
+                         </tbody>
+                    </table> 
+                    
+
+
+                 </div>
+  				
+		
+
+  					
+
+
+  			
+		
+			
+  		);
+     }
+
 }
 
 export default Viewtest;

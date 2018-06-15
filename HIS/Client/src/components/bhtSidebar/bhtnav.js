@@ -73,16 +73,20 @@ export default {
       children: [
         {
           name: "Fever Chart",
+
           url: "/bht/charts"
         },
         {
           name: "Diabetic Chart",
           url: "/bht/charts"
+
         },
 
         {
           name: "Liquid Balance Chart",
+
           url: "/bht/charts"
+
         }
       ]
     },
