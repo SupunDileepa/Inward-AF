@@ -16,7 +16,7 @@ class SearchByBHT extends Component {
     // check whether the field is empty
     if (!this.refs.bht.value) return;
 
-    fetch("http://localhost:5000/api/patients/" + this.refs.bht.value)
+    fetch("http://localhost:5000/api/patients/bht/" + this.refs.bht.value)
       .then(response => response.json())
       .then(json => {
         if (json.length == 0) {
