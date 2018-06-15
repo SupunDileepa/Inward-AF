@@ -21,7 +21,9 @@ class TableRow extends Component {
     const patient = {
       pid : this.props.pId,
       bht : this.props.bht,
-      name : this.props.name
+      name : this.props.name,
+      ward : this.props.wardNo,
+      bed : this.props.bedNo
     }
 
     localStorage.setItem('patientDetails',JSON.stringify(patient));
