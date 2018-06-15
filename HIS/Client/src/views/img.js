@@ -89,6 +89,7 @@ class ImageUpload extends Component {
             
             console.log("lol "+labItems.image)
       return(
+        
           <img src={labItems.image} />
         )
 

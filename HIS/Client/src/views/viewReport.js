@@ -6,21 +6,25 @@ class ViewReport extends Component {
 constructor(props){
 
     super(props);
-
     this.state={
-
-        item:props.item
+        image:JSON.parse(localStorage.getItem('image'))
     }
 
-
+    console.log(this.state.image)
 }
 
   render() {
     return (
       <div className="animated fadeIn">
 
-       
-            <img src={this.state.item.image} />
+            
+            <h1>Report</h1>
+            <br/>
+            <br/>
+
+            <img src={this.state.image} />
+
+          
 
            
         

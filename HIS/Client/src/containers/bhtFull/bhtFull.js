@@ -64,6 +64,7 @@ import PrescribeDrug from "../../views/prescribeDrug";
 import Viewtest from "../../views/viewTest";
 import ImageUpload from "../../views/img";
 import AddNewReport from "../../views/addNewReports";
+import ViewReport from "../../views/viewReport";
 
 
 
@@ -103,6 +104,11 @@ class bhtFull extends Component {
                   path="/bht/addnewtests" 
                   name="addnewtests" 
                   component={AddNewReport}/>
+
+                  <Route 
+                  path="/bht/viewreport" 
+                  name="viewreport" 
+                  component={ViewReport}/>
 
                   
 
