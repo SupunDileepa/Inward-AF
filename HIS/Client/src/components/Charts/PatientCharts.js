@@ -93,6 +93,19 @@ class PatientChart extends Component {
         super(props);
         this.state ={};
     }
+
+    sendToLocal(){
+
+        localStorage.clear();
+    
+        const patient = {
+          pid : this.props.pId,
+          bht : this.props.bht,
+          name : this.props.name
+        }
+    
+        localStorage.setItem('patientDetails',JSON.stringify(patient));
+      }
     render() {
         return (
             <div className="animated fadeIn">
