@@ -1,8 +1,8 @@
 export default {
   items: [
     {
-      name: "Patient BHT Options",
-      url: "/ward/admission",
+      name: "Back To Ward",
+      url: "/patientList/patientView",
       icon: "icon-speedometer",
       badge: {
         variant: "info"
@@ -20,7 +20,7 @@ export default {
     },
     {
       name: "Patient Profile",
-      url: "/ward/admission",
+      url: "/bht/profile",
       icon: "icon-drop"
     },
     {
@@ -29,98 +29,79 @@ export default {
       icon: "icon-drop"
     },
 
-
     {
       name: "Laboratory Test",
       icon: "icon-drop",
 
-            children: [
+      children: [
         {
           name: "View Test Results",
-          url: "/bht/viewtests",
-
-          
+          url: "/bht/viewtests"
         },
         {
           name: "New Test Request",
-          url: "/bht/newtests",          
+
+          url: "/bht/addnewtests",
+          
         },
      
-      ]
 
+      ]
     },
 
-
-
     {
-
       name: "Patient Allergies",
       icon: "icon-drop",
 
       children: [
         {
           name: "View Allergies",
-          url: "/bht/allergies/view",          
+          url: "/bht/allergies/view"
         },
         {
           name: "Add New Allergy",
-          url: "/bht/allergies/create",          
-        },
-     
+          url: "/bht/allergies/create"
+        }
       ]
-
     },
-
-
 
     {
       name: "Charts",
-      url: "/theme/colors",
+      url: "/bht/charts",
       icon: "icon-drop",
 
       children: [
         {
           name: "Fever Chart",
-          url: "/viewtests",
-          
+          url: "/bht/charts"
         },
         {
           name: "Diabetic Chart",
-          url: "/newtests",
-          
+          url: "/bht/charts"
         },
 
-          {
+        {
           name: "Liquid Balance Chart",
-          url: "/newtests",
-          
-        },
-     
+          url: "/bht/charts"
+        }
       ]
-
     },
-
-
 
     {
       name: "Patient Transfer",
       url: "/theme/colors",
       icon: "icon-drop",
 
-     children: [
+      children: [
         {
           name: "Internal Transfer",
-          url: "/viewtests",
-          
+          url: "/bht/internalTransfer"
         },
         {
           name: "External Transfer",
-          url: "/newtests",
-          
-        },
-     
+          url: "/bht/externalTransfer"
+        }
       ]
-
     },
     {
       name: "Discharge Patient",
@@ -134,15 +115,12 @@ export default {
       children: [
         {
           name: "Patient Diets",
-          url: "/login",
-
+          url: "/login"
         },
         {
           name: "View Patient Diets",
-          url: "/register",
-
-        },
-     
+          url: "/register"
+        }
       ]
     }
   ]

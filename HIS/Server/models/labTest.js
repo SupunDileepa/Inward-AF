@@ -9,7 +9,8 @@ const LabTestSchema = new mongoose.Schema({
     test_id:String,
     tester:String,
     testName:String,
-    testResult:String
+    testResult:String,
+    image:String
 });
 
 LabTestSchema.plugin(autoIncrement.plugin, {model: "Lab_Tests", field: "test_id"});
