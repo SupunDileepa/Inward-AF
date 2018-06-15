@@ -2,6 +2,18 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Table } from "reactstrap";
 import PatientDetails from "./PatientDetails";
+import {
+  Badge,
+  Row,
+  Col,
+  Card,
+  CardHeader,
+  CardFooter,
+  CardBody,
+  Label,
+  Input
+} from "reactstrap";
+import TableRow from "../PatientList/TableRow/TableRow";
 
 class PatientProfile extends Component {
   constructor(props) {
@@ -33,31 +45,47 @@ class PatientProfile extends Component {
 
     return (
       <div className="container">
-        <h4>Patient Details</h4>
+        <h4 className="text-uppercase">Patient Details</h4>
         <br />
-        <Table hover bordered striped responsive size="sm">
-          <thead>
-            <tr>
-              <th>Patient Id </th>
-              <th>Gender</th>
-              <th>Full Name</th>
-              <th>Date Of Birth</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{patient.pId}</td>
-              <td>{patient.gender}</td>
-              <td>{patient.name}</td>
-              <td>{patient.dob}</td>
-            </tr>
-          </tbody>
-        </Table>
+        <div className="row">
+          <div className="col-md-3">
+            <Card className=" bg-info ">
+              <CardHeader className="text-dark font-weight-bold text-uppercase">
+                Patient Id
+              </CardHeader>
+              <CardBody>{patient.pId}</CardBody>
+            </Card>
+          </div>
+          <div className="col-md-3">
+            <Card className="bg-success ">
+              <CardHeader className="text-dark font-weight-bold text-uppercase">
+                Gender
+              </CardHeader>
+              <CardBody>{patient.gender}</CardBody>
+            </Card>
+          </div>
+          <div className="col-md-3">
+            <Card className="bg-warning">
+              <CardHeader className="text-dark  font-weight-bold text-uppercase">
+                Full Name
+              </CardHeader>
+              <CardBody>{patient.name}</CardBody>
+            </Card>
+          </div>
+          <div className="col-md-3">
+            <Card className=" bg-danger ">
+              <CardHeader className="text-dark font-weight-bold text-uppercase">
+                Date Of Birth
+              </CardHeader>
+              <CardBody>{patient.dob}</CardBody>
+            </Card>
+          </div>
+        </div>
 
-        <h4>Initial Addmission Details Details</h4>
+        <h4 className="text-uppercase">Initial Addmission Details Details</h4>
         <br />
-        <Table hover bordered striped responsive size="sm">
-          <thead>
+        <table class="table table-bordered">
+          <thead className="thead-dark">
             <tr>
               <th>BHT No </th>
               <th>Ward No</th>
@@ -81,7 +109,7 @@ class PatientProfile extends Component {
               <td>{patient.patientPreviousHistory}</td>
             </tr>
           </tbody>
-        </Table>
+        </table>
       </div>
     );
   }
