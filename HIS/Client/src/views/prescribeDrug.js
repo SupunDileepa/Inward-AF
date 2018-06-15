@@ -9,6 +9,8 @@ class PrescribeDrug extends Component {
 		super();
 
 		this.state={
+
+      patient : JSON.parse(localStorage.getItem('patientDetails'))
 			
 		}
 		this.pres=this.pres.bind(this)
@@ -19,8 +21,8 @@ class PrescribeDrug extends Component {
 
 
 const newDrug={
-      pId:"1",
-      bht:"123",
+      pId:this.state.patient.pid,
+      bht:this.state.patient.bht,
 			drugName:this.refs.name.value,
 			dose:this.refs.dosage.value,
 			frequency:this.refs.frequancy.value,

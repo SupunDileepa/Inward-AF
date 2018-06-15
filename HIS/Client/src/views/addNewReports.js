@@ -11,9 +11,11 @@ class AddNewReport extends Component {
 		super();
 
 		this.state={
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
 			 file: '',
       imagePreviewUrl: ''
       		}
+
 		this.pres=this.pres.bind(this);
     this._handleImageChange = this._handleImageChange.bind(this);
 	}
@@ -23,8 +25,8 @@ class AddNewReport extends Component {
 
 
 const newReport={
-      pId:"1",
-      bedid:"123",
+      pId:this.state.patient.pid,
+      bedid:this.state.patient.bht,
 			testName:this.refs.name.value,
 			tester:this.refs.tester.value,
 			testResult:this.refs.result.value,
