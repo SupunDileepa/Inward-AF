@@ -19,7 +19,7 @@ class Viewtest extends Component {
       labTestItems:[]
       
     }
-    console.log(this.state.name);
+    console.log("lol this.state.name");
 
   }
 
@@ -40,7 +40,7 @@ class Viewtest extends Component {
 
 //Mapping lab test items 
 
-    if(!this.state.expand){
+  
 
       var labReports =this.state.labTestItems.map((labItems,i)=>{
             
@@ -50,7 +50,7 @@ class Viewtest extends Component {
               
      })
 
-    }
+  
 
     
 
