@@ -18,7 +18,9 @@ import "../scss/core/_dropdown-menu-right.scss";
 // Containers
 import Full from "./containers/Full/";
 
+
 import bhtFull from "./containers/bhtFull";
+
 
 
 //components
@@ -42,12 +44,14 @@ import store from "./store";
 
 
 
+
 import Prescribe from "./views/prescribe";
 import PrescribeDrug from "./views/prescribeDrug";
 
 
 
 import viewAllergies from "./views/Allergies/view";
+
 
 //check for token
 
@@ -86,6 +90,7 @@ ReactDOM.render(
         <Route exact path="/" name="Landing" component={Landing} />
         <Route exact path="/login" name="Login" component={Login} />
         <Route exact path="/register" name="Register" component={Register} />
+
 
 
 

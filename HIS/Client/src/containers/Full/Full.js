@@ -4,6 +4,7 @@ import { Container } from "reactstrap";
 import Header from "../../components/Header/";
 import Sidebar from "../../components/Sidebar/";
 import Breadcrumb from "../../components/Breadcrumb/";
+
 // import Aside from "../../components/Aside/";
 import Footer from "../../components/Footer/";
 
@@ -14,6 +15,7 @@ import ViewAddmission from "../../components/ViewAddmission/";
 import Dashboard from "../../views/Dashboard/";
 import Charts from "../../views/Charts/";
 import Sample from "../../views/Sample/";
+
 
 import Widgets from "../../views/Widgets/";
 
@@ -52,8 +54,10 @@ import Alerts from "../../views/Notifications/Alerts/";
 import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
+
 import wardAdmission from "../../views/wardAdmission";
 import searchByBHT from "../../views/searchByBHT";
+
 
 class Full extends Component {
   render() {
@@ -71,6 +75,7 @@ class Full extends Component {
                   name="Dashboard"
                   component={Dashboard}
                 />
+
 
                 <Route
                   path="/ward/admission"
@@ -196,6 +201,7 @@ class Full extends Component {
                 <Route path="/charts" name="Charts" component={Charts} />
                 <Route path="/sample" name="Sample" component={Sample} />
 
+
                 <Route
                   path="/patientList/patientView"
                   name="New Addmission"
@@ -217,6 +223,7 @@ class Full extends Component {
             </Container>
           </main>
           {/* <Aside /> */}
+
         </div>
         <Footer />
       </div>

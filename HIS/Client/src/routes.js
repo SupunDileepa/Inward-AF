@@ -33,9 +33,11 @@ const routes = {
   "/notifications/badges": "Badges",
   "/notifications/modals": "Modals",
 
+
   "/theme": "Theme",
   "/theme/colors": "Colors",
   "/theme/typography": "Typography",
+
 
   "/widgets": "Widgets"
   //  "/sample": "Sample"

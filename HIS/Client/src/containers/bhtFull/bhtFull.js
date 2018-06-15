@@ -60,6 +60,9 @@ import searchByBHT from "../../views/searchByBHT";
 import PrescribeDrug from "../../views/prescribeDrug";
 import Viewtest from "../../views/viewTest";
 
+import InternalTransfer from "../../components/InternalTransfer/";
+import ExternalTransfer from "../../components/ExternalTransfer/";
+
 class bhtFull extends Component {
   render() {
     return (
@@ -75,6 +78,18 @@ class bhtFull extends Component {
                   path="/dashboardlol"
                   name="Dashboard"
                   component={Dashboard}
+                />
+
+                <Route
+                  path="/bht/internalTransfer"
+                  name="InternalTransfer"
+                  component={InternalTransfer}
+                />
+
+                <Route
+                  path="/bht/externalTransfer"
+                  name="ExternalTransfer"
+                  component={ExternalTransfer}
                 />
 
                 <Route

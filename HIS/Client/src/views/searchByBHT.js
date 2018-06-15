@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 
 class SearchByBHT extends Component {
 
+
   constructor(props){
     super(props);
     this.state = {
@@ -53,6 +54,7 @@ class SearchByBHT extends Component {
         Name : <label id="name"></label><br/>
         Ward Number : <label id="wardNo"></label><br/>
         Bed Number : <label id="bedNo"></label>
+
 
       </div>
     )
