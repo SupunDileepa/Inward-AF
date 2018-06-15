@@ -62,6 +62,8 @@ import Prescribe from "../../views/prescribe";
 import searchByBHT from "../../views/searchByBHT";
 import PrescribeDrug from "../../views/prescribeDrug";
 import Viewtest from "../../views/viewTest";
+import ImageUpload from "../../views/img";
+import AddNewReport from "../../views/addNewReports";
 
 
 
@@ -96,6 +98,13 @@ class bhtFull extends Component {
                   path="/bht/viewtests" 
                   name="viewtests" 
                   component={Viewtest}/>
+
+                  <Route 
+                  path="/bht/addnewtests" 
+                  name="addnewtests" 
+                  component={AddNewReport}/>
+
+                  
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
                 <Route path="/base/forms" name="Forms" component={Forms} />
