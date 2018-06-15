@@ -84,7 +84,7 @@ class PatientProfile extends Component {
 
         <h4 className="text-uppercase">Initial Addmission Details Details</h4>
         <br />
-        <table class="table table-bordered">
+        <table className="table table-bordered">
           <thead className="thead-dark">
             <tr>
               <th>BHT No </th>
