@@ -24,9 +24,9 @@ class TableRow extends Component {
         <td>{this.props.bedNo}</td>
         <td>{this.props.addmittedDate}</td>
         <td>
-          <Link to="/viewAddmission">
+          <Link to="/bht">
             <button type="button" className="btn btn-success btn-sm">
-              <i className="fa fa-search fa-sm" /> View
+              <i className="fa fa-search fa-sm" /> View BHT
             </button>
           </Link>
         </td>
