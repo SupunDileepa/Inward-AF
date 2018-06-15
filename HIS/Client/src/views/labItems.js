@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
+import ViewReport from "./viewReport";
+import { HashRouter, Route, Switch } from "react-router-dom";
 
 class LabItem extends Component {
 
@@ -13,7 +15,22 @@ constructor(props){
     }
 
 
+
 }
+
+    showReport(){
+
+
+        localStorage.setItem('image',JSON.stringify(this.state.item.image));
+
+        // console.log(this.state.item.image);
+        // <Switch>
+        
+        // <Route exact path="/bht/viewreport" name="Landing" render={(props) => <viewReport {...props} item={this.state.item} />} />
+        //  </Switch>
+        //  window.open('/#/bht/viewreport');
+     
+    }
 
   render() {
     return (
@@ -29,7 +46,7 @@ constructor(props){
                                     <td>{this.state.item.testName}</td>
                                     <td>{this.state.item.testResult}</td>
                                     <td>{this.state.item.tester}</td>
-                                    <td><button className="btn btn-secondary">View Report</button></td>
+                                    <td><Link to="/bht/viewreport"><button onClick={this.showReport.bind(this)} className="btn btn-secondary">View Report</button></Link></td>
                                     <br/>
                                 </tr>
 

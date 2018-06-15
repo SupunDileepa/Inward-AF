@@ -108,6 +108,7 @@ class Prescribe extends Component {
   			<div className='main_prescriptions'>
   			 
           <DetailBar/>
+          <br/><br/>
   		
   				  <div className="row">
           

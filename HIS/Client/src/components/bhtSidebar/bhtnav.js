@@ -40,8 +40,12 @@ export default {
         },
         {
           name: "New Test Request",
-          url: "/bht/newtests"
-        }
+
+          url: "/bht/addnewtests",
+          
+        },
+     
+
       ]
     },
 
