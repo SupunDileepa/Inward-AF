@@ -17,7 +17,11 @@ import "../scss/core/_dropdown-menu-right.scss";
 
 // Containers
 import Full from "./containers/Full/";
+
+
 import bhtFull from "./containers/bhtFull";
+
+
 
 //components
 import Login from "./components/Auth/Login";
@@ -39,6 +43,8 @@ import store from "./store";
 
 
 
+
+
 import Prescribe from "./views/prescribe";
 import PrescribeDrug from "./views/prescribeDrug";
 
@@ -46,7 +52,9 @@ import PrescribeDrug from "./views/prescribeDrug";
 
 import viewAllergies from "./views/Allergies/view";
 
+
 //check for token
+
 if (localStorage.jwtToken) {
   //set auth token header auth
   setAuthToken(localStorage.jwtToken);
@@ -84,16 +92,19 @@ ReactDOM.render(
         <Route exact path="/register" name="Register" component={Register} />
 
 
+
+
         <Route  path="/bht" name="bhtFull" component={bhtFull} />
         <Route exact path="/bht/prescriptions" name="prescription" component={Prescribe} />  
         <Route exact path="/bht/allergies/view" name="viewAllergies" component={viewAllergies} />              
-
+      
 
         <Route exact path="/bht/lol" name="prescribeDrug" component={PrescribeDrug} />  
  
         <Route  path="/" name="Home" component={Full} /> 
         
                 
+
       </Switch>
     </HashRouter>
   </Provider>,
