@@ -20,7 +20,7 @@ export default {
     },
     {
       name: "Patient Profile",
-      url: "/ward/admission",
+      url: "/bht/profile",
       icon: "icon-drop"
     },
     {

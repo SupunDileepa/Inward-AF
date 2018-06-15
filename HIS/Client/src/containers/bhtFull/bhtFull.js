@@ -62,6 +62,7 @@ import Viewtest from "../../views/viewTest";
 
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/";
+import PatientProfile from "../../components/PatientProfile/";
 
 class bhtFull extends Component {
   render() {
@@ -78,6 +79,11 @@ class bhtFull extends Component {
                   path="/dashboardlol"
                   name="Dashboard"
                   component={Dashboard}
+                />
+                <Route
+                  path="/bht/profile"
+                  name="Profile"
+                  component={PatientProfile}
                 />
 
                 <Route
