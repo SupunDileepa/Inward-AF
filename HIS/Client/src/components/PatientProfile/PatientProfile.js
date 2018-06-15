@@ -28,26 +28,9 @@ class PatientProfile extends Component {
   // ${this.state.p.pid}
 
   render() {
-    // var arr = this.state.patients.obj;
-    // var patientDetails = "";
-    // console.log(arr);
-    //if (arr) {
-    // patientDetails = arr.map((patient, i) => {
-    //   console.log(patient);
-
-    //   });
-    // } else {
-    //   patientDetails = "";
-    //   return patientDetails;
-    // }
-    // console.log(this.state.patients.obj);
-    //let arr = ;
     console.log(this.state.patients.obj);
     let patient = this.state.patients;
-    // if (this.state.patients.length > 0) {
-    //   let patient = this.state.patients.obj;
-    //   return patient;
-    // }
+
     return (
       <div className="container">
         <h4>Patient Details</h4>
@@ -67,6 +50,35 @@ class PatientProfile extends Component {
               <td>{patient.gender}</td>
               <td>{patient.name}</td>
               <td>{patient.dob}</td>
+            </tr>
+          </tbody>
+        </Table>
+
+        <h4>Initial Addmission Details Details</h4>
+        <br />
+        <Table hover bordered striped responsive size="sm">
+          <thead>
+            <tr>
+              <th>BHT No </th>
+              <th>Ward No</th>
+              <th>Bed No</th>
+              <th>Monthly No</th>
+              <th>Doctor</th>
+              <th>Addmitted Date</th>
+              <th>Patient Complains</th>
+              <th>Patient History</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{patient.bht}</td>
+              <td>{patient.wardNo}</td>
+              <td>{patient.bedNo}</td>
+              <td>{patient.monthlyNo}</td>
+              <td>{this.state.patients.docName}</td>
+              <td>{patient.addmittedDate}</td>
+              <td>{patient.patientComplain}</td>
+              <td>{patient.patientPreviousHistory}</td>
             </tr>
           </tbody>
         </Table>
