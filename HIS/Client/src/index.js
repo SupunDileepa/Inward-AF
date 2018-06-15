@@ -97,7 +97,7 @@ ReactDOM.render(
         <Route  path="/bht" name="bhtFull" component={bhtFull} />
         <Route exact path="/bht/prescriptions" name="prescription" component={Prescribe} />  
         <Route exact path="/bht/allergies/view" name="viewAllergies" component={viewAllergies} />              
-
+      
 
         <Route exact path="/bht/lol" name="prescribeDrug" component={PrescribeDrug} />  
  
