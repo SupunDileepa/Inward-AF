@@ -16,7 +16,7 @@ class PatientProfile extends Component {
   componentDidMount() {
     console.log(this.state.p.pid);
     axios
-      .get(`http://localhost:5000/api/patients/9`)
+      .get(`http://localhost:5000/api/patients/${this.state.p.pid}`)
       .then(res => {
         this.setState({ patients: res.data });
         console.log(this.state.patients);
@@ -40,7 +40,14 @@ class PatientProfile extends Component {
     //   patientDetails = "";
     //   return patientDetails;
     // }
+    // console.log(this.state.patients.obj);
+    //let arr = ;
     console.log(this.state.patients.obj);
+    let patient = this.state.patients;
+    // if (this.state.patients.length > 0) {
+    //   let patient = this.state.patients.obj;
+    //   return patient;
+    // }
     return (
       <div className="container">
         <h4>Patient Details</h4>
@@ -56,10 +63,10 @@ class PatientProfile extends Component {
           </thead>
           <tbody>
             <tr>
-              {/* <td>{this.state.patients.obj.pId}</td> */}
-              <td>{this.state.patients.obj.gender}</td>
-              <td>{this.state.patients.name}</td>
-              {/* <td>{this.props.dob}</td> */}
+              <td>{patient.pId}</td>
+              <td>{patient.gender}</td>
+              <td>{patient.name}</td>
+              <td>{patient.dob}</td>
             </tr>
           </tbody>
         </Table>
