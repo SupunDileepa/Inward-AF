@@ -57,6 +57,7 @@ import Modals from "../../views/Notifications/Modals/";
 
 import wardAdmission from "../../views/wardAdmission";
 import searchByBHT from "../../views/searchByBHT";
+import viewArch from "./../../views/Archive/viewArch";
 
 
 class Full extends Component {
@@ -216,6 +217,12 @@ class Full extends Component {
                   path="/viewAddmission"
                   name="View Addmission"
                   component={ViewAddmission}
+                />
+
+                 <Route
+                  path="/view_Archive"
+                  name="View Archive"
+                  component={viewArch}
                 />
 
                 <Redirect from="/" to="/dashboard" />

@@ -81,6 +81,12 @@ class NewAddmission extends Component {
       })
       .then(result => {
         console.log(result);
+        // alertify.alert("Alert Title", "New Addmission Added!", function() {
+        //   alertify.success("Ok");
+        // });
+        alertify.notify("New Addmission Added!", "success", 5, function() {
+          console.log("dismissed");
+        });
       });
     this.props.history.push("/patientList/patientView");
   }
@@ -101,7 +107,7 @@ class NewAddmission extends Component {
             <form onSubmit={this.submitHandler}>
               <Card>
                 <CardHeader>
-                  <strong>New Addmission</strong>
+                  <strong>NEW ADDMISSION</strong>
                   <small> Form</small>
                 </CardHeader>
 
@@ -118,6 +124,7 @@ class NewAddmission extends Component {
                             placeholder="Enter BHT no"
                             onChange={this.inputHandler}
                             value={this.state.bht}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -132,6 +139,7 @@ class NewAddmission extends Component {
                             placeholder="Enter patient name"
                             onChange={this.inputHandler}
                             value={this.state.name}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -145,6 +153,7 @@ class NewAddmission extends Component {
                             placeholder="Enter ward no"
                             onChange={this.inputHandler}
                             value={this.state.wardNo}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -159,6 +168,7 @@ class NewAddmission extends Component {
                               placeholder="Enter patient bed no"
                               onChange={this.inputHandler}
                               value={this.state.bedNo}
+                              required
                             />
                           </FormGroup>
                         </Col>
@@ -173,6 +183,7 @@ class NewAddmission extends Component {
                             placeholder="Enter daily no"
                             onChange={this.inputHandler}
                             value={this.state.dailyNo}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -186,6 +197,7 @@ class NewAddmission extends Component {
                             placeholder="Enter monthly no"
                             onChange={this.inputHandler}
                             value={this.state.monthlyNo}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -201,6 +213,7 @@ class NewAddmission extends Component {
                             placeholder="Enter yearly no"
                             onChange={this.inputHandler}
                             value={this.state.yearlyNo}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -216,6 +229,7 @@ class NewAddmission extends Component {
                             placeholder="Enter patient complain"
                             onChange={this.inputHandler}
                             value={this.state.patientComplain}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -231,6 +245,7 @@ class NewAddmission extends Component {
                             placeholder="Enter history "
                             onChange={this.inputHandler}
                             value={this.state.patientPreviousHistory}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -244,6 +259,7 @@ class NewAddmission extends Component {
                             placeholder="Enter DOB "
                             onChange={this.inputHandler}
                             value={this.state.dob}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -257,6 +273,7 @@ class NewAddmission extends Component {
                             placeholder="Enter gender "
                             onChange={this.inputHandler}
                             value={this.state.gender}
+                            required
                           />
                         </Col>
                       </FormGroup>
@@ -270,6 +287,7 @@ class NewAddmission extends Component {
                             placeholder="Enter Doctor Name "
                             onChange={this.inputHandler}
                             value={this.state.docName}
+                            required
                           />
                         </Col>
                       </FormGroup>

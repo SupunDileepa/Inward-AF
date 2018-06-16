@@ -3,7 +3,7 @@ import jsPDF from 'jspdf';
 
 
 import React, {Component, PropTypes} from 'react';
-import Viewtest from './viewTest';
+import Viewtest from './LabTests/viewTest';
 
 
 
@@ -33,7 +33,7 @@ export default class Export extends Component {
       </div>
 
        <div id="divToPrint" className="mt4" style={{   backgroundColor : '#f5f5f5',
-        width : '197mm',
+        width : '220mm',
         minHeight : '297mm',
         marginLeft :'auto',
         marginRight :'auto'}}

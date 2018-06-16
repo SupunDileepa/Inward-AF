@@ -9,7 +9,9 @@ class DetailBar extends Component {
 			patient : JSON.parse(localStorage.getItem('patientDetails'))
 			
 		}
+
 		console.log(this.state.patient)
+
 	}
 
 componentDidMount(){
@@ -30,8 +32,10 @@ componentDidMount(){
 				                PID : {this.state.patient.pid}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								BHT : {this.state.patient.bht}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 								Name : {this.state.patient.name}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								Ward No : {this.state.patient.ward}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-								Bed No : {this.state.patient.bed}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+								Ward No : {this.state.patient.wardNo}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+								Bed No : {this.state.patient.bedNo}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 				                

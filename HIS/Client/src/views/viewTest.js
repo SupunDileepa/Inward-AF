@@ -1,26 +1,31 @@
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LabItem from "./labItems";
-import DetailBar from "./details";
+import DetailBar from "./../details";
 
 
-class Viewtest extends Component {
-  constructor() {
-    super();
 
+// class Viewtest extends Component {
+//   constructor() {
+//     super();
 
-    	user:JSON.parse(localStorage.getItem('session')),
+    this.state={
+    	
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
       labTestItems:[]
-      
+
+      }
     }
-    console.log("lol this.state.name");
+    
 
 
-  }
+  
 
   componentWillMount() {
     // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
-    fetch("http://localhost:5000/api/labtests/1/123")
+    fetch(`http://localhost:5000/api/labtests/${this.state.patient.pid}/${this.state.patient.bht}`)
+
       .then(res => res.json())
       .then(labTestItems =>
         this.setState({ labTestItems }, () => console.log(labTestItems))
@@ -29,56 +34,59 @@ class Viewtest extends Component {
 
 
 
+
   render(){
 
 
 
 
-//Mapping lab test items 
+
+// //Mapping lab test items 
 
   
 
-      var labReports =this.state.labTestItems.map((labItems,i)=>{
+//       var labReports =this.state.labTestItems.map((labItems,i)=>{
             
-      return(
-          <LabItem key={i} item={labItems}/>
-        )
+//       return(
+//           <LabItem key={i} item={labItems}/>
+//         )
               
-     })
+//      })
 
   
 
     
 
 
-  	return(
+//   	return(
 
-  			<div className='main_labReportView'>
+//   			<div className='main_labReportView'>
   			 
-          <DetailBar/>
+//           <DetailBar/>
   		
 
-                 <br/>
-                 <br/>
-                 <br/>
-                    <h3>Lab Reports</h3>
-                 <br/>
-                 <br/>
-                 <br/>
+//                  <br/>
+//                  <br/>
+//                  <br/>
+//                     <h3>Lab Reports</h3>
+//                  <br/>
+//                  <br/>
+//                  <br/>
 
-                   <table className="table table-hover">
+//                    <table className="table table-hover">
 
                       
 
-                        <thead>
-                        <th>Test Name</th>
-                        <th>Test Result</th>
-                        <th>Tester</th>
-                        <th>View Report</th>             
-                        </thead>
-                        <tbody>
+//                         <thead>
+//                         <th>Test Name</th>
+//                         <th>Test Result</th>
+//                         <th>Tester</th>
+//                         <th>View Report</th>             
+//                         </thead>
+//                         <tbody>
 
-                    {labReports}
+//                     {labReports}
+
 
                          </tbody>
                     </table> 
@@ -88,7 +96,8 @@ class Viewtest extends Component {
                  <br/>
 
 
-                 </div>
+
+//                  </div>
   				
 		
 
@@ -98,9 +107,12 @@ class Viewtest extends Component {
   			
 		
 			
-  		);
-     }
+//   		);
+//      }
+
+
 
 }
 
-export default Viewtest;
+
+// export default Viewtest;
