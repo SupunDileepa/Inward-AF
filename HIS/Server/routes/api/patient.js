@@ -69,7 +69,7 @@ router.get("/:id", (req, res, next) => {
   });
 });
 
-router.get("/patients/:bhtid", (req, res, next) => {
+router.get("/patients/bht/:bhtid", (req, res, next) => {
   var query = { bht: req.params.bhtid };
 
   Patient.find(query, (err, result) => {
