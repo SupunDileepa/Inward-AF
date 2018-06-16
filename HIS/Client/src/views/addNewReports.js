@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router';
+import DetailBar from "./details";
 
 import DetailBar from "./details";
 
@@ -80,8 +81,10 @@ const newReport={
 
       <div className="labtest">
 
+
       <DetailBar/>
           <br/><br/>
+
 
       <h2>Enter New Lab Test Details Below To Add New Test Results</h2>
       <br/>

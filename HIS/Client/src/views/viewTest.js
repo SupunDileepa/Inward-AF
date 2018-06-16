@@ -4,6 +4,7 @@ import LabItem from "./labItems";
 import DetailBar from "./details";
 
 
+
 class Viewtest extends Component {
   constructor() {
     super();
@@ -23,11 +24,13 @@ class Viewtest extends Component {
   componentWillMount() {
     // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
     fetch(`http://localhost:5000/api/labtests/${this.state.patient.pid}/${this.state.patient.bht}`)
+
       .then(res => res.json())
       .then(labTestItems =>
         this.setState({ labTestItems }, () => console.log(labTestItems))
       );
   }
+
 
 
 
@@ -102,6 +105,7 @@ class Viewtest extends Component {
 			
   		);
      }
+
 
 }
 

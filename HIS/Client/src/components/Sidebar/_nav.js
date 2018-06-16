@@ -49,7 +49,7 @@ export default {
     },
     {
       name: "Patient Archive Details",
-      url: "/theme/colors",
+      url: "/view_Archive",
       icon: "icon-drop"
     },
     {
