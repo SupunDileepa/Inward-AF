@@ -22,10 +22,10 @@ class Viewdiet extends Component {
 
   componentWillMount() {
     // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
-    fetch(`http://localhost:5000/api/diets/${this.state.patient.pid}`)
+    fetch(`http://localhost:8081/api/diets/${this.state.patient.pid}`)
       .then(res => res.json())
       .then(dietItems =>
-        this.setState({ dietItems }, () => console.log(dietItems))
+        this.setState({ dietItems })
       );
   }
 
@@ -40,13 +40,13 @@ class Viewdiet extends Component {
 
   
 
-      var diet =this.state.labTestItems.map((dietitem,i)=>{
+      //var diet =this.state.labTestItems.map((dietitem,i)=>{
             
-      return(
-          <DietItem key={i} item={dietitem}/>
-        )
+     // return(
+          
+      //  )
               
-     })
+     //})
 
   
 
@@ -80,7 +80,14 @@ class Viewdiet extends Component {
                         </thead>
                         <tbody>
 
-                    {diet}
+                   {/* <DietItem  item={this.state.dietItems}/>*/}
+                                    <tr>
+                                    <td>{this.state.dietItems.foodgroup}</td>
+                                    <td>{this.state.dietItems.servingsize}</td>
+                                    <td>{this.state.dietItems.calories}</td>
+                                    <td>{this.state.dietItems.energy}</td>
+                                    <br/>
+                                </tr>
 
                          </tbody>
                     </table> 

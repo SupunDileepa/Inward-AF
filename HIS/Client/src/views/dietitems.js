@@ -14,6 +14,8 @@ constructor(props){
         item:props.item
     }
 
+    console.log(this.state.item);
+
 
 
 }
