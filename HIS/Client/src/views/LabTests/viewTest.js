@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LabItem from "./labItems";
-import DetailBar from "./details";
+import DetailBar from "./../details";
 
 
 

@@ -40,9 +40,11 @@ class View extends Component {
   }
 
   sendAllergy(){
-    console.log(this.refs.name.value)
+    var name = document.getElementById('name').value;
+    var remark = document.getElementById('remark').value;
+
     // check for empty fields
-    if(!this.refs.name.value || !this.refs.remark.value) return;
+    if(!name || !remark) return;
 
     var radio = "";
     if(document.getElementById("r1").checked){
@@ -53,8 +55,8 @@ class View extends Component {
     }
     
     this.setState({
-      name : this.refs.name.value,
-      remark : this.refs.remark.value,
+      name : name,
+      remark : remark,
       category : document.getElementById("category").value,
       severity : document.getElementById("severity").value,
       status : radio
@@ -104,12 +106,12 @@ class View extends Component {
                  
                   <FormGroup>
                     <Label>Allergy Name</Label>
-                    <Input ref="name" type="text" placeholder="Allergy Name" required/>
+                    <Input id="name" ref="name" type="text" placeholder="Allergy Name" required/>
                   </FormGroup>
 
                   <FormGroup>
                     <Label>Remark</Label>
-                    <Input ref="remark" type="text" placeholder="Remark" required/>
+                    <Input id="remark"  ref="remark" type="text" placeholder="Remark" required/>
                   </FormGroup>
 
                   <FormGroup>
@@ -141,14 +143,14 @@ class View extends Component {
 
                     <FormGroup check>
                       <Label check>
-                        <Input type="radio" id="r1" name="radio1" checked/>{' '}
+                        <Input value="Current" type="radio" id="r1" name="radio1" checked/>{' '}
                         Current
                       </Label>
                     </FormGroup>
 
                     <FormGroup check>
                       <Label check>
-                        <Input type="radio" id="r2" name="radio1" />{' '}
+                        <Input value="Past" type="radio" id="r2" name="radio1" />{' '}
                         Past
                       </Label>
                     </FormGroup>

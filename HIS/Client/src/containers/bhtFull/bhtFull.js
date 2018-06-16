@@ -58,25 +58,29 @@ import updateAllergies from "./../../views/Allergies/updateAllergy";
 
 import searchByBHT from "../../views/searchByBHT";
 import PrescribeDrug from "../../views/prescribeDrug";
-import Viewtest from "../../views/viewTest";
+import Viewtest from "../../views/LabTests/viewTest";
 import ImageUpload from "../../views/img";
-import AddNewReport from "../../views/addNewReports";
-import ViewReport from "../../views/viewReport";
+import AddNewReport from "../../views/LabTests/addNewReports";
+import ViewReport from "../../views/LabTests/viewReport";
 
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/";
+
+import PatientProfile from "../../components/PatientProfile/PatientProfile";
+
 import PatientChart from "../../components/Charts/";
-import PatientProfile from "../../components/PatientProfile/";
+//import PatientProfile from "../../components/PatientProfile/";
 
 
 
 import Export from "../../views/download";
 
-import PatientChart from "../../components/Charts/";
-import PatientProfile from "../../components/PatientProfile/";
+//import PatientChart from "../../components/Charts/";
+//import PatientProfile from "../../components/PatientProfile/";
 
 
 import Viewdiet from "../../views/viewdiet";
+
 
 class bhtFull extends Component {
   render() {
@@ -154,16 +158,24 @@ class bhtFull extends Component {
                   name="viewtests"
                   component={Viewtest}
                 />
+                <Route
+                  path="/bht/profile"
+                  name="PatientProfile"
+                  component={PatientProfile}
+                />
 
-                  <Route 
-                  path="/bht/addnewtests" 
-                  name="addnewtests" 
-                  component={AddNewReport}/>
+                <Route
+                  path="/bht/addnewtests"
+                  name="addnewtests"
+                  component={AddNewReport}
+                />
 
-                  <Route 
-                  path="/bht/viewreport" 
-                  name="viewreport" 
-                  component={ViewReport}/>
+
+                <Route
+                  path="/bht/viewreport"
+                  name="viewreport"
+                  component={ViewReport}
+                />
 
                     <Route
                   path="/bht/printreports"
@@ -178,6 +190,7 @@ class bhtFull extends Component {
                 />
 
                   
+
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
 

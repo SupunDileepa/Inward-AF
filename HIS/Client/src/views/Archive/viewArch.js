@@ -2,7 +2,7 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import React, {Component, PropTypes} from 'react';
 import View from '../../views/Allergies/view';
-import Viewtest from './../viewTest';
+import Viewtest from './../LabTests/viewTest';
 
 import {
   Row,
@@ -132,7 +132,11 @@ export default class Export extends Component {
             </Card>
           </Col>
         </Row>
-        <div id="divToPrint">
+        <div id="divToPrint" style={{   backgroundColor : '#f5f5f5',
+        width : '220mm',
+        minHeight : '297mm',
+        marginLeft :'auto',
+        marginRight :'auto'}}>
         <div><View/></div><br/><br/>
         <div><Viewtest/></div>
         </div>

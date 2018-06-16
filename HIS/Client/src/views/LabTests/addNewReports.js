@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import {Redirect} from 'react-router';
-import DetailBar from "./details";
+import DetailBar from "./../details";
 
-import DetailBar from "./details";
+//import DetailBar from "./details";
 
 
 class AddNewReport extends Component {
