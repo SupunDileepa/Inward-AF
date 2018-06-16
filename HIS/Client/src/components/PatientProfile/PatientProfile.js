@@ -82,7 +82,7 @@ class PatientProfile extends Component {
           </div>
         </div>
 
-        <h4 className="text-uppercase">Initial Addmission Details Details</h4>
+        <h4 className="text-uppercase">Initial Addmission Details</h4>
         <br />
         <table className="table table-bordered">
           <thead className="thead-dark">
