@@ -16,11 +16,11 @@ class View extends Component {
   // get allergies of the given bht and pid
   getAllergies(){
     var pid = this.state.patient.pid;
-    var bht = this.state.patient.bht;
+    var bht = this.state.patient.bht;    
 
     fetch('http://localhost:5000/api/allergies/' + pid + '/' + bht)
     .then(response => response.json())
-    .then(allergies=>this.setState({allergies}))      
+    .then(allergies=>this.setState({allergies}),()=>{console.log(allergies)})      
   }
 
   componentDidMount(){
@@ -35,7 +35,7 @@ class View extends Component {
       })
 
       return (
-        <div className="animated fadeIn"> 
+        <div> 
             <DetailBar/>
             <br/><br/>
             <table width="750">                  

@@ -1,5 +1,27 @@
 import React, {Component} from 'react';
 import DetailBar from "./../details";
+import {
+  Row,
+  Col,
+  Button,
+  ButtonDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  Card,
+  CardHeader,
+  CardFooter,
+  CardBody,
+  Collapse,
+  Form,
+  FormGroup,
+  FormText,
+  Label,
+  Input,
+  InputGroup,
+  InputGroupAddon,
+  InputGroupButton
+} from "reactstrap";
 
 class View extends Component {  
 
@@ -16,7 +38,7 @@ class View extends Component {
   }
 
   sendAllergy(){
-
+    console.log(this.refs.name.value)
     // check for empty fields
     if(!this.refs.name.value || !this.refs.remark.value) return;
 
@@ -66,7 +88,81 @@ class View extends Component {
       <div className="animated fadeIn"> 
         <DetailBar/>
         <br/><br/>
-        <h3>Add New Allergy</h3><br/>
+
+
+        <Row>
+          <Col xs="12" sm="6">
+            <Card>
+              <CardHeader>
+                <strong>Add New Allergy</strong>
+              </CardHeader>
+              <Form>
+                <CardBody>
+                 
+                  <FormGroup>
+                    <Label>Allergy Name</Label>
+                    <Input ref="name" type="text" placeholder="Allergy Name" required/>
+                  </FormGroup>
+
+                  <FormGroup>
+                    <Label>Remark</Label>
+                    <Input ref="remark" type="text" placeholder="Remark" required/>
+                  </FormGroup>
+
+                  <FormGroup>
+                  <Label>Category</Label>
+                  <Input type="select" name="select" id="category">
+                    <option>Animal Allergy</option>
+                    <option>Drug Allergy</option>
+                    <option>Environmental Allergy</option>
+                    <option>Food Allergy</option>
+                    <option>Pollen Allergy</option>
+                    <option>Miscellaneous Allergy</option>
+                    <option>Miscellaneous Contra Indication</option>
+                    <option>Plant Allergy</option>
+                  </Input>                  
+                  </FormGroup>
+
+                  <FormGroup>
+                  <Label>Severity</Label>
+                  <Input type="select" name="select" id="severity">                  
+                    <option>Mild</option>
+                    <option>Moderate</option>
+                    <option>Severe</option>
+                    <option>Unknown</option>  
+                  </Input>                  
+                  </FormGroup>
+
+                  <FormGroup>
+                    <Label>Status</Label>
+
+                    <FormGroup check>
+                      <Label check>
+                        <Input type="radio" id="r1" name="radio1" checked/>{' '}
+                        Current
+                      </Label>
+                    </FormGroup>
+
+                    <FormGroup check>
+                      <Label check>
+                        <Input type="radio" id="r2" name="radio1" />{' '}
+                        Past
+                      </Label>
+                    </FormGroup>
+                  </FormGroup>
+
+                  <FormGroup>
+                    <Button onClick={this.sendAllergy.bind(this)} size="sm" color="success">
+                      Insert Allergy
+                    </Button>
+                  </FormGroup>
+                </CardBody>
+              </Form>
+            </Card>
+          </Col>
+        </Row>
+
+        {/* <h3>Add New Allergy</h3><br/>
         <form>
           <input ref="name" type="text" placeholder="Allergy Name" required/><br/><br/>
           <input ref="remark" type="text" placeholder="Remark" required/><br/><br/>
@@ -94,7 +190,7 @@ class View extends Component {
           <br/><br/>
           
           <button onClick={this.sendAllergy.bind(this)} className="btn btn-sm btn-primary"> Insert Allergy </button>
-        </form>
+        </form> */}
       </div>
     )
   }
