@@ -51,10 +51,10 @@ class TableView extends Component {
     }
     return (
       <div className="container">
-        <h4>Ward Addmissions</h4>
+        <h4>WARD ADDMISSIONS</h4>
         <br />
         <Table hover bordered striped responsive size="sm">
-          <thead>
+          <thead className="thead-dark">
             <tr>
               <th>BHT No</th>
               <th>Patient Id</th>

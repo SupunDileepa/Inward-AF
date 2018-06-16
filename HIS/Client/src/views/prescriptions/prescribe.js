@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import PrescribeItem from "./prescribeItems";
 import PrescribeItemExpand from "./prescribeItemsExpand";
-import DetailBar from "./details";
+import DetailBar from "./../details";
 
 
 

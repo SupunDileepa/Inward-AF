@@ -50,27 +50,38 @@ import Alerts from "../../views/Notifications/Alerts/";
 import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
-import Prescribe from "../../views/prescribe";
+import Prescribe from "../../views/prescriptions/prescribe";
 
 import viewAllergies from "./../../views/Allergies/view";
 import createAllergies from "./../../views/Allergies/create";
 import updateAllergies from "./../../views/Allergies/updateAllergy";
 
 import searchByBHT from "../../views/searchByBHT";
-import PrescribeDrug from "../../views/prescribeDrug";
-import Viewtest from "../../views/viewTest";
+import PrescribeDrug from "../../views/prescriptions/prescribeDrug";
+import Viewtest from "../../views/LabTests/viewTest";
 import ImageUpload from "../../views/img";
-import AddNewReport from "../../views/addNewReports";
-import ViewReport from "../../views/viewReport";
+import AddNewReport from "../../views/LabTests/addNewReports";
+import ViewReport from "../../views/LabTests/viewReport";
 
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/ExternalTransfer";
 import ViewExTransfers from "../../components/ExternalTransfer/ViewExTransfers";
 import ViewInTransfers from "../../components/InternalTransfer/ViewInTransfer";
 
-import PatientChart from "../../components/Charts/";
-import PatientProfile from "../../components/PatientProfile/";
+import PatientProfile from "../../components/PatientProfile/PatientProfile";
 
+import PatientChart from "../../components/Charts/";
+//import PatientProfile from "../../components/PatientProfile/";
+
+
+
+import Export from "../../views/download";
+
+//import PatientChart from "../../components/Charts/";
+//import PatientProfile from "../../components/PatientProfile/";
+
+
+import Viewdiet from "../../views/viewdiet";
 
 
 class bhtFull extends Component {
@@ -95,6 +106,7 @@ class bhtFull extends Component {
                   component={PatientProfile}
                 />
 
+
                 <Route
                   path="/bht/internalTransfer"
                   name="InternalTransfer"
@@ -112,6 +124,7 @@ class bhtFull extends Component {
                   name="ExternalTransfer"
                   component={ExternalTransfer}
                 />
+
                 <Route
                   path="/bht/viewexternalTransfer"
                   name="ExternalTransfer"
@@ -170,18 +183,39 @@ class bhtFull extends Component {
                   name="viewtests"
                   component={Viewtest}
                 />
+                <Route
+                  path="/bht/profile"
+                  name="PatientProfile"
+                  component={PatientProfile}
+                />
 
-                  <Route 
-                  path="/bht/addnewtests" 
-                  name="addnewtests" 
-                  component={AddNewReport}/>
+                <Route
+                  path="/bht/addnewtests"
+                  name="addnewtests"
+                  component={AddNewReport}
+                />
 
-                  <Route 
-                  path="/bht/viewreport" 
-                  name="viewreport" 
-                  component={ViewReport}/>
+
+                <Route
+                  path="/bht/viewreport"
+                  name="viewreport"
+                  component={ViewReport}
+                />
+
+                    <Route
+                  path="/bht/printreports"
+                  name="printreports"
+                  component={Export}
+                />
+
+                    <Route
+                  path="/bht/diet"
+                  name="printreports"
+                  component={Viewdiet}
+                />
 
                   
+
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
 

@@ -1,34 +1,42 @@
-// import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-// import LabItem from "./labItems";
-// import DetailBar from "./details";
+
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import LabItem from "./labItems";
+import DetailBar from "./../details";
+
+
 
 // class Viewtest extends Component {
 //   constructor() {
 //     super();
 
+    this.state={
+    	
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
+      labTestItems:[]
 
-//     	user:JSON.parse(localStorage.getItem('session')),
-//       labTestItems:[]
-      
-//     }
-//     console.log("lol this.state.name");
-
-
-//   }
-
-//   componentWillMount() {
-//     // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
-//     fetch("http://localhost:5000/api/labtests/1/123")
-//       .then(res => res.json())
-//       .then(labTestItems =>
-//         this.setState({ labTestItems }, () => console.log(labTestItems))
-//       );
-//   }
+      }
+    }
+    
 
 
+  
 
-//   render(){
+  componentWillMount() {
+    // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
+    fetch(`http://localhost:5000/api/labtests/${this.state.patient.pid}/${this.state.patient.bht}`)
+
+      .then(res => res.json())
+      .then(labTestItems =>
+        this.setState({ labTestItems }, () => console.log(labTestItems))
+      );
+  }
+
+
+
+
+  render(){
+
 
 
 
@@ -79,9 +87,14 @@
 
 //                     {labReports}
 
-//                          </tbody>
-//                     </table> 
-                    
+
+                         </tbody>
+                    </table> 
+
+                 <br/>
+                 <br/>
+                 <br/>
+
 
 
 //                  </div>
@@ -97,6 +110,9 @@
 //   		);
 //      }
 
-// }
+
+
+}
+
 
 // export default Viewtest;
