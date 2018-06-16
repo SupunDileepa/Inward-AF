@@ -1,7 +1,7 @@
 
 const express = require('express');
 const router = express.Router();
-const Chart = require('../models/dischargeSchema');
+const Chart = require('../../models/dischargeSchema');
 
 router.get('/all',(req,res,next)=>{
     Chart.find((err,result)=>{
@@ -14,6 +14,8 @@ router.get('/all',(req,res,next)=>{
 
 router.post('/add',(req,res,next)=>{
     const Charts = new Chart({
+        patient_id: req.body.patient_id,
+  patient_name:req.body.patient_name,
         bht_no:req.body.bht_no,
         dischargedDate:req.body.dischargedDate,
         

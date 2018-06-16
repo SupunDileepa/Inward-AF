@@ -24,7 +24,7 @@ import {
 } from "reactstrap";
 import axios from "axios/index";
 
-class InternalTransferForms extends Component {
+class DischargePatient extends Component {
   constructor(props) {
     super(props);
 
@@ -32,15 +32,11 @@ class InternalTransferForms extends Component {
     this.state = {
      
       patient : JSON.parse(localStorage.getItem('patientDetails')),
-      patient_id:"",
+      patient_id: "",
       patient_name:"",
-      bht_no:"",
-      transfer_ward: "",
-      reason_for_transfer: "",
-      report_of_special_examination: "",
-      treatment_suggested: "",
-      transfer_date: "",
-      remark: ""
+            bht_no:"",
+            dischargedDate:"",
+            
     };
       console.log(this.state.patient_id);
     this.inputHandler = this.inputHandler.bind(this);
@@ -55,37 +51,26 @@ class InternalTransferForms extends Component {
       this.setState({
 
         patient_id:this.state.patient.pid,
-        bht_no:this.state.patient.bht,
-        patient_name: this.state.patient.name
+        bht_no:this.state.patient.bht
       })
     const {
-      patient_id,
-      patient_name,
-      bht_no,
-      transfer_ward,
-      reason_for_transfer,
-      report_of_special_examination,
-      treatment_suggested,
-      transfer_date,
-      remark
+        patient_id,
+        patient_name,
+              bht_no,
+              dischargedDate
     } = this.state;
 
     axios
-      .post("http://localhost:5000/api/internalTransfer/add", {
+      .post("http://localhost:5000/api/discharge/add", {
         patient_id,
         patient_name,
-        bht_no,
-        transfer_ward,
-        reason_for_transfer,
-        report_of_special_examination,
-        treatment_suggested,
-        transfer_date,
-        remark
+              bht_no,
+              dischargedDate
       })
       .then(result => {
         alertify.notify('Successfully Transfered!', 'success', 5, function(){  console.log('dismissed'); });
       });
-    this.props.history.push("/bht/viewinternalTransfer");
+    this.props.history.push("/bht/viewdischarge");
   }
 
   render() {
@@ -97,86 +82,65 @@ class InternalTransferForms extends Component {
           <Col xs="12" sm="6">
             <Card>
               <CardHeader>
-                <strong>Internal Transfer</strong>
+                <strong>Patient discharge</strong>
               </CardHeader>
               <Form onSubmit={this.submitHandler}>
                 <CardBody>
                   <FormGroup>
-                    <Label htmlFor="toward">Transfer Ward</Label>
+                    <Label htmlFor="toward">BHT number</Label>
                     <Input
                       type="text"
                       id="transfer_ward"
                       name="transfer_ward"
-                      value={this.state.transfer_ward}
-                      onChange={this.inputHandler}
+                      value={this.state.patient.bht}
+                      
                       placeholder=""
                       required
                     />
                   </FormGroup>
                   <FormGroup>
-                    <Label htmlFor="repSpExm">
-                      Report of Spacial Examination
+                    <Label htmlFor="repSpExm">Patient ID
                     </Label>
                     <Input
                       type="text"
                       id="report_of_spacial_examination"
                       name="report_of_special_examination"
-                      value={this.state.report_of_special_examination}
-                      onChange={this.inputHandler}
+                      value={this.state.patient.pid}
+                      
                       placeholder=""
                       required
                     />
                   </FormGroup>
                   <FormGroup>
-                    <Label htmlFor="reason">Reason for Transfer</Label>
+                    <Label htmlFor="reason">Patient Name</Label>
                     <Input
                       type="text"
                       id="reson_for_trasnsfer"
                       name="reason_for_transfer"
-                      value={this.state.reason_for_transfer}
-                      onChange={this.inputHandler}
+                      value={this.state.patient.name}
+                      
+                      
                       placeholder=""
                       required
                     />
-                  </FormGroup>
-                  <FormGroup>
-                    <Label htmlFor="treatment">Treatment suggested</Label>
-                    <Input
-                      type="text"
-                      id="treatment_suggested"
-                      name="treatment_suggested"
-                      value={this.state.treatment_suggested}
-                      onChange={this.inputHandler}
-                      placeholder=""
-                      required
-                    />
-                  </FormGroup>
-                  <FormGroup>
+                    </FormGroup>
+                 <FormGroup>
                     <Label htmlFor="trDate">Transfer Date Time</Label>
                     <Input
                       type="date"
-                      id="transfer_date"
-                      name="transfer_date"
-                      value={this.state.transfer_date}
+                      id="dischargedDate"
+                      name="dischargedDate"
+                      value={this.state.dischargedDate}
                       onChange={this.inputHandler}
                       placeholder=""
                       required
                     />
                   </FormGroup>
-                  <FormGroup>
-                    <Label htmlFor="remark">Remark</Label>
-                    <Input
-                      type="text"
-                      id="remark"
-                      name="remark"
-                      value={this.state.remark}
-                      onChange={this.inputHandler}
-                      placeholder=""
-                    />
-                  </FormGroup>
+                  
+
                   <FormGroup className="form-actions">
                     <Button type="submit" size="sm" color="success">
-                      Transfer Patient
+                      Discharge Patient
                     </Button>
                   </FormGroup>
                 </CardBody>
@@ -189,4 +153,4 @@ class InternalTransferForms extends Component {
   }
 }
 
-export default InternalTransferForms;
+export default DischargePatient;

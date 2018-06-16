@@ -14,7 +14,7 @@ const internalTransfer = require("./routes/api/internalTransferroute");
 const diabeticsRouter =require("./routes/api/dibeticsChartroute");
 const fvrRouter = require("./routes/api/fvrChartroutes");
 const lbRouter = require("./routes/api/liquidBalanceChartroute");
-
+const discharge = require("./routes/api/dischargeRoute");
 const patientRoutes = require("./routes/api/patient");
 
 
@@ -66,6 +66,7 @@ app.use("/api/internalTransfer",internalTransfer);
 app.use("/api/diabeticschart",diabeticsRouter);
 app.use("/api/feverchart",fvrRouter);
 app.use("/api/lbchart",lbRouter);
+app.use("/api/discharge",discharge);
 
 app.use("/api/patients", patientRoutes);
 
