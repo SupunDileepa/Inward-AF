@@ -162,7 +162,7 @@ class PatientChart extends Component {
                         </CardHeader>
                         <CardBody>
                             <div className="chart-wrapper">
-                                <Line data={this.state.diabatics}
+                                <Line data={diabatics}
                                       options={{
                                           maintainAspectRatio: false
                                       }}

@@ -5,8 +5,8 @@ const bcrypt = require("bcryptjs");
 autoIncrement = require("mongoose-auto-increment");
 autoIncrement.initialize(mongoose.connection);
 const internalTransferSchema = new mongoose.Schema({
-    tranfer_id: Number,
-
+    patient_id: Number,
+    patient_name:String,
     bht_no: String,
     transfer_ward: String,
     transfer_from_ward: String,

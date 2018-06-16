@@ -3,8 +3,8 @@ const mongooseUniqueValidator = require("mongoose-unique-validator");
 const bcrypt = require("bcryptjs");
 
 const ExternalTransferSchema = new mongoose.Schema({
-  transfer_id: Number,
-
+  patient_id: Number,
+  patient_name: String,
   bht_no: String,
   transfer_from: String,
   transfer_to: String,

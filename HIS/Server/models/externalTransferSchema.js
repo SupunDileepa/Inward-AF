@@ -5,6 +5,8 @@ const externalTransferSchema = new mongoose.Schema({
     //     type:String,
     //     required:true
     // },
+    patient_id: Number,
+  patient_name: String,
     bht_no:{
         type:String,
         required:true

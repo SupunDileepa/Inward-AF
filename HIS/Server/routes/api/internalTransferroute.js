@@ -13,6 +13,8 @@ router.get("/all", (req, res, next) => {
 
 router.post("/add", (req, res, next) => {
   const Charts = new Chart({
+    patient_id:req.body.patient_id,
+    patient_name:req.body.patient_name,
     transfer_ward: req.body.transfer_ward,
     reason_for_transfer: req.body.reason_for_transfer,
     report_of_special_examination: req.body.report_of_special_examination,

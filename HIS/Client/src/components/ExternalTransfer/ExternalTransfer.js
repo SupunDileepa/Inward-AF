@@ -23,6 +23,10 @@ class ExternalTransferForms extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
+      patient_id:"",
+      patient_name:"",
+      bht_no:"",
       transfer_from: "",
       transfer_to: "",
       reason_for_transfer: "",
@@ -41,8 +45,15 @@ class ExternalTransferForms extends Component {
   }
   submitHandler(e) {
     e.preventDefault();
+    this.setState({
 
+      patient_id:this.state.patient.pid,
+      bht_no:this.state.patient.bht
+    })
     const {
+      patient_id,
+      patient_name,
+      bht_no,
       transfer_from,
       transfer_to,
       reason_for_transfer,
@@ -56,6 +67,9 @@ class ExternalTransferForms extends Component {
 
     axios
       .post("http://localhost:5000/api/externalTransfer/add", {
+        patient_id,
+        patient_name,
+        bht_no,
         transfer_from,
         transfer_to,
         reason_for_transfer,

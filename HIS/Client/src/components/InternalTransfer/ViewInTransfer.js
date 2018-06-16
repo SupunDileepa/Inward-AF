@@ -15,7 +15,7 @@ import {
 } from "reactstrap";
 //import TableRow from "../PatientList/TableRow/TableRow";
 
-class ViewExTransfers extends Component {
+class ViewInTransfers extends Component {
   constructor(props) {
     super(props);
     //console.log(this.state.patients);
@@ -28,7 +28,7 @@ class ViewExTransfers extends Component {
   componentDidMount() {
     console.log(this.state.p.pid);
     axios
-      .get("http://localhost:5000/api/externalTransfer/all")
+      .get("http://localhost:5000/api/internalTransfer/all")
       .then(res => {
         this.setState({ ext: res.data });
         console.log(this.state.ext);
@@ -47,7 +47,7 @@ class ViewExTransfers extends Component {
       <div className="container">
 
 
-        <h4 className="text-uppercase">External Transfer Details</h4>
+        <h4 className="text-uppercase">Internal Transfer Details</h4>
         <br />
         <table className="table table-bordered">
           <thead className="thead-dark">
@@ -56,9 +56,8 @@ class ViewExTransfers extends Component {
               <th>Patient name</th>
               <th>BHT number</th>
               <th>Transfer from </th>
-              <th>Transfer to </th>
               <th>Reason for transfer</th>
-              <th>Trearment suggested</th>
+              <th>Treatment suggested</th>
 
             </tr>
           </thead>
@@ -69,8 +68,7 @@ class ViewExTransfers extends Component {
              <td>{external.patient_id}</td>
              <td>{external.patient_name}</td>
              <td>{external.bht_no}</td>
-             <td>{external.transfer_from}</td>
-             <td>{external.transfer_to}</td>
+             <td>{external.transfer_ward}</td>
              <td>{external.reason_for_transfer}</td>
              <td>{external.treatment_suggested}</td>
         
@@ -83,4 +81,4 @@ class ViewExTransfers extends Component {
     );
   }
 }
-export default ViewExTransfers;
+export default ViewInTransfers;

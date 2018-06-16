@@ -30,6 +30,11 @@ class InternalTransferForms extends Component {
 
     // this.toggle = this.toggle.bind(this);
     this.state = {
+     
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
+      patient_id:"",
+      patient_name:"",
+      bht_no:"",
       transfer_ward: "",
       reason_for_transfer: "",
       report_of_special_examination: "",
@@ -37,7 +42,7 @@ class InternalTransferForms extends Component {
       transfer_date: "",
       remark: ""
     };
-
+      console.log(this.state.patient_id);
     this.inputHandler = this.inputHandler.bind(this);
     this.submitHandler = this.submitHandler.bind(this);
   }
@@ -47,8 +52,15 @@ class InternalTransferForms extends Component {
   }
   submitHandler(e) {
     e.preventDefault();
+      this.setState({
 
+        patient_id:this.state.patient.pid,
+        bht_no:this.state.patient.bht
+      })
     const {
+      patient_id,
+      patient_name,
+      bht_no,
       transfer_ward,
       reason_for_transfer,
       report_of_special_examination,
@@ -59,6 +71,9 @@ class InternalTransferForms extends Component {
 
     axios
       .post("http://localhost:5000/api/internalTransfer/add", {
+        patient_id,
+        patient_name,
+        bht_no,
         transfer_ward,
         reason_for_transfer,
         report_of_special_examination,
@@ -69,7 +84,7 @@ class InternalTransferForms extends Component {
       .then(result => {
         alertify.notify('Successfully Transfered!', 'success', 5, function(){  console.log('dismissed'); });
       });
-    this.props.history.push("/internalTransfer");
+    this.props.history.push("/bht/viewinternalTransfer");
   }
 
   render() {
