@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 
 class SearchByBHT extends Component {
+
   constructor(props) {
+
     super(props);
     this.state = {
       pid: "",
@@ -15,6 +17,7 @@ class SearchByBHT extends Component {
   search() {
     // check whether the field is empty
     if (!this.refs.bht.value) return;
+
 
     fetch("http://localhost:5000/api/patients/bht/" + this.refs.bht.value)
       .then(response => response.json())
@@ -30,6 +33,7 @@ class SearchByBHT extends Component {
           wardNo: json[0].wardNo,
           bedNo: json[0].bedNo
         });
+
 
         document.getElementById("pid").innerHTML = this.state.pid;
         document.getElementById("bht").innerHTML = this.state.bht;
@@ -51,6 +55,7 @@ class SearchByBHT extends Component {
           />
           <input type="submit" onClick={this.search.bind(this)} Search />
         </form>
+
         <br />
         <br />
         Patient ID : <label id="pid" />
@@ -62,6 +67,7 @@ class SearchByBHT extends Component {
         Ward Number : <label id="wardNo" />
         <br />
         Bed Number : <label id="bedNo" />
+
       </div>
     );
   }

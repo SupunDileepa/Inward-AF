@@ -20,6 +20,7 @@ class Prescribe extends Component {
     this.state={
 
     	user:JSON.parse(localStorage.getItem('session')),
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
       prescriptions:[],
 
       expand:false,
@@ -35,7 +36,7 @@ class Prescribe extends Component {
 
      // fetch(`/api/prescriptions/${this.state.user.pid}/${this.state.user.bht}`)
 
-     fetch('http://localhost:5000/api/prescriptions/1/123')
+     fetch(`http://localhost:5000/api/prescriptions/${this.state.patient.pid}/${this.state.patient.bht}`)
 
         .then(res=>res.json())
          .then(prescriptions=> this.setState({prescriptions},()=> console.log(prescriptions)));

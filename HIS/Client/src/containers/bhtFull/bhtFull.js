@@ -69,6 +69,15 @@ import PatientChart from "../../components/Charts/";
 import PatientProfile from "../../components/PatientProfile/";
 
 
+
+import Export from "../../views/download";
+
+import PatientChart from "../../components/Charts/";
+import PatientProfile from "../../components/PatientProfile/";
+
+
+import Viewdiet from "../../views/viewdiet";
+
 class bhtFull extends Component {
   render() {
     return (
@@ -90,6 +99,7 @@ class bhtFull extends Component {
                   name="Profile"
                   component={PatientProfile}
                 />
+
 
                 <Route
                   path="/bht/internalTransfer"
@@ -154,6 +164,18 @@ class bhtFull extends Component {
                   path="/bht/viewreport" 
                   name="viewreport" 
                   component={ViewReport}/>
+
+                    <Route
+                  path="/bht/printreports"
+                  name="printreports"
+                  component={Export}
+                />
+
+                    <Route
+                  path="/bht/diet"
+                  name="printreports"
+                  component={Viewdiet}
+                />
 
                   
 

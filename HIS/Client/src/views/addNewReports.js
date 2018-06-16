@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import {Redirect} from 'react-router';
 import DetailBar from "./details";
 
+import DetailBar from "./details";
+
+
 class AddNewReport extends Component {
 
 	constructor(){
@@ -9,9 +12,11 @@ class AddNewReport extends Component {
 		super();
 
 		this.state={
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
 			 file: '',
       imagePreviewUrl: ''
       		}
+
 		this.pres=this.pres.bind(this);
     this._handleImageChange = this._handleImageChange.bind(this);
 	}
@@ -21,8 +26,8 @@ class AddNewReport extends Component {
 
 
 const newReport={
-      pId:"1",
-      bedid:"123",
+      pId:this.state.patient.pid,
+      bedid:this.state.patient.bht,
 			testName:this.refs.name.value,
 			tester:this.refs.tester.value,
 			testResult:this.refs.result.value,
@@ -75,8 +80,12 @@ const newReport={
     return (
 
       <div className="labtest">
+
+
       <DetailBar/>
           <br/><br/>
+
+
       <h2>Enter New Lab Test Details Below To Add New Test Results</h2>
       <br/>
       <br/>

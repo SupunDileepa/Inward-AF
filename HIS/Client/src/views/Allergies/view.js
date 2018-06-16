@@ -35,7 +35,9 @@ class View extends Component {
       })
 
       return (
+
         <div> 
+
             <DetailBar/>
             <br/><br/>
             <table width="750">                  

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
+
 import DetailBar from "./../../views/details";
+
 import {
   Row,
   Col,
@@ -72,10 +74,12 @@ class ExternalTransferForms extends Component {
 
   render() {
     return (
+
       
       <div className="animated fadeIn">
         <DetailBar/>
         <br/><br/>
+
         <Col xs="12" sm="6">
           <Card>
             <CardHeader>

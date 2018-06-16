@@ -44,6 +44,15 @@ export default {
           url: "/bht/addnewtests",
           
         },
+
+        {
+          name: "Create PDF",
+
+          url: "/bht/printreports",
+          
+        },
+
+
      
 
       ]
@@ -73,16 +82,20 @@ export default {
       children: [
         {
           name: "Fever Chart",
+
           url: "/bht/charts"
         },
         {
           name: "Diabetic Chart",
           url: "/bht/charts"
+
         },
 
         {
           name: "Liquid Balance Chart",
+
           url: "/bht/charts"
+
         }
       ]
     },
@@ -110,18 +123,9 @@ export default {
     },
 
     {
-      name: "Patient Diets",
-      icon: "icon-star",
-      children: [
-        {
-          name: "Patient Diets",
-          url: "/login"
-        },
-        {
-          name: "View Patient Diets",
-          url: "/register"
-        }
-      ]
+      name: "View Patient Diets",
+      icon: "icon-drop",
+      url: "/bht/diet",
     }
   ]
 };

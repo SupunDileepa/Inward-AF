@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import DetailBar from "./../details";
+
 import {
   Row,
   Col,
@@ -22,6 +23,7 @@ import {
   InputGroupAddon,
   InputGroupButton
 } from "reactstrap";
+
 
 class View extends Component {  
 
@@ -88,6 +90,7 @@ class View extends Component {
       <div className="animated fadeIn"> 
         <DetailBar/>
         <br/><br/>
+
 
 
         <Row>
@@ -163,6 +166,7 @@ class View extends Component {
         </Row>
 
         {/* <h3>Add New Allergy</h3><br/>
+
         <form>
           <input ref="name" type="text" placeholder="Allergy Name" required/><br/><br/>
           <input ref="remark" type="text" placeholder="Remark" required/><br/><br/>
