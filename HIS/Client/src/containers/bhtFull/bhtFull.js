@@ -65,8 +65,11 @@ import ViewReport from "../../views/LabTests/viewReport";
 
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/";
+
+import PatientProfile from "../../components/PatientProfile/PatientProfile";
+
 import PatientChart from "../../components/Charts/";
-import PatientProfile from "../../components/PatientProfile/";
+//import PatientProfile from "../../components/PatientProfile/";
 
 
 
@@ -77,6 +80,7 @@ import Export from "../../views/download";
 
 
 import Viewdiet from "../../views/viewdiet";
+
 
 class bhtFull extends Component {
   render() {
@@ -154,16 +158,24 @@ class bhtFull extends Component {
                   name="viewtests"
                   component={Viewtest}
                 />
+                <Route
+                  path="/bht/profile"
+                  name="PatientProfile"
+                  component={PatientProfile}
+                />
 
-                  <Route 
-                  path="/bht/addnewtests" 
-                  name="addnewtests" 
-                  component={AddNewReport}/>
+                <Route
+                  path="/bht/addnewtests"
+                  name="addnewtests"
+                  component={AddNewReport}
+                />
 
-                  <Route 
-                  path="/bht/viewreport" 
-                  name="viewreport" 
-                  component={ViewReport}/>
+
+                <Route
+                  path="/bht/viewreport"
+                  name="viewreport"
+                  component={ViewReport}
+                />
 
                     <Route
                   path="/bht/printreports"
@@ -178,6 +190,7 @@ class bhtFull extends Component {
                 />
 
                   
+
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
 

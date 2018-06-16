@@ -64,17 +64,19 @@ router.get(
 router.get("/:id", (req, res, next) => {
   Patient.findOne({ pId: req.params.id }, (err, result) => {
     if (err) return next(err);
-    res.json({ obj: result });
+
+    res.json(result);
   });
 });
 
-router.get('/patients/bht/:bhtid', (req, res, next) => {   
-  var query = {'bht' : req.params.bhtid};
+router.get("/patients/:bhtid", (req, res, next) => {
+  var query = { bht: req.params.bhtid };
 
   Patient.find(query, (err, result) => {
-      if(err) return next(err);        
-      res.json(result);
-  });    
+    if (err) return next(err);
+    res.json(result);
+  });
+
 });
 
 getToken = function(headers) {
