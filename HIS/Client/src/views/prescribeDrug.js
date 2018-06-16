@@ -73,7 +73,8 @@ const newDrug={
          </div>
          <br/>
          <br/>
-         <div className="col-md-4 mb-3">
+         
+         <div className="col-md-4 m-auto">
          <label for="validationDefault02">
          Duration
          </label>
@@ -81,30 +82,37 @@ const newDrug={
          </div>
          <br/>
          <br/>
-         <label>
-         Dosage:   
-         <input type="text" name="Dosage" ref='dosage'/>
+
+           <div className="col-md-4 m-auto">
+         <label for="validationDefault03">
+         Dosage
          </label>
+         <input type="number" className="form-control" id="validationDefault03" placeholder="Dosage" ref='dosage' required/>
+         </div>
+
          <br/>
          <br/>
-         <label>
-         Frequancy:
-         <input type="text" name="frequancy" ref='frequancy'/>
+        <div className="col-md-4 m-auto">
+         <label for="validationDefault04">
+         Frequancy
          </label>
+         <input type="text" className="form-control" id="validationDefault04" placeholder="Frequancy" ref='frequancy' required/>
+         </div>
+    
          <br/>
          <br/>
-          <label>
-         Prescriber:   
-         <input type="text" name="prescriber" ref='prescriber'/>
+         <div className="col-md-4 m-auto">
+         <label for="validationDefault04">
+         Prescriber
          </label>
+         <input type="text" className="form-control" id="validationDefault04" placeholder="Prescriber" ref='prescriber' required/>
+         </div>
+     
          <br/>
          <br/>
-         <div className="custom-file">
-  <input type="file" className="custom-file-input" id="customFile"/>
-  <label className="custom-file-label" for="customFile">Choose file</label>
-</div>
+         <div className="col-md-4 m-auto">
          <button className='btn btn-primary 'type="submit" onClick={this.pres}>Prescribe</button>
-       
+         </div>
        </from>
       </div>
     );

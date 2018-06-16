@@ -123,18 +123,9 @@ export default {
     },
 
     {
-      name: "Patient Diets",
-      icon: "icon-star",
-      children: [
-        {
-          name: "Patient Diets",
-          url: "/login"
-        },
-        {
-          name: "View Patient Diets",
-          url: "/register"
-        }
-      ]
+      name: "View Patient Diets",
+      icon: "icon-drop",
+      url: "/bht/diet",
     }
   ]
 };

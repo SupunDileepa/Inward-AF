@@ -73,7 +73,7 @@ import PatientChart from "../../components/Charts/";
 import PatientProfile from "../../components/PatientProfile/";
 
 
-
+import Viewdiet from "../../views/viewdiet";
 
 class bhtFull extends Component {
   render() {
@@ -177,6 +177,12 @@ class bhtFull extends Component {
                   path="/bht/printreports"
                   name="printreports"
                   component={Export}
+                />
+
+                    <Route
+                  path="/bht/diet"
+                  name="printreports"
+                  component={Viewdiet}
                 />
 
                   
