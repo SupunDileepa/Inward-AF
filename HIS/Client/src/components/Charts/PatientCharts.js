@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Line} from 'react-chartjs-2';
 import {CardColumns, Card, CardHeader, CardBody, Dropdown, DropdownMenu,DropdownToggle,DropdownItem} from 'reactstrap';
 
-
+import axios from "axios";
 
 
 const fever = {
@@ -91,22 +91,38 @@ class PatientChart extends Component {
 
     constructor(props){
         super(props);
-        this.state ={};
+        this.state ={diabatics:[]};
     }
 
     sendToLocal(){
 
         localStorage.clear();
     
-        const patient = {
-          pid : this.props.pId,
-          bht : this.props.bht,
-          name : this.props.name
+        const dates = {
+            datetime : this.props.datetime
+        }
+
+        const blood_sugar ={
+            blood_sugar:this.props.blood_sugar
         }
     
         localStorage.setItem('patientDetails',JSON.stringify(patient));
       }
+
+
+      componentDidMount(){
+          axios.get("http://localhost:5000/api/diabeticschart/333/bht1").then(res=>{
+              this.setState({diabatics:res.data});
+          }).catch(err=>{
+              console.log(err);
+          })
+      }
     render() {
+
+
+    //   const da=  this.state.diabatics.map((d,i)=>{
+
+    //     })
         return (
             <div className="animated fadeIn">
                 <CardColumns className="cols-2">

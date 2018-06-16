@@ -1,6 +1,9 @@
 const mongoose = require("mongoose");
 
 const internalTransferSchema = new mongoose.Schema({
+  patient_id: Number,
+  patient_name: String,
+  bht_no: String,
   transfer_ward: {
     type: String,
     required: true

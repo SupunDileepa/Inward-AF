@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LabItem from "./labItems";
@@ -5,9 +6,9 @@ import DetailBar from "./../details";
 
 
 
-class Viewtest extends Component {
-  constructor() {
-    super();
+// class Viewtest extends Component {
+//   constructor() {
+//     super();
 
     this.state={
     	
@@ -39,51 +40,53 @@ class Viewtest extends Component {
 
 
 
-//Mapping lab test items 
+
+// //Mapping lab test items 
 
   
 
-      var labReports =this.state.labTestItems.map((labItems,i)=>{
+//       var labReports =this.state.labTestItems.map((labItems,i)=>{
             
-      return(
-          <LabItem key={i} item={labItems}/>
-        )
+//       return(
+//           <LabItem key={i} item={labItems}/>
+//         )
               
-     })
+//      })
 
   
 
     
 
 
-  	return(
+//   	return(
 
-  			<div className='main_labReportView'>
+//   			<div className='main_labReportView'>
   			 
-          <DetailBar/>
+//           <DetailBar/>
   		
 
-                 <br/>
-                 <br/>
-                 <br/>
-                    <h3>Lab Reports</h3>
-                 <br/>
-                 <br/>
-                 <br/>
+//                  <br/>
+//                  <br/>
+//                  <br/>
+//                     <h3>Lab Reports</h3>
+//                  <br/>
+//                  <br/>
+//                  <br/>
 
-                   <table className="table table-hover">
+//                    <table className="table table-hover">
 
                       
 
-                        <thead>
-                        <th>Test Name</th>
-                        <th>Test Result</th>
-                        <th>Tester</th>
-                        <th>View Report</th>             
-                        </thead>
-                        <tbody>
+//                         <thead>
+//                         <th>Test Name</th>
+//                         <th>Test Result</th>
+//                         <th>Tester</th>
+//                         <th>View Report</th>             
+//                         </thead>
+//                         <tbody>
 
-                    {labReports}
+//                     {labReports}
+
 
                          </tbody>
                     </table> 
@@ -93,7 +96,8 @@ class Viewtest extends Component {
                  <br/>
 
 
-                 </div>
+
+//                  </div>
   				
 		
 
@@ -103,10 +107,12 @@ class Viewtest extends Component {
   			
 		
 			
-  		);
-     }
+//   		);
+//      }
+
 
 
 }
 
-export default Viewtest;
+
+// export default Viewtest;

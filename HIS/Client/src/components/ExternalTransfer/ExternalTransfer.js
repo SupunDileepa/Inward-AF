@@ -23,6 +23,10 @@ class ExternalTransferForms extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
+      patient_id:"",
+      patient_name:"",
+      bht_no:"",
       transfer_from: "",
       transfer_to: "",
       reason_for_transfer: "",
@@ -41,8 +45,15 @@ class ExternalTransferForms extends Component {
   }
   submitHandler(e) {
     e.preventDefault();
+    this.setState({
 
+      patient_id:this.state.patient.pid,
+      bht_no:this.state.patient.bht
+    })
     const {
+      patient_id,
+      patient_name,
+      bht_no,
       transfer_from,
       transfer_to,
       reason_for_transfer,
@@ -56,6 +67,9 @@ class ExternalTransferForms extends Component {
 
     axios
       .post("http://localhost:5000/api/externalTransfer/add", {
+        patient_id,
+        patient_name,
+        bht_no,
         transfer_from,
         transfer_to,
         reason_for_transfer,
@@ -67,9 +81,9 @@ class ExternalTransferForms extends Component {
         remark
       })
       .then(result => {
-        console.log(result);
+        alertify.notify('Successfully Tranfered', 'success', 5, function(){  console.log('dismissed'); });
       });
-    this.props.history.push("/externalTransfer");
+    this.props.history.push("/bht/viewexternalTransfer");
   }
 
   render() {
@@ -97,6 +111,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.transfer_from}
                     onChange={this.inputHandler}
                     placeholder=""
+                    required
                   />
                 </FormGroup>
                 <FormGroup>
@@ -108,6 +123,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.transfer_to}
                     onChange={this.inputHandler}
                     placeholder=""
+                    required
                   />
                 </FormGroup>
                 <FormGroup>
@@ -121,6 +137,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.reason_for_transfer}
                     onChange={this.inputHandler}
                     placeholder=""
+                    required
                   />
                 </FormGroup>
                 <FormGroup>
@@ -134,6 +151,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.report_of_spacial_examination}
                     onChange={this.inputHandler}
                     placeholder=""
+                    required
                   />
                 </FormGroup>
                 <FormGroup>
@@ -147,6 +165,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.treatment_suggested}
                     onChange={this.inputHandler}
                     placeholder=""
+                    required
                   />
                 </FormGroup>
                 <FormGroup>
@@ -160,6 +179,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.transfer_created_date_time}
                     onChange={this.inputHandler}
                     placeholder=""
+                    required
                   />
                 </FormGroup>
                 <FormGroup>
@@ -171,6 +191,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.name_of_guardian}
                     onChange={this.inputHandler}
                     placeholder=""
+                    required
                   />
                 </FormGroup>
                 <FormGroup>
@@ -184,6 +205,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.address_of_guardian}
                     onChange={this.inputHandler}
                     placeholder=""
+                    required
                   />
                 </FormGroup>
                 <FormGroup>
@@ -195,6 +217,7 @@ class ExternalTransferForms extends Component {
                     value={this.state.remark}
                     onChange={this.inputHandler}
                     placeholder=""
+                    
                   />
                 </FormGroup>
                 <FormGroup className="form-actions">
