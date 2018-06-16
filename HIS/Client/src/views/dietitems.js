@@ -18,19 +18,6 @@ constructor(props){
 
 }
 
-    showReport(){
-
-
-        localStorage.setItem('image',JSON.stringify(this.state.item.image));
-
-        // console.log(this.state.item.image);
-        // <Switch>
-        
-        // <Route exact path="/bht/viewreport" name="Landing" render={(props) => <viewReport {...props} item={this.state.item} />} />
-        //  </Switch>
-        //  window.open('/#/bht/viewreport');
-     
-    }
 
   render() {
     return (
@@ -43,10 +30,10 @@ constructor(props){
 
                           
                                 <tr>
-                                    <td>{this.state.item.testName}</td>
-                                    <td>{this.state.item.testResult}</td>
-                                    <td>{this.state.item.tester}</td>
-                                    <td><Link to="/bht/viewreport"><button onClick={this.showReport.bind(this)} className="btn btn-secondary">View Report</button></Link></td>
+                                    <td>{this.state.item.foodgroup}</td>
+                                    <td>{this.state.item.servingsize}</td>
+                                    <td>{this.state.item.calories}</td>
+                                    <td>{this.state.item.energy}</td>
                                     <br/>
                                 </tr>
 

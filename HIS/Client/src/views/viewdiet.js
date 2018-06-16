@@ -11,7 +11,7 @@ class Viewdiet extends Component {
     this.state={
     	
       patient : JSON.parse(localStorage.getItem('patientDetails')),
-      labTestItems:[]
+      dietItems:[]
 
       }
     }
@@ -22,10 +22,10 @@ class Viewdiet extends Component {
 
   componentWillMount() {
     // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
-    fetch(`http://localhost:5000/api/labtests/${this.state.patient.pid}/${this.state.patient.bht}`)
+    fetch(`http://localhost:5000/api/diets/${this.state.patient.pid}`)
       .then(res => res.json())
-      .then(labTestItems =>
-        this.setState({ labTestItems }, () => console.log(labTestItems))
+      .then(dietItems =>
+        this.setState({ dietItems }, () => console.log(dietItems))
       );
   }
 
@@ -40,10 +40,10 @@ class Viewdiet extends Component {
 
   
 
-      var labReports =this.state.labTestItems.map((labItems,i)=>{
+      var diet =this.state.labTestItems.map((dietitem,i)=>{
             
       return(
-          <LabItem key={i} item={labItems}/>
+          <DietItem key={i} item={dietitem}/>
         )
               
      })
@@ -55,7 +55,7 @@ class Viewdiet extends Component {
 
   	return(
 
-  			<div className='main_labReportView'>
+  			<div className='main_DietReportView'>
   			 
           <DetailBar/>
   		
@@ -63,7 +63,7 @@ class Viewdiet extends Component {
                  <br/>
                  <br/>
                  <br/>
-                    <h3>Lab Reports</h3>
+                    <h3>patient Diet Reports</h3>
                  <br/>
                  <br/>
                  <br/>
@@ -73,14 +73,14 @@ class Viewdiet extends Component {
                       
 
                         <thead>
-                        <th>Test Name</th>
-                        <th>Test Result</th>
-                        <th>Tester</th>
-                        <th>View Report</th>             
+                        <th>Food Group</th>
+                        <th>Serving Size</th>
+                        <th>Calories</th>
+                        <th>Energy</th>             
                         </thead>
                         <tbody>
 
-                    {labReports}
+                    {diet}
 
                          </tbody>
                     </table> 
