@@ -50,14 +50,14 @@ import Alerts from "../../views/Notifications/Alerts/";
 import Badges from "../../views/Notifications/Badges/";
 import Modals from "../../views/Notifications/Modals/";
 
-import Prescribe from "../../views/prescribe";
+import Prescribe from "../../views/prescriptions/prescribe";
 
 import viewAllergies from "./../../views/Allergies/view";
 import createAllergies from "./../../views/Allergies/create";
 import updateAllergies from "./../../views/Allergies/updateAllergy";
 
 import searchByBHT from "../../views/searchByBHT";
-import PrescribeDrug from "../../views/prescribeDrug";
+import PrescribeDrug from "../../views/prescriptions/prescribeDrug";
 import Viewtest from "../../views/LabTests/viewTest";
 import ImageUpload from "../../views/img";
 import AddNewReport from "../../views/LabTests/addNewReports";
