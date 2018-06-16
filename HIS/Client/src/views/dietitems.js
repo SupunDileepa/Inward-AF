@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
-import ViewReport from "./viewReport";
+// import ViewReport from "./LabTests/viewReport";
 import { HashRouter, Route, Switch } from "react-router-dom";
 
 class DietItem extends Component {

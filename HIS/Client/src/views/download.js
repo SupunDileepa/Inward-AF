@@ -3,7 +3,7 @@ import jsPDF from 'jspdf';
 
 
 import React, {Component, PropTypes} from 'react';
-import Viewtest from './viewTest';
+import Viewtest from './LabTests/viewTest';
 
 
 

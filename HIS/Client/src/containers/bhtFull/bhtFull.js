@@ -58,10 +58,10 @@ import updateAllergies from "./../../views/Allergies/updateAllergy";
 
 import searchByBHT from "../../views/searchByBHT";
 import PrescribeDrug from "../../views/prescribeDrug";
-import Viewtest from "../../views/viewTest";
+import Viewtest from "../../views/LabTests/viewTest";
 import ImageUpload from "../../views/img";
-import AddNewReport from "../../views/addNewReports";
-import ViewReport from "../../views/viewReport";
+import AddNewReport from "../../views/LabTests/addNewReports";
+import ViewReport from "../../views/LabTests/viewReport";
 
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/";
@@ -72,8 +72,8 @@ import PatientProfile from "../../components/PatientProfile/";
 
 import Export from "../../views/download";
 
-import PatientChart from "../../components/Charts/";
-import PatientProfile from "../../components/PatientProfile/";
+//import PatientChart from "../../components/Charts/";
+//import PatientProfile from "../../components/PatientProfile/";
 
 
 import Viewdiet from "../../views/viewdiet";
