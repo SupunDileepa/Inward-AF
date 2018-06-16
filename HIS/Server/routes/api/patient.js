@@ -69,14 +69,13 @@ router.get("/:id", (req, res, next) => {
   });
 });
 
-router.get("/patients/bht/:bhtid", (req, res, next) => {
+router.get("/bht/:bhtid", (req, res, next) => {
   var query = { bht: req.params.bhtid };
 
   Patient.find(query, (err, result) => {
     if (err) return next(err);
     res.json(result);
   });
-
 });
 
 getToken = function(headers) {
