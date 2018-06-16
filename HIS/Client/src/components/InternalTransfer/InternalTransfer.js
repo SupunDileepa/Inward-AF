@@ -67,7 +67,7 @@ class InternalTransferForms extends Component {
         remark
       })
       .then(result => {
-        console.log(result);
+        alertify.notify('Successfully Transfered!', 'success', 5, function(){  console.log('dismissed'); });
       });
     this.props.history.push("/internalTransfer");
   }
@@ -94,6 +94,7 @@ class InternalTransferForms extends Component {
                       value={this.state.transfer_ward}
                       onChange={this.inputHandler}
                       placeholder=""
+                      required
                     />
                   </FormGroup>
                   <FormGroup>
@@ -107,6 +108,7 @@ class InternalTransferForms extends Component {
                       value={this.state.report_of_special_examination}
                       onChange={this.inputHandler}
                       placeholder=""
+                      required
                     />
                   </FormGroup>
                   <FormGroup>
@@ -118,6 +120,7 @@ class InternalTransferForms extends Component {
                       value={this.state.reason_for_transfer}
                       onChange={this.inputHandler}
                       placeholder=""
+                      required
                     />
                   </FormGroup>
                   <FormGroup>
@@ -129,6 +132,7 @@ class InternalTransferForms extends Component {
                       value={this.state.treatment_suggested}
                       onChange={this.inputHandler}
                       placeholder=""
+                      required
                     />
                   </FormGroup>
                   <FormGroup>
@@ -140,6 +144,7 @@ class InternalTransferForms extends Component {
                       value={this.state.transfer_date}
                       onChange={this.inputHandler}
                       placeholder=""
+                      required
                     />
                   </FormGroup>
                   <FormGroup>

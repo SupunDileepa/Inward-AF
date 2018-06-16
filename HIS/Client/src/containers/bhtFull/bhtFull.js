@@ -64,8 +64,8 @@ import AddNewReport from "../../views/addNewReports";
 import ViewReport from "../../views/viewReport";
 
 import InternalTransfer from "../../components/InternalTransfer/";
-import ExternalTransfer from "../../components/ExternalTransfer/";
-
+import ExternalTransfer from "../../components/ExternalTransfer/ExternalTransfer";
+import ViewExTransfers from "../../components/ExternalTransfer/ViewExTransfers";
 import PatientChart from "../../components/Charts/";
 import PatientProfile from "../../components/PatientProfile/";
 
@@ -104,8 +104,12 @@ class bhtFull extends Component {
                   name="ExternalTransfer"
                   component={ExternalTransfer}
                 />
-
                 <Route
+                  path="/bht/viewexternalTransfer"
+                  name="ExternalTransfer"
+                  component={ViewExTransfers}
+                />
+                {/* <Route
                   path="/bht/internalTransfer"
                   name="InternalTransfer"
                   component={InternalTransfer}
@@ -113,9 +117,9 @@ class bhtFull extends Component {
 
                 <Route
                   path="/bht/externalTransfer"
-                  name="ExternalTransfer"
-                  component={ExternalTransfer}
-                />
+                  name="ViewExternalTransfer"
+                  component={ViewExTransfers}
+                /> */}
 
                 <Route
                   path="/bht/prescriptions"
