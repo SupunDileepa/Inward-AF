@@ -162,7 +162,7 @@ class PatientChart extends Component {
                         </CardHeader>
                         <CardBody>
                             <div className="chart-wrapper">
-                                <Line data={diabatics}
+                                <Line data={diabetics}
                                       options={{
                                           maintainAspectRatio: false
                                       }}

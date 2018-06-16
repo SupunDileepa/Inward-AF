@@ -66,9 +66,9 @@ class ViewExTransfers extends Component {
 
             {this.state.ext.map((external,i)=>
              <tr key={i}>
-             <td>{external.patient_id}</td>
-             <td>{external.patient_name}</td>
-             <td>{external.bht_no}</td>
+             <td>{this.state.p.pid}</td>
+             <td>{this.state.p.name}</td>
+             <td>{this.state.p.bht}</td>
              <td>{external.transfer_from}</td>
              <td>{external.transfer_to}</td>
              <td>{external.reason_for_transfer}</td>
