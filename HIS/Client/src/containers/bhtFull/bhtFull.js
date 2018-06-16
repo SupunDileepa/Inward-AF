@@ -58,14 +58,29 @@ import updateAllergies from "./../../views/Allergies/updateAllergy";
 
 import searchByBHT from "../../views/searchByBHT";
 import PrescribeDrug from "../../views/prescribeDrug";
-import Viewtest from "../../views/viewTest";
+import Viewtest from "../../views/LabTests/viewTest";
 import ImageUpload from "../../views/img";
-import AddNewReport from "../../views/addNewReports";
-import ViewReport from "../../views/viewReport";
+import AddNewReport from "../../views/LabTests/addNewReports";
+import ViewReport from "../../views/LabTests/viewReport";
 
 import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/";
+
 import PatientProfile from "../../components/PatientProfile/PatientProfile";
+
+import PatientChart from "../../components/Charts/";
+//import PatientProfile from "../../components/PatientProfile/";
+
+
+
+import Export from "../../views/download";
+
+//import PatientChart from "../../components/Charts/";
+//import PatientProfile from "../../components/PatientProfile/";
+
+
+import Viewdiet from "../../views/viewdiet";
+
 
 class bhtFull extends Component {
   render() {
@@ -83,6 +98,12 @@ class bhtFull extends Component {
                   name="Dashboard"
                   component={Dashboard}
                 />
+                <Route
+                  path="/bht/profile"
+                  name="Profile"
+                  component={PatientProfile}
+                />
+
 
                 <Route
                   path="/bht/internalTransfer"
@@ -100,6 +121,12 @@ class bhtFull extends Component {
                   path="/bht/prescriptions"
                   name="Prescription"
                   component={Prescribe}
+                />
+
+                <Route
+                  path="/bht/charts"
+                  name="PatientChart"
+                  component={PatientChart}
                 />
 
                 <Route
@@ -143,11 +170,27 @@ class bhtFull extends Component {
                   component={AddNewReport}
                 />
 
+
                 <Route
                   path="/bht/viewreport"
                   name="viewreport"
                   component={ViewReport}
                 />
+
+                    <Route
+                  path="/bht/printreports"
+                  name="printreports"
+                  component={Export}
+                />
+
+                    <Route
+                  path="/bht/diet"
+                  name="printreports"
+                  component={Viewdiet}
+                />
+
+                  
+
 
                 <Route path="/base/cards" name="Cards" component={Cards} />
 

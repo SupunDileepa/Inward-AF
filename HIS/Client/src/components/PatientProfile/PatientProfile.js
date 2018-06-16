@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Table } from "reactstrap";
 import PatientDetails from "./PatientDetails";
+
 import {
   Badge,
   Row,
@@ -14,6 +15,7 @@ import {
   Input
 } from "reactstrap";
 import TableRow from "../PatientList/TableRow/TableRow";
+
 
 class PatientProfile extends Component {
   constructor(props) {
@@ -28,7 +30,9 @@ class PatientProfile extends Component {
   componentDidMount() {
     console.log(this.state.p.pid);
     axios
+
       .get(`http://localhost:5000/api/patients/${this.state.p.pid}`)
+
       .then(res => {
         this.setState({ patients: res.data });
         console.log(this.state.patients);
@@ -40,6 +44,7 @@ class PatientProfile extends Component {
   // ${this.state.p.pid}
 
   render() {
+
     console.log(this.state.patients.obj);
     let patient = this.state.patients;
 
@@ -95,10 +100,12 @@ class PatientProfile extends Component {
               <th>Addmitted Date</th>
               <th>Patient Complains</th>
               <th>Patient History</th>
+
             </tr>
           </thead>
           <tbody>
             <tr>
+
               <td>{patient.bht}</td>
               <td>{patient.wardNo}</td>
               <td>{patient.bedNo}</td>
@@ -110,6 +117,7 @@ class PatientProfile extends Component {
             </tr>
           </tbody>
         </table>
+
       </div>
     );
   }

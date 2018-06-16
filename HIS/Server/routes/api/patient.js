@@ -64,6 +64,7 @@ router.get(
 router.get("/:id", (req, res, next) => {
   Patient.findOne({ pId: req.params.id }, (err, result) => {
     if (err) return next(err);
+
     res.json(result);
   });
 });
@@ -75,6 +76,7 @@ router.get("/patients/:bhtid", (req, res, next) => {
     if (err) return next(err);
     res.json(result);
   });
+
 });
 
 getToken = function(headers) {

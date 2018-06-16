@@ -1,20 +1,26 @@
 import React, {Component} from 'react';
 import AllergyItem from "./allergyItem";
+import DetailBar from "./../details";
 
 class View extends Component {  
 
   constructor(props){
       super(props);
       this.state = {
-        allergies : []
+        allergies : [],       
+        patient : JSON.parse(localStorage.getItem('patientDetails'))       
+        
       }
   }
 
   // get allergies of the given bht and pid
   getAllergies(){
-    fetch('http://localhost:5000/api/allergies/05/432')
+    var pid = this.state.patient.pid;
+    var bht = this.state.patient.bht;    
+
+    fetch('http://localhost:5000/api/allergies/' + pid + '/' + bht)
     .then(response => response.json())
-    .then(allergies=>this.setState({allergies}))      
+    .then(allergies=>this.setState({allergies}),()=>{console.log(allergies)})      
   }
 
   componentDidMount(){
@@ -29,7 +35,11 @@ class View extends Component {
       })
 
       return (
-        <div className="animated fadeIn"> 
+
+        <div> 
+
+            <DetailBar/>
+            <br/><br/>
             <table width="750">                  
                 <th>Name</th>
                 <th>Remark</th>

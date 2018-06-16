@@ -1,36 +1,34 @@
-import React,{Component} from 'react';
+import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import LabItem from "./labItems";
+import DietItem from "./dietitems";
 import DetailBar from "./details";
 
 
-
-
-class Viewtest extends Component {
-
-
-  constructor(){
-
+class Viewdiet extends Component {
+  constructor() {
     super();
-   
+
     this.state={
-
-    	user:JSON.parse(localStorage.getItem('session')),
+    	
+      patient : JSON.parse(localStorage.getItem('patientDetails')),
       labTestItems:[]
-      
+
+      }
     }
-    console.log("lol this.state.name");
+    
 
+
+  
+
+  componentWillMount() {
+    // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
+    fetch(`http://localhost:5000/api/labtests/${this.state.patient.pid}/${this.state.patient.bht}`)
+      .then(res => res.json())
+      .then(labTestItems =>
+        this.setState({ labTestItems }, () => console.log(labTestItems))
+      );
   }
 
-  componentWillMount(){
-
-     // fetch(`http://localhost:5000/api/labtests/${this.state.user.pid}/${this.state.user.bht}`)
-     fetch('http://localhost:5000/api/labtests/1/123')
-        .then(res=>res.json())
-         .then(labTestItems=> this.setState({labTestItems},()=> console.log(labTestItems)));
-
-  }
 
 
   render(){
@@ -86,7 +84,10 @@ class Viewtest extends Component {
 
                          </tbody>
                     </table> 
-                    
+
+                 <br/>
+                 <br/>
+                 <br/>
 
 
                  </div>
@@ -101,12 +102,7 @@ class Viewtest extends Component {
 			
   		);
      }
+
 }
 
-
-export default Viewtest; 	
-
-
-
-
- 
+export default Viewdiet;

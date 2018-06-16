@@ -1,7 +1,7 @@
 
 const express = require('express');
 const diabeticsRouter = express.Router();
-const Chart = require('../models/diabeticSchema');
+const Chart = require('../../models/diabeticSchema');
 
 diabeticsRouter.get('/all',(req,res,next)=>{
     Chart.find((err,result)=>{
@@ -14,6 +14,7 @@ diabeticsRouter.get('/all',(req,res,next)=>{
 
 diabeticsRouter.post('/add',(req,res,next)=>{
     const Charts = new Chart({
+        patient_id:req.body.patient_id,
         bht_no:req.body.bht_no,
         datetime:req.body.datetime,
         blood_sugar:req.body.blood_sugar
@@ -27,8 +28,17 @@ diabeticsRouter.post('/add',(req,res,next)=>{
     })
 });
 
-diabeticsRouter.get('/:id',(req,res,next)=>{
-    Chart.findOne({_id:req.params.id},(err,result)=>{
+// diabeticsRouter.get('/:id',(req,res,next)=>{
+//     Chart.findOne({_id:req.params.id},(err,result)=>{
+//         if(err){
+//             return res.json({error:err});
+//         }
+//         res.json(result);
+//     })
+// });
+
+diabeticsRouter.get('/:patient_id/:bht_no',(req,res,next)=>{
+    Chart.find({patient_id:req.params.patient_id, bht_no:req.params.bht_no},(err,result)=>{
         if(err){
             return res.json({error:err});
         }

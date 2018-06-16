@@ -41,8 +41,22 @@ export default {
         {
           name: "New Test Request",
 
-          url: "/bht/addnewtests"
-        }
+
+          url: "/bht/addnewtests",
+          
+        },
+
+        {
+          name: "Create PDF",
+
+          url: "/bht/printreports",
+          
+        },
+
+
+     
+
+
       ]
     },
 
@@ -64,22 +78,26 @@ export default {
 
     {
       name: "Charts",
-      url: "/theme/colors",
+      url: "/bht/charts",
       icon: "icon-drop",
 
       children: [
         {
           name: "Fever Chart",
-          url: "/viewtests"
+
+          url: "/bht/charts"
         },
         {
           name: "Diabetic Chart",
-          url: "/newtests"
+          url: "/bht/charts"
+
         },
 
         {
           name: "Liquid Balance Chart",
-          url: "/newtests"
+
+          url: "/bht/charts"
+
         }
       ]
     },
@@ -107,18 +125,9 @@ export default {
     },
 
     {
-      name: "Patient Diets",
-      icon: "icon-star",
-      children: [
-        {
-          name: "Patient Diets",
-          url: "/login"
-        },
-        {
-          name: "View Patient Diets",
-          url: "/register"
-        }
-      ]
+      name: "View Patient Diets",
+      icon: "icon-drop",
+      url: "/bht/diet",
     }
   ]
 };

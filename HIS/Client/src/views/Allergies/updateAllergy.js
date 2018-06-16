@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import DetailBar from "./../details";
 
 class View extends Component {  
 
@@ -9,7 +10,8 @@ class View extends Component {
       remark : "",
       category : "",
       severity : "",
-      status : ""
+      status : "",
+      patient : JSON.parse(localStorage.getItem('patientDetails'))
     }
   }
 
@@ -43,8 +45,8 @@ class View extends Component {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            "pid" : "05",
-            "bht" : "432",
+            "pid" : this.state.patient.pid,
+            "bht" : this.state.patient.bht,
             "name" : this.state.name ,
             "remark" : this.state.remark ,
             "category" : this.state.category , 
@@ -82,6 +84,8 @@ class View extends Component {
   render() {
     return (
       <div className="animated fadeIn"> 
+        <DetailBar/>
+        <br/><br/>
         <h3>Update Allergy</h3><br/>
         <form>
           <input ref="name" type="text" placeholder="Allergy Name" required/><br/><br/>
