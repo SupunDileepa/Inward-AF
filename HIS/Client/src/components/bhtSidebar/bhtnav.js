@@ -120,7 +120,7 @@ export default {
     },
     {
       name: "Discharge Patient",
-      url: "/theme/colors",
+      url: "/bht/discharge",
       icon: "icon-drop"
     },
 

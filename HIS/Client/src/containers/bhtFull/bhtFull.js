@@ -67,6 +67,8 @@ import InternalTransfer from "../../components/InternalTransfer/";
 import ExternalTransfer from "../../components/ExternalTransfer/ExternalTransfer";
 import ViewExTransfers from "../../components/ExternalTransfer/ViewExTransfers";
 import ViewInTransfers from "../../components/InternalTransfer/ViewInTransfer";
+import Discharge from "../../components/Discharge Patient/DischargePatient";
+import ViewDischarges from "../../components/Discharge Patient/ViewDischarge";
 
 import PatientProfile from "../../components/PatientProfile/PatientProfile";
 
@@ -153,7 +155,17 @@ class bhtFull extends Component {
                   name="PatientChart"
                   component={PatientChart}
                 />
-
+                
+                <Route
+                  path="/bht/discharge"
+                  name="Discharge"
+                  component={Discharge}
+                />
+                 <Route
+                  path="/bht/viewdischarge"
+                  name="ViewDischarge"
+                  component={ViewDischarges}
+                />
                 <Route
                   path="/bht/allergies/view"
                   name="viewAllergies"

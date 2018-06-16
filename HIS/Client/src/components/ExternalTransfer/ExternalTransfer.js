@@ -48,7 +48,8 @@ class ExternalTransferForms extends Component {
     this.setState({
 
       patient_id:this.state.patient.pid,
-      bht_no:this.state.patient.bht
+      bht_no:this.state.patient.bht,
+      patient_name: this.state.patient.name
     })
     const {
       patient_id,
