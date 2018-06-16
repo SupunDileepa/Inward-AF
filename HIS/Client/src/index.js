@@ -45,8 +45,8 @@ import store from "./store";
 
 
 
-import Prescribe from "./views/prescribe";
-import PrescribeDrug from "./views/prescribeDrug";
+import Prescribe from "./views/prescriptions/prescribe";
+import PrescribeDrug from "./views/prescriptions/prescribeDrug";
 
 
 
