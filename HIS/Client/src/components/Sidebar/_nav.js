@@ -23,30 +23,28 @@ export default {
       url: "/patientList/patientView",
       icon: "icon-drop"
     },
-    
-    
+
     {
       name: "New Admision",
       url: "/newAddmission",
       icon: "icon-drop"
     },
-     
-  
+
     {
       name: "Search Patient By BHT",
       url: "/search",
       icon: "icon-drop"
     },
-    {
-      name: "Bed Management",
-      url: "/theme/colors",
-      icon: "icon-drop"
-    },
-    {
-      name: "My Wards",
-      url: "/theme/colors",
-      icon: "icon-drop"
-    },
+    // {
+    //   name: "Bed Management",
+    //   url: "/theme/colors",
+    //   icon: "icon-drop"
+    // },
+    // {
+    //   name: "My Wards",
+    //   url: "/theme/colors",
+    //   icon: "icon-drop"
+    // },
     {
       name: "Patient Archive Details",
       url: "/view_Archive",
@@ -54,13 +52,12 @@ export default {
     },
     {
       title: true,
-      name: "Components",
+      name: "Easy Navigation",
       wrapper: {
         element: "",
         attributes: {}
       }
     },
-
 
     {
       name: "Pages",
@@ -76,7 +73,6 @@ export default {
           name: "Register",
           url: "/register",
           icon: "icon-star"
-
         }
       ]
     }
